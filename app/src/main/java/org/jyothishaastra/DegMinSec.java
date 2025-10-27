@@ -28,16 +28,6 @@ public class DegMinSec {
 	}
 
 	// get in degrees, minutes and seconds, can be used as ar[0]-ar[1]-ar[2]
-	public static int[] getGeoCoords(int degree, int minutes, int seconds) {
-
-		double resDegrees = toDegrees(degree, minutes, seconds);
-		return getGeoCoordsFromDegree(resDegrees);
-	}
-
-	public static int[] getGeoCoords(int arr[]) {
-		return getGeoCoords(arr[0], arr[1], arr[2]);
-	}
-
 	public static int[] getGeoCoordsFromDegree(double resDegrees) {
 		int d = (int)resDegrees;  // Truncate the decimals
 		double t1 = (resDegrees - d) * 60;
