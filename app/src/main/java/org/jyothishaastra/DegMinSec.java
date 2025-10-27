@@ -172,10 +172,11 @@ are:
 		System.out.printf("Daily motion of Chandra is %s\n", Arrays.toString(chaMot));
 
 		// Time taken to cover remainingDistance
-		System.out.printf("Tithi ends at %s from 5:30 IST or minus from 7am in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))));
+		String suff = "from 5:30 IST following day or from 5pm in PST? which is from midnight UT.";
+		System.out.printf("Tithi ends at %s %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))), suff);
 
 		System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
-		// System.out.printf("Karana ends at %s from 5:30 IST or minus from 7am in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
+		// System.out.printf("Karana ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 
 		int surNir[] = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, sooryaAbs));
 		// System.out.printf("Soorya niraayana on %s from Swiss is %s\n", date.getTime(), Arrays.toString(surNir));	
@@ -188,11 +189,11 @@ are:
 
 		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", Raashi.raashi(chaNir), Raashi.remainingDistance, Arrays.toString(chaNir));
 
-		// System.out.printf("Raashi ends at %s from 5:30 IST or minus from 7am in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Raashi.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
+		// System.out.printf("Raashi ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Raashi.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 		System.out.printf("Nakshatra is %s and remaining distance is %4.9f.\n", Nakshatra.nakshatra(chaNir), Nakshatra.remainingDistance);
 
-		// "Nakshatra ends at %s from 5:30 IST or minus from 7am in PST?\n"
-		System.out.printf("Nakshatra ends at %s from 5:30 IST or minus from 7am in PST?\n", Nakshatra.end(chaMot, Nakshatra.remainingDistance));
+		// "Nakshatra ends at %s from 5:30 IST or minus from 5pm in PST?\n"
+		System.out.printf("Nakshatra ends at %s %s\n", Nakshatra.end(chaMot, Nakshatra.remainingDistance), suff);
 		// System.out.printf("Nakshatra ends at %s for Cha mot %s and RD %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))), Arrays.toString(chaMot), Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)));
 	}
 }

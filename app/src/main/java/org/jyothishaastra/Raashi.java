@@ -3,7 +3,7 @@ package org.jyothishaastra;
 import java.util.Calendar;
 
 public class Raashi {
-	static String rashis[] = { "Mesha", "Vrushabha", "Mithuna", "Karkataka", "Simha", "Kanya", "Thula", "Vrishika", "Mesha", "Kumbha", "Meena" };
+	static String rashis[] = { "Mesha", "Vrushabha", "Mithuna", "Karkataka", "Simha", "Kanya", "Thula", "Vrishika", "Dhanushu", "Makara", "Kumbha", "Meena" };
 
 	private static int rashiIndex;
 
@@ -37,7 +37,7 @@ public class Raashi {
 		double elapsed = chaDeg % raashiSectSize;
         // tithiIndex = (int) Math.round(tithi);
 
-		return "%s - %4.9f deg have elapsed".formatted(rashis[rashiIndex - 1], elapsed);
+		return "%s - %4.9f deg have elapsed".formatted(rashis[rashiIndex], elapsed);
 	}
 
 
