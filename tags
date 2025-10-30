@@ -640,6 +640,7 @@ ArraySum	app/src/main/java/org/learn/learn.java	/^    public static int ArraySum
 Ayanaamsha	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^public class Ayanaamsha {$/;"	c
 AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<h1>AyanaamshaTest<\/h1>$/;"	h
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
+AyanaamshaTest	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\fa/;"	v
 CLASSPATH	gradlew.bat	/^set CLASSPATH=$/;"	v
 CallableFuture	app/src/main/java/org/learn/learn.java	/^    public void CallableFuture() {$/;"	m	class:learn
@@ -1246,6 +1247,7 @@ apply	app/src/main/java/org/learn/learn.java	/^        public Integer apply(Inte
 applyAsDouble	app/src/main/java/org/learn/learn.java	/^        double applyAsDouble(long value);$/;"	m	interface:learn.Ltd
 arrayOfMultiples	app/src/main/java/org/learn/learn.java	/^    public static int[] arrayOfMultiples(int num, int length) {$/;"	m	class:learn
 ayanamsha	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^	public static double ayanamsha(Calendar cal){$/;"	m	class:Ayanaamsha
+ayanamshaData	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	void ayanamshaData(int day, int []sayyana, int[] nirayaana, int raashi) throws Exception {$/;"	m	class:AyanaamshaTest
 baseId	app/build/reports/tests/test/js/report.js	/^        baseId;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
 body	app/build/reports/tests/test/css/base-style.css	/^body {$/;"	s
 body	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
@@ -5656,6 +5658,7 @@ org.jyothishaastra	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^packag
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/TithiTest.java	/^package org.jyothishaastra;$/;"	p
+org.jyothishaastra.unit	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^package org.jyothishaastra.unit;$/;"	p
 org.learn	app/src/main/java/org/learn/Person.java	/^package org.learn;$/;"	p
 org.learn	app/src/main/java/org/learn/Some.java	/^package org.learn;$/;"	p
 org.learn	app/src/main/java/org/learn/learn.java	/^package org.learn;$/;"	p
@@ -7141,6 +7144,8 @@ summary	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.h
 summary	app/build/reports/tests/test/index.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.example.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div id="summary">$/;"	I
+swissEphIndChandra	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndChandra() {$/;"	m	class:AyanaamshaTest	file:
+swissEphIndSoorya	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndSoorya() {$/;"	m	class:AyanaamshaTest	file:
 tabs	app/build/reports/tests/test/js/report.js	/^        tabs;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
 test	app/src/main/java/org/learn/learn.java	/^        public boolean test(double in);$/;"	m	interface:learn.Pre
 tests	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox" id="tests">$/;"	I
