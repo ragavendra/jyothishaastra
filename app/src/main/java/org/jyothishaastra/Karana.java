@@ -27,7 +27,7 @@ public class Karana {
 		if(chandraAbs[0] < sooryaAbs[0])
 			chandraAbs[0] = chandraAbs[0] + 360;
 
-		karanaDeg = DegMinSec.toDegrees(DegMinSec.minus(sooryaAbs, chandraAbs));
+		karanaDeg = DegMinSec.toDegrees(DegMinSec.minusMoreThreeSixty(sooryaAbs, chandraAbs));
         // System.out.printf("Karana deg is %4.9f\n", karanaDeg);
 
 		// Each Karana is 12/2 == 6 degrees

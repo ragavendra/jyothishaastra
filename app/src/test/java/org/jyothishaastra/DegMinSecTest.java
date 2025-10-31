@@ -12,7 +12,7 @@ class DegMinSecTest {
     @Test void toDegrees() {
 		int ar1[] = { 377, 41, 0 };
 		double res = DegMinSec.toDegrees(ar1);
-		assertEquals(377.68333333333334, res);
+		assertEquals(17.683333333333337, res);
 
 		int ar2[] = { 265, 1, 32 };
 		int resAct[] = DegMinSec.add(ar1, ar2); 
@@ -20,8 +20,9 @@ class DegMinSecTest {
 		int resExp[] = { 282, 42, 32 };
 		assertArrayEquals(resExp, resAct);
 
-		resExp = new int[]{ 112, 39, 28 };
+		resExp = new int[]{ 247, 20, 32 };
 		resAct = DegMinSec.minus(ar1, ar2); 
+		System.out.printf("resAct %s", Arrays.toString(resAct));
 		assertArrayEquals(resExp, resAct);
 
 		int[] ress = DegMinSec.minus(new int[]{17, 41, 0}, new int[]{112,29,38});

@@ -22,25 +22,40 @@ public class DegMinSec {
 		return 	res;
 	}
 
+	public static double toDegreesMoreThreeSixty(int degree, int minutes, int seconds){
+        if(degree == 0) {
+			// System.out.println("deg is 0");
+            degree = 1;
+		}
+		int abs = Math.abs(degree);
+		double res = Math.signum(degree) * (abs + (minutes / 60.0) + (seconds / 3600.0));
+
+		return 	res;
+	}
+
+	public static double toDegreesMoreThreeSixty(int arr[]){
+		return toDegreesMoreThreeSixty(arr[0], arr[1], arr[2]);
+	}
+
 	public static double toDegrees(int arr[]){
 		return toDegrees(arr[0], arr[1], arr[2]);
 	}
 
 	public static double toMinutes(double degrees){
-        int no = (int) degrees;
-        double result = no * 60 + (degrees - no) * 60;
-        return result;
+		int no = (int) degrees;
+		double result = no * 60 + (degrees - no) * 60;
+		return result;
 	}
 
 	// get in degrees, minutes and seconds, can be used as ar[0]-ar[1]-ar[2]
 	public static int[] getGeoCoordsFromDegree(double resDegrees) {
-/* 
-		boolean flag = false;
-		if(resDegrees < 0.0){
-			flag = true;
-			resDegrees = -1 * resDegrees;
-		}
-*/
+		/* 
+		   boolean flag = false;
+		   if(resDegrees < 0.0){
+		   flag = true;
+		   resDegrees = -1 * resDegrees;
+		   }
+		   */
 		if(resDegrees < 0.0)
 			resDegrees = 360.0 + resDegrees;
 
@@ -60,11 +75,11 @@ public class DegMinSec {
 			m = m - 60;
 			System.out.println("In minutes minu loop");
 		}
-/* 
-		if(flag){
-			d = 360 - d;
-		}
-*/
+		/* 
+		   if(flag){
+		   d = 360 - d;
+		   }
+		   */
 
 		int ar[] = { d, m, sec};
 
@@ -85,14 +100,14 @@ public class DegMinSec {
 		return getGeoCoordsFromDegree(res);
 	}
 
-	public static int[] minus(int dms1[], int dms2[]) {
+	public static int[] minusMoreThreeSixty(int dms1[], int dms2[]) {
 		// System.out.println("dms1 is " + Arrays.toString(dms1));	
 		// System.out.println("dms2 is " + Arrays.toString(dms2));	
-		double d1 = toDegrees(dms1);
-		double d2 = toDegrees(dms2);
+		double d1 = toDegreesMoreThreeSixty(dms1);
+		double d2 = toDegreesMoreThreeSixty(dms2);
 
-		System.out.println("d1 is " + d1);	
-		System.out.println("d2 is " + d2);	
+		// System.out.println("d1 is " + d1);	
+		// System.out.println("d2 is " + d2);	
 		// swap
 		if(d1 > d2){
 			double d = d2;
@@ -101,7 +116,29 @@ public class DegMinSec {
 		}
 
 		double res = d2 - d1;
-		System.out.println("Sub is " + res);	
+		// System.out.println("Sub is " + res);	
+
+		return getGeoCoordsFromDegree(res);
+	}
+
+
+	public static int[] minus(int dms1[], int dms2[]) {
+		// System.out.println("dms1 is " + Arrays.toString(dms1));	
+		// System.out.println("dms2 is " + Arrays.toString(dms2));	
+		double d1 = toDegrees(dms1);
+		double d2 = toDegrees(dms2);
+
+		// System.out.println("d1 is " + d1);	
+		// System.out.println("d2 is " + d2);	
+		// swap
+		if(d1 > d2){
+			double d = d2;
+			d2 = d1;
+			d1 = d;
+		}
+
+		double res = d2 - d1;
+		// System.out.println("Sub is " + res);	
 
 		return getGeoCoordsFromDegree(res);
 	}
@@ -117,15 +154,15 @@ public class DegMinSec {
 	public static void main(String ags[]) throws Exception {
 
 		// Mesha is 1
-		 //  for 22nd Oct
-		 int surRaashi = 7;
-		 int chaRaashi = 8;
-		 int swissEphermesisMoon[] = { 4, 7, 00 };
-		 int ar1[] = { 4, 7, 0 }; // of next day's which is in Mesha raashi 9
-		 int ar2[] = { 16, 1, 0 }; // of next day's which is in Mesha raashi 9
-		 int swissEphermesisSun[] = { 28, 50, 42 };
-		 int ar3[] = { 28, 50, 42 };
-		 int ar4[] = { 29, 50, 25 };
+		//  for 22nd Oct
+		int surRaashi = 7;
+		int chaRaashi = 8;
+		int swissEphermesisMoon[] = { 4, 7, 00 };
+		int ar1[] = { 4, 7, 0 }; // of next day's which is in Mesha raashi 9
+		int ar2[] = { 16, 1, 0 }; // of next day's which is in Mesha raashi 9
+		int swissEphermesisSun[] = { 28, 50, 42 };
+		int ar3[] = { 28, 50, 42 };
+		int ar4[] = { 29, 50, 25 };
 
 		// India Ephemersis doesnt have Ayanamsha
 		Calendar date = Calendar.getInstance();
@@ -147,23 +184,23 @@ public class DegMinSec {
 		Calendar date = Calendar.getInstance();
 		date.set(2009, 6, 15); // for 15 July 2009
 							   // date.set(2009, 7, 15); // for 15 July 2009
-		 */
+							   */
 		/* 
 		   From Indian Astronomical ephemeris we straightaway get the Nirayana
 		   longitudes for Ravi and Chandra at 5:29 AM IST on 15-7-2009. The values
 are:
-		   Ravi = 88-39’-45’
-		   Chandra = 353-40’-26”
+Ravi = 88-39’-45’
+Chandra = 353-40’-26”
 
-		   112-39’-28”
-		   - 23-59’-34”
-		   ------------
-		   88-39’-54” which is same as that we obtained from Indian
-		   astronomical ephemeris.
+112-39’-28”
+- 23-59’-34”
+------------
+88-39’-54” which is same as that we obtained from Indian
+astronomical ephemeris.
 
-		   Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
-		   353-41’-26” very near to that we obtain from Indian ephemeris.
-		 */
+Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
+353-41’-26” very near to that we obtain from Indian ephemeris.
+*/
 
 		double ayanamsha = Ayanaamsha.ayanamsha(date);
 		System.out.printf("Aya is %s degrees for %s\n", ayanamsha, date.toInstant());	
@@ -213,7 +250,8 @@ are:
 		System.out.printf("Nakshatra is %s and remaining distance is %4.9f.\n", Nakshatra.nakshatra(chaNir), Nakshatra.remainingDistance);
 
 		// "Nakshatra ends at %s from 5:30 IST or minus from 5pm in PST?\n"
-		System.out.printf("Nakshatra ends at %s %s\n", Nakshatra.end(chaMot, Nakshatra.remainingDistance), suff);
+		var naksEnd = Nakshatra.end(chaMot, Nakshatra.remainingDistance);
+		System.out.printf("Nakshatra ends at %s %s %s\n", naksEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(naksEnd)), suff);
 		// System.out.printf("Nakshatra ends at %s for Cha mot %s and RD %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))), Arrays.toString(chaMot), Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)));
 	}
 }

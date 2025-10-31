@@ -45,13 +45,13 @@ class NakshatraTest {
 	// assertArrayEquals(new int[]{22, 39, 28}, swissEphermesisSun);
 
 	double ayaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
-	System.out.printf("ayaNir %s\n", ayaNir); 
+	// System.out.printf("ayaNir %s\n", ayaNir); 
 	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(ayaNir);
-	System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+	// System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
 	String naks = Nakshatra.nakshatra(chaNir);
 	assertEquals("Revathi - 7.023888889 deg have elapsed", naks);
 
-	System.out.printf("res %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance))); 
+	// System.out.printf("res %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance))); 
 	assertArrayEquals(new int[]{6,18,34}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)); // , 34
 
 	assertEquals(6.309444444444466, Nakshatra.remainingDistance);

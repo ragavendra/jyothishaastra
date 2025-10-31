@@ -56,10 +56,10 @@ class IntegraionTest {
 		// System.out.printf("Daily motion of Soorya is %s\n", Arrays.toString(surMot));
 
         // Time taken to cover remainingDistance
-        System.out.printf("Tithi ends at %s from 5:30 IST or minus from 7am in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))));
+        // System.out.printf("Tithi ends at %s from 5:30 IST or minus from 7am in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))));
 
 		assertTrue(Tithi.tithi(chandraAbs, sooryaAbs).contains("Padya"));
-		assertArrayEquals(new int[]{14, 48, 30}, DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance)));
+		assertArrayEquals(new int[]{13, 34, 11}, DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance)));
 
 /* 
 

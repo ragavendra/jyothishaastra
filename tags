@@ -639,6 +639,7 @@ AppTest	app/src/test/java/org/example/AppTest.java	/^class AppTest {$/;"	c
 ArraySum	app/src/main/java/org/learn/learn.java	/^    public static int ArraySum(int[] input, int[] ind) {$/;"	m	class:Main
 Ayanaamsha	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^public class Ayanaamsha {$/;"	c
 AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<h1>AyanaamshaTest<\/h1>$/;"	h
+AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<h1>AyanaamshaTest<\/h1>$/;"	h
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\fa/;"	v
@@ -648,8 +649,8 @@ ClassName	app/src/main/java/org/learn/learn.java	/^class ClassName {$/;"	c
 Classes	app/build/reports/tests/test/index.html	/^<h2>Classes<\/h2>$/;"	i
 Classes	app/build/reports/tests/test/packages/org.example.html	/^<h2>Classes<\/h2>$/;"	i
 Classes	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<h2>Classes<\/h2>$/;"	i
+Classes	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<h2>Classes<\/h2>$/;"	i
 Comparator_	app/src/main/java/org/learn/learn.java	/^    public void Comparator_() {$/;"	m	class:learn
-Compile or run	bin/README.md	/^### Compile or run$/;"	S
 Cons	app/src/main/java/org/learn/learn.java	/^    interface Cons extends Consumer<Double> {$/;"	i	class:learn
 CopyStream	app/src/main/java/org/learn/learn.java	/^    public void CopyStream() {$/;"	m	class:learn
 DEFAULT_JVM_OPTS	app/build/scripts/app.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
@@ -669,20 +670,6 @@ EXIT_CODE	gradlew.bat	/^set EXIT_CODE=%ERRORLEVEL%$/;"	v
 ExtSome	app/src/main/java/org/learn/learn.java	/^    class ExtSome extends SomeCla {$/;"	c	class:Main
 FirLasComp	app/src/main/java/org/learn/learn.java	/^interface FirLasComp<S> extends Comparator<S> {$/;"	i
 Funct	app/src/main/java/org/learn/learn.java	/^    interface Funct extends Function<Integer, Integer> {$/;"	i	class:learn
-Gradle Configuration Cache	build/reports/configuration-cache/17rsgd36h2mpzckusctqjyyt7/ac8n8fajt39y1o455lr7kl1tl/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/3251ie7o6i1z1yg6wphdcpms4/4psq37tiknex1qee7t7ol9c0/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/2utmyrl7cb6nvl1ziiccn5k3y/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/60h3vjyasb3n62n2k9l5dxykl/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/8ecu7klek3z1g8p5sdvh32een/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/9nxmg9umbm3zgz723hxefhkwa/6xwoj4uy0n0dbrv4fjy0dvav1/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/3e4be9c3ueccvq645me5etckf/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/64upmn8ulqo8zgyo7z1oueq93/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/ch7sq1tszitxi0w1mgfgxuiev/7x8ciyg8n2vtpdzznw1q9deqa/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/emm5uf23grhbdt9w8k8i40ymz/9vzsd8eekp580me18ma0zolwi/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/459afhkn4qioos2yh15b00k1a/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/6xe8iqgy9yb7eifqeofnm2da/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/configuration-cache/v9806kk5l01zp6pst61tmz8k/15pqs70ylngqsnih39w5mwdb4/configuration-cache-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
-Gradle Configuration Cache	build/reports/problems/problems-report.html	/^    <title>Gradle Configuration Cache<\/title>$/;"	j
 ImplIter	app/src/main/java/org/learn/learn.java	/^    public class ImplIter implements Iterable<String> {$/;"	c	class:learn
 ImplIterat	app/src/main/java/org/learn/learn.java	/^        class ImplIterat implements Iterator<String> {$/;"	c	class:learn.ImplIter
 IntegraionTest	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<h1>IntegraionTest<\/h1>$/;"	h
@@ -694,30 +681,19 @@ JAVA_EXE	gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
 JAVA_HOME	app/build/scripts/app.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
 JAVA_HOME	gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
 Karana	app/src/main/java/org/jyothishaastra/Karana.java	/^public class Karana {$/;"	c
+KaranaTest	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<h1>KaranaTest<\/h1>$/;"	h
 KaranaTest	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^class KaranaTest {$/;"	c
-Layer_1	build/reports/configuration-cache/17rsgd36h2mpzckusctqjyyt7/ac8n8fajt39y1o455lr7kl1tl/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/3251ie7o6i1z1yg6wphdcpms4/4psq37tiknex1qee7t7ol9c0/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/2utmyrl7cb6nvl1ziiccn5k3y/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/60h3vjyasb3n62n2k9l5dxykl/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/8ecu7klek3z1g8p5sdvh32een/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/9nxmg9umbm3zgz723hxefhkwa/6xwoj4uy0n0dbrv4fjy0dvav1/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/3e4be9c3ueccvq645me5etckf/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/64upmn8ulqo8zgyo7z1oueq93/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/ch7sq1tszitxi0w1mgfgxuiev/7x8ciyg8n2vtpdzznw1q9deqa/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/emm5uf23grhbdt9w8k8i40ymz/9vzsd8eekp580me18ma0zolwi/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/459afhkn4qioos2yh15b00k1a/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/6xe8iqgy9yb7eifqeofnm2da/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/configuration-cache/v9806kk5l01zp6pst61tmz8k/15pqs70ylngqsnih39w5mwdb4/configuration-cache-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
-Layer_1	build/reports/problems/problems-report.html	/^    background-image: url('data:image\/svg+xml;utf8,<svg width="800px" height="800px" viewBox="-/;"	I
 Ltd	app/src/main/java/org/learn/learn.java	/^    interface Ltd extends java.util.function.LongToDoubleFunction {$/;"	i	class:learn
 Main	app/src/main/java/org/learn/learn.java	/^class Main {$/;"	c
 Nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^public class Nakshatra {$/;"	c
+NakshatraTest	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<h1>NakshatraTest<\/h1>$/;"	h
 NakshatraTest	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^class NakshatraTest {$/;"	c
 Nobody	app/src/main/java/org/learn/learn.java	/^        abstract void Nobody();$/;"	m	class:Main.SomeCla
 Nobody	app/src/main/java/org/learn/learn.java	/^        void Nobody() {$/;"	m	class:Main.ExtSome
 Operation	app/src/main/java/org/learn/learn.java	/^    interface Operation<I> {$/;"	i	class:Main
 Package org.example	app/build/reports/tests/test/packages/org.example.html	/^<h1>Package org.example<\/h1>$/;"	h
 Package org.jyothishaastra	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<h1>Package org.jyothishaastra<\/h1>$/;"	h
+Package org.jyothishaastra.unit	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<h1>Package org.jyothishaastra.unit<\/h1>$/;"	h
 Packages	app/build/reports/tests/test/index.html	/^<h2>Packages<\/h2>$/;"	i
 Person	app/src/main/java/org/learn/Person.java	/^public record Person(String firstName, String lastName){$/;"	m
 Pre	app/src/main/java/org/learn/learn.java	/^    interface Pre extends DoublePredicate {$/;"	i	class:learn
@@ -725,6 +701,7 @@ Pro	app/src/main/java/org/learn/learn.java	/^    interface Pro extends Supplier<
 ProCons	app/src/main/java/org/learn/learn.java	/^class ProCons {$/;"	c
 ProCons2	app/src/main/java/org/learn/learn.java	/^class ProCons2 {$/;"	c
 Raashi	app/src/main/java/org/jyothishaastra/Raashi.java	/^public class Raashi {$/;"	c
+RaashiTest	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h1>RaashiTest<\/h1>$/;"	h
 RaashiTest	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^class RaashiTest {$/;"	c
 SampleClass	app/src/main/java/org/learn/learn.java	/^    public class SampleClass implements Comparator<String> {$/;"	c	class:learn
 Seat	app/src/main/java/org/learn/learn.java	/^    public record Seat(char rowMarker, int seatNumber, double price) {$/;"	m	class:Main
@@ -742,7 +719,10 @@ SomeMetho	app/src/main/java/org/learn/learn.java	/^        public void SomeMetho
 SomeMethod	app/src/main/java/org/learn/learn.java	/^        public static void SomeMethod() {$/;"	m	interface:Main.SomeInter
 SomeRec	app/src/main/java/org/learn/learn.java	/^    public record SomeRec(String name, String lastName, String email, int id) {$/;"	m	class:Main
 Spliterator_	app/src/main/java/org/learn/learn.java	/^class Spliterator_ implements Spliterator<String> {$/;"	c
+Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<h2>Standard output<\/h2>$/;"	i
 Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<h2>Standard output<\/h2>$/;"	i
+Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h2>Standard output<\/h2>$/;"	i
+Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h2>Standard output<\/h2>$/;"	i
 StreamSample	app/src/main/java/org/learn/learn.java	/^    public static void StreamSample() {$/;"	m	class:learn
 StreamsMapFilterReduce	app/src/main/java/org/learn/learn.java	/^    public void StreamsMapFilterReduce() {$/;"	m	class:learn
 Sum	app/src/main/java/org/learn/learn.java	/^    public interface Sum {$/;"	i	class:learn
@@ -750,16 +730,28 @@ TabManager	app/build/reports/tests/test/js/report.js	/^    class TabManager {$/;
 Test Summary	app/build/reports/tests/test/index.html	/^<h1>Test Summary<\/h1>$/;"	h
 Test results - AppTest	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<title>Test results - AppTest<\/title>$/;"	j
 Test results - AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<title>Test results - AyanaamshaTest<\/title>$/;"	j
+Test results - AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<title>Test results - AyanaamshaTest<\/title>$/;"	j
 Test results - DegMinSecTest	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<title>Test results - DegMinSecTest<\/title>$/;"	j
 Test results - IntegraionTest	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<title>Test results - IntegraionTest<\/title>$/;"	j
+Test results - KaranaTest	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<title>Test results - KaranaTest<\/title>$/;"	j
+Test results - NakshatraTest	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<title>Test results - NakshatraTest<\/title>$/;"	j
 Test results - Package org.example	app/build/reports/tests/test/packages/org.example.html	/^<title>Test results - Package org.example<\/title>$/;"	j
 Test results - Package org.jyothishaastra	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<title>Test results - Package org.jyothishaastra<\/title>$/;"	j
+Test results - Package org.jyothishaastra.unit	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<title>Test results - Package org.jyothishaastra.unit<\/title>$/;"	j
+Test results - RaashiTest	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<title>Test results - RaashiTest<\/title>$/;"	j
 Test results - Test Summary	app/build/reports/tests/test/index.html	/^<title>Test results - Test Summary<\/title>$/;"	j
+Test results - TithiTest	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<title>Test results - TithiTest<\/title>$/;"	j
 Tests	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tithi	app/src/main/java/org/jyothishaastra/Tithi.java	/^public class Tithi {$/;"	c
+TithiTest	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h1>TithiTest<\/h1>$/;"	h
 TithiTest	app/src/test/java/org/jyothishaastra/TithiTest.java	/^class TithiTest {$/;"	c
 a	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 a:visited	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
@@ -3623,9 +3615,15 @@ content	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div id=
 content	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/index.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/packages/org.example.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div id="content">$/;"	I
 createTab	app/build/reports/tests/test/js/report.js	/^        function createTab(num, container) {$/;"	f	function:anonymousFunctionfed02dd60100.initTabs
 current	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "current" : false,$/;"	b	object:0
 current	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "current" : false,$/;"	b	object:1
@@ -4101,9 +4099,6 @@ current	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "
 deselectAll	app/build/reports/tests/test/js/report.js	/^        deselectAll() {$/;"	m	class:anonymousFunctionfed02dd60100.TabManager
 die	app/build/scripts/app	/^die () {$/;"	f
 die	gradlew	/^die () {$/;"	f
-distributionBase	gradle/wrapper/gradle-wrapper.properties	/^distributionBase=GRADLE_USER_HOME$/;"	k
-distributionPath	gradle/wrapper/gradle-wrapper.properties	/^distributionPath=wrapper\/dists$/;"	k
-distributionUrl	gradle/wrapper/gradle-wrapper.properties	/^distributionUrl=https\\:\/\/services.gradle.org\/distributions\/gradle-8.14.3-bin.zip$/;"	k
 div.deselected	app/build/reports/tests/test/css/base-style.css	/^div.deselected {$/;"	c
 div.failures	app/build/reports/tests/test/css/style.css	/^div.failures, #successRate.failures {$/;"	c
 div.selected	app/build/reports/tests/test/css/base-style.css	/^div.selected {$/;"	c
@@ -4593,9 +4588,15 @@ duration	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div cl
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="duration">$/;"	I
 end	app/build/scripts/app.bat	/^:end$/;"	l
 end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double end(int[] chaMot, double remainingDistance) throws Exception {$/;"	m	class:Nakshatra
 end	app/src/main/java/org/jyothishaastra/Tithi.java	/^	public static double end(int[] surMot, int[] chaMot, double remainingDistance) throws Exception/;"	m	class:Tithi
@@ -4609,9 +4610,15 @@ failures	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div cl
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="failures">$/;"	I
 findChildElements	app/build/reports/tests/test/js/report.js	/^    function findChildElements(container, name, targetClass) {$/;"	f	function:anonymousFunctionfed02dd60100
 findCodeBlocks	app/build/reports/tests/test/js/report.js	/^    function findCodeBlocks() {$/;"	f	function:anonymousFunctionfed02dd60100
 findHeaders	app/build/reports/tests/test/js/report.js	/^    function findHeaders(container) {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -4623,9 +4630,15 @@ footer	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div id="
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/index.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/packages/org.example.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div id="footer">$/;"	I
 forAllCodeBlocks	app/build/reports/tests/test/js/report.js	/^    function forAllCodeBlocks(operation) {$/;"	f	function:anonymousFunctionfed02dd60100
 get	app/src/main/java/org/learn/learn.java	/^        default Integer get() {$/;"	m	interface:learn.Pro
 getCheckBox	app/build/reports/tests/test/js/report.js	/^    function getCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -4647,9 +4660,15 @@ ignored	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div cla
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="ignored">$/;"	I
 index	app/src/main/java/org/learn/learn.java	/^            int index = 0;$/;"	f	class:learn.ImplIter.ImplIterat
 initControls	app/build/reports/tests/test/js/report.js	/^    function initControls() {$/;"	f	function:anonymousFunctionfed02dd60100
 initTabs	app/build/reports/tests/test/js/report.js	/^    function initTabs() {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -4662,18 +4681,30 @@ label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.example.
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/index.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/packages/org.example.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label.hidden	app/build/reports/tests/test/css/base-style.css	/^label.hidden {$/;"	c
 learn	app/src/main/java/org/learn/learn.java	/^public class learn {$/;"	c
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/index.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/packages/org.example.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 link	app/src/main/java/org/learn/learn.java	/^        public LinkedList<String> link = new LinkedList();$/;"	f	class:learn.ImplIter
 list	app/src/main/java/org/learn/learn.java	/^    public List<Integer> list = new LinkedList<Integer>();$/;"	f	class:ProCons2
 lock	app/src/main/java/org/learn/learn.java	/^    private Object lock = new Object();$/;"	f	class:ProCons2	file:
@@ -5154,13 +5185,13 @@ milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	
 milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "milestoneFor" : "9.2.0",$/;"	s	object:4
 milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "milestoneFor" : "9.2.0",$/;"	s	object:5
 minus	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] minus(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
+minusMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] minusMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double nakshDeg;$/;"	f	class:Nakshatra	file:
 nakshaIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshaIndex;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
 nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshatraIndex;$/;"	f	class:Nakshatra	file:
 nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika", "Rohini", "Mrigashira", "Aradr/;"	f	class:Nakshatra
 name	app/src/main/java/org/learn/learn.java	/^        String name();$/;"	m	annotation:Main.AnnInterf
-networkTimeout	gradle/wrapper/gradle-wrapper.properties	/^networkTimeout=10000$/;"	k
 next	app/src/main/java/org/learn/learn.java	/^            public String next() {$/;"	m	class:learn.ImplIter.ImplIterat
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:1
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:10
@@ -5662,28 +5693,14 @@ org.jyothishaastra.unit	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest
 org.learn	app/src/main/java/org/learn/Person.java	/^package org.learn;$/;"	p
 org.learn	app/src/main/java/org/learn/Some.java	/^package org.learn;$/;"	p
 org.learn	app/src/main/java/org/learn/learn.java	/^package org.learn;$/;"	p
-playground	build/reports/configuration-cache/17rsgd36h2mpzckusctqjyyt7/ac8n8fajt39y1o455lr7kl1tl/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/3251ie7o6i1z1yg6wphdcpms4/4psq37tiknex1qee7t7ol9c0/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/2utmyrl7cb6nvl1ziiccn5k3y/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/60h3vjyasb3n62n2k9l5dxykl/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/8ecu7klek3z1g8p5sdvh32een/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/9nxmg9umbm3zgz723hxefhkwa/6xwoj4uy0n0dbrv4fjy0dvav1/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/3e4be9c3ueccvq645me5etckf/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/64upmn8ulqo8zgyo7z1oueq93/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/ch7sq1tszitxi0w1mgfgxuiev/7x8ciyg8n2vtpdzznw1q9deqa/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/emm5uf23grhbdt9w8k8i40ymz/9vzsd8eekp580me18ma0zolwi/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/459afhkn4qioos2yh15b00k1a/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/6xe8iqgy9yb7eifqeofnm2da/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/configuration-cache/v9806kk5l01zp6pst61tmz8k/15pqs70ylngqsnih39w5mwdb4/configuration-cache-report.html	/^<div id="playground"><\/div>$/;"	I
-playground	build/reports/problems/problems-report.html	/^<div id="playground"><\/div>$/;"	I
 produce	app/src/main/java/org/learn/learn.java	/^    public synchronized void produce() throws InterruptedException {$/;"	m	class:ProCons
 produce	app/src/main/java/org/learn/learn.java	/^    public synchronized void produce() throws InterruptedException {$/;"	m	class:ProCons2
 propName	app/src/main/java/org/learn/learn.java	/^    private String propName = "";$/;"	f	class:ClassName	file:
 r	app/src/main/java/org/learn/learn.java	/^    private Random r = new Random(100);$/;"	f	class:ProCons2	file:
 raashi	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String raashi(int chaNirAbs[]) throws Exception {$/;"	m	class:Raashi
-raashi	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:KaranaTest
+raashi	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^	void raashi() throws Exception {$/;"	m	class:KaranaTest
 raashi	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:NakshatraTest
-raashi	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:RaashiTest
+raashi	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^	void raashi() throws Exception {$/;"	m	class:RaashiTest
 raashi	app/src/test/java/org/jyothishaastra/TithiTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:TithiTest
 randSelNames	app/src/main/java/org/learn/learn.java	/^    public static String[] randSelNames(int count, String[] ip, Supplier<Integer> s) {$/;"	m	class:Main
 rashiIndex	app/src/main/java/org/jyothishaastra/Raashi.java	/^	private static int rashiIndex;$/;"	f	class:Raashi	file:
@@ -6635,20 +6652,6 @@ remainingDistance	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static 
 remainingDistance	app/src/main/java/org/jyothishaastra/Raashi.java	/^	static double remainingDistance;$/;"	f	class:Raashi
 remainingDistance	app/src/main/java/org/jyothishaastra/Tithi.java	/^	static double remainingDistance;$/;"	f	class:Tithi
 removeClass	app/build/reports/tests/test/js/report.js	/^    function removeClass(element, classValue) {$/;"	f	function:anonymousFunctionfed02dd60100
-report	build/reports/configuration-cache/17rsgd36h2mpzckusctqjyyt7/ac8n8fajt39y1o455lr7kl1tl/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/3251ie7o6i1z1yg6wphdcpms4/4psq37tiknex1qee7t7ol9c0/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/2utmyrl7cb6nvl1ziiccn5k3y/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/60h3vjyasb3n62n2k9l5dxykl/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/6oa3x3awj06izgq9m1yyl8num/8ecu7klek3z1g8p5sdvh32een/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/9nxmg9umbm3zgz723hxefhkwa/6xwoj4uy0n0dbrv4fjy0dvav1/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/3e4be9c3ueccvq645me5etckf/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/bw4zma47ocemscqvd1xlwpc0m/64upmn8ulqo8zgyo7z1oueq93/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/ch7sq1tszitxi0w1mgfgxuiev/7x8ciyg8n2vtpdzznw1q9deqa/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/emm5uf23grhbdt9w8k8i40ymz/9vzsd8eekp580me18ma0zolwi/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/459afhkn4qioos2yh15b00k1a/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/v2hdcs2jztky3pjqo9580yn8/6xe8iqgy9yb7eifqeofnm2da/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/configuration-cache/v9806kk5l01zp6pst61tmz8k/15pqs70ylngqsnih39w5mwdb4/configuration-cache-report.html	/^<div class="report" id="report">$/;"	I
-report	build/reports/problems/problems-report.html	/^<div class="report" id="report">$/;"	I
 select	app/build/reports/tests/test/js/report.js	/^        select(i) {$/;"	m	class:anonymousFunctionfed02dd60100.TabManager
 sequence	app/src/main/java/org/learn/learn.java	/^    private static Integer sequence = 0;$/;"	f	class:Main	file:
 snapshot	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "snapshot" : false,$/;"	b	object:10
@@ -7132,18 +7135,30 @@ successRate	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/index.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox success" id="successRate">$/;"	I
 sum	app/src/main/java/org/learn/learn.java	/^    public static int sum(int[] arr) {$/;"	m	class:learn
 sum_	app/src/main/java/org/learn/learn.java	/^    public static int sum_(int[] arr) {$/;"	m	class:learn
 summary	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/index.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.example.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div id="summary">$/;"	I
 swissEphIndChandra	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndChandra() {$/;"	m	class:AyanaamshaTest	file:
 swissEphIndSoorya	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndSoorya() {$/;"	m	class:AyanaamshaTest	file:
 tabs	app/build/reports/tests/test/js/report.js	/^        tabs;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
@@ -7152,9 +7167,15 @@ tests	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="tests">$/;"	I
 tithi	app/src/main/java/org/jyothishaastra/Tithi.java	/^	public static String tithi(int chandraAbs[], int sooryaAbs[]) throws Exception {$/;"	m	class:Tithi
 tithiDeg	app/src/main/java/org/jyothishaastra/Tithi.java	/^    private static double tithiDeg;$/;"	f	class:Tithi	file:
 tithiIndex	app/src/main/java/org/jyothishaastra/Tithi.java	/^	private static int tithiIndex;$/;"	f	class:Tithi	file:
@@ -7164,6 +7185,8 @@ toDegrees	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static d
 toDegrees	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static double toDegrees(int degree, int minutes, int seconds){$/;"	m	class:DegMinSec
 toDegrees	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^	@Test void toDegrees() throws Exception {$/;"	m	class:AyanaamshaTest
 toDegrees	app/src/test/java/org/jyothishaastra/DegMinSecTest.java	/^    @Test void toDegrees() {$/;"	m	class:DegMinSecTest
+toDegreesMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static double toDegreesMoreThreeSixty(int arr[]){$/;"	m	class:DegMinSec
+toDegreesMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static double toDegreesMoreThreeSixty(int degree, int minutes, int seconds){$/;"	m	class:DegMinSec
 toMinutes	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static double toMinutes(double degrees){$/;"	m	class:DegMinSec
 toggleLineWrapping	app/build/reports/tests/test/js/report.js	/^    function toggleLineWrapping() {$/;"	f	function:anonymousFunctionfed02dd60100
 tryAdvance	app/src/main/java/org/learn/learn.java	/^    public boolean tryAdvance(Consumer<? super String> cnsmr) {$/;"	m	class:Spliterator_
@@ -7179,7 +7202,6 @@ ul.tabLinks li.deselected > a	app/build/reports/tests/test/css/base-style.css	/^
 ul.tabLinks li.selected	app/build/reports/tests/test/css/base-style.css	/^ul.tabLinks li.selected {$/;"	c
 ul.tabLinks li:hover	app/build/reports/tests/test/css/base-style.css	/^ul.tabLinks li:hover {$/;"	s
 useThr	app/src/main/java/org/learn/learn.java	/^    public void useThr() {$/;"	m	class:learn
-validateDistributionUrl	gradle/wrapper/gradle-wrapper.properties	/^validateDistributionUrl=true$/;"	k
 var	app/src/main/java/org/learn/learn.java	/^    public static void var(String par) {$/;"	m	class:learn
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.7",$/;"	s	object:470
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.8",$/;"	s	object:469
@@ -8298,5 +8320,3 @@ wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-1/;"	s	object:5
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-2/;"	s	object:4
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-rc-1-wrappe/;"	s	object:2
-zipStoreBase	gradle/wrapper/gradle-wrapper.properties	/^zipStoreBase=GRADLE_USER_HOME$/;"	k
-zipStorePath	gradle/wrapper/gradle-wrapper.properties	/^zipStorePath=wrapper\/dists$/;"	k

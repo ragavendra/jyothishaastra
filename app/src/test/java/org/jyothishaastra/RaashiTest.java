@@ -9,33 +9,34 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Calendar;
 
 class RaashiTest {
-	@Test void raashi() throws Exception {
+	@Test 
+	void raashi() throws Exception {
 
-	Calendar date = Calendar.getInstance();
-	date.set(2009, 6, 15); // for 15 July 2009
+		Calendar date = Calendar.getInstance();
+		date.set(2009, 6, 15); // for 15 July 2009
 
-	double ayanamsha = Ayanaamsha.ayanamsha(date);
+		double ayanamsha = Ayanaamsha.ayanamsha(date);
 
-	// 23.9853731 in pdf
-	assertEquals(23.992896251386888, ayanamsha);
-	assertArrayEquals(new int[]{ 23, 59, 34 }, DegMinSec.getGeoCoordsFromDegree(ayanamsha));
+		// 23.9853731 in pdf
+		assertEquals(23.992896251386888, ayanamsha);
+		assertArrayEquals(new int[]{ 23, 59, 34 }, DegMinSec.getGeoCoordsFromDegree(ayanamsha));
 
-	int swissEphermesisMoon[] = { 17, 41, 00 };
-	int swissEphermesisSun[] = { 22, 39, 28 };
-	int surRaashi = 4; // Karkaataka
-	int chaRaashi = 1; // Mesha
+		int swissEphermesisMoon[] = { 17, 41, 00 };
+		int swissEphermesisSun[] = { 22, 39, 28 };
+		int surRaashi = 4; // Karkaataka
+		int chaRaashi = 1; // Mesha
 
-	int chandraAbs[] = swissEphermesisMoon;
-	chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
+		int chandraAbs[] = swissEphermesisMoon;
+		chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
 
-	int sooryaAbs[] = swissEphermesisSun;
-	sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
-	int surNir[] = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, sooryaAbs));
+		int sooryaAbs[] = swissEphermesisSun;
+		sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
+		int surNir[] = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, sooryaAbs));
 
-	assertArrayEquals(new int[]{ 88, 39, 54 }, surNir);
-	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, chandraAbs));
+		assertArrayEquals(new int[]{ 88, 39, 54 }, surNir);
+		int[] chaNir = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, chandraAbs));
 
-	assertEquals("Meena - 23.690555556 deg have elapsed", Raashi.raashi(chaNir));
-	assertEquals(6.309444444444466, Raashi.remainingDistance);
+		assertEquals("Meena - 23.690555556 deg have elapsed", Raashi.raashi(chaNir));
+		assertEquals(6.309444444444466, Raashi.remainingDistance);
 	}
 }

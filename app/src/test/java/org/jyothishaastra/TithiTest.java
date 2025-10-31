@@ -6,6 +6,7 @@ package org.jyothishaastra;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 class TithiTest {
@@ -25,17 +26,45 @@ class TithiTest {
 	int surRaashi = 4; // Karkaataka
 	int chaRaashi = 1; // Mesha
 
-	int chandraAbs[] = swissEphermesisMoon;
-	chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
+	int chaRaashi1 = 2; // on 16 July 2009 it is in Vrushabha
+	int chandraAbs1[] = new int[]{ 00, 50, 00 };
+	chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
+	assertArrayEquals(new int[]{30, 50, 0}, chandraAbs1);
 
-	int sooryaAbs[] = swissEphermesisSun;
+	int sooryaRaashi1 = 4; // on 16 July 2009 it is in Karkaataka itself
+	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
+	sooryaAbs1[0] = DegMinSec.absGeo(sooryaRaashi1, sooryaAbs1);
+	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1);
+
+	int chandraAbs[] = Arrays.copyOf(swissEphermesisMoon, swissEphermesisMoon.length);
+	chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
+	assertArrayEquals(new int[]{17, 41, 0}, chandraAbs);
+
+	int sooryaAbs[] = Arrays.copyOf(swissEphermesisSun, swissEphermesisSun.length);
 	sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
+	assertArrayEquals(new int[]{112, 39, 28}, sooryaAbs);
 
 	// assertEquals("Padya - 5.271666667 deg have elapsed", Tithi.tithi(chandraAbs, sooryaAbs));
 	assertEquals("Krishna Bahula - Ashtami - 1.025555556 deg have elapsed", Tithi.tithi(chandraAbs, sooryaAbs));
 	// assertEquals(6.728333333, Tithi.remainingDistance);
+	// assertEquals(1.025555555555556, Tithi.remainingDistance);
 	assertEquals(10.974444444444487, Tithi.remainingDistance);
 
+	// daily motion of Chandra
+	int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
+	assertArrayEquals(new int[]{13, 9, 0}, chaMot);
+	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1);
+	assertArrayEquals(new int[]{112, 39, 28}, sooryaAbs);
+	int surMot[] = DegMinSec.minus(sooryaAbs, sooryaAbs1);
+	// assertArrayEquals(new int[]{1, 3, 14}, surMot);
+	assertArrayEquals(new int[]{0, 57, 14}, surMot, "Surmot is " + Arrays.toString(surMot));
+
+	// assertEquals(10.974444444444487, Tithi.end(surMot,chaMot, Tithi.remainingDistance));
+	// assertEquals(21.595954, Tithi.end(surMot,chaMot, Tithi.remainingDistance));
+	var tithiEnd = Tithi.end(surMot,chaMot, Tithi.remainingDistance);
+	assertEquals(20.029404309252296, tithiEnd);
+	var tithiEndArr = DegMinSec.getGeoCoordsFromDegree(tithiEnd);
+	assertArrayEquals(new int[]{20, 1, 46}, tithiEndArr, "tithi End is not " + Arrays.toString(tithiEndArr));
 	// Tithi is  - Padya - 5.271666667 deg have elapsed and remaining distance is 6.728333333.
 	// Tithi ends at [0, 38, 37] from 5:30 IST following day or from 5pm in PST? which is from midnight UT.
 	}

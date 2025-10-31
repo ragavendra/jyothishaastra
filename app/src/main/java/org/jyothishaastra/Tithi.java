@@ -1,5 +1,6 @@
 package org.jyothishaastra;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class Tithi {
@@ -27,10 +28,12 @@ public class Tithi {
 		// ar1 and ar3 are Chandra & Soorya'a Sayaana
 
 		// if Chandra is less than Soorya, add 360 to it
-		if(chandraAbs[0] < sooryaAbs[0])
+		if(chandraAbs[0] < sooryaAbs[0]){
 			chandraAbs[0] = chandraAbs[0] + 360;
+			System.out.printf("Chandra abs %s\n", Arrays.toString(chandraAbs));
+		}
 
-		tithiDeg = DegMinSec.toDegrees(DegMinSec.minus(sooryaAbs, chandraAbs));
+		tithiDeg = DegMinSec.toDegrees(DegMinSec.minusMoreThreeSixty(sooryaAbs, chandraAbs));
         // System.out.printf("Tithi deg is %4.9f\n", tithiDeg);
 
 		// Each Tithi is 12 degrees
@@ -59,13 +62,16 @@ public class Tithi {
 
 	// end time in hours
 	public static double end(int[] surMot, int[] chaMot, double remainingDistance) throws Exception {
-		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
 		/* 
-		   System.out.printf("1 is %4.9f\n", DegMinSec.degrees(chaMot) * 60);
-		   System.out.printf("2 is %4.9f\n", DegMinSec.degrees(surMot) * 60);
+		System.out.printf("chaMot and surMot is %s and %s\n", Arrays.toString(chaMot), Arrays.toString(surMot));
+		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
+		   System.out.printf("1 is %4.9f\n", DegMinSec.toDegrees(chaMot));
+		   // System.out.printf("1 is %4.9f\n", DegMinSec.toMinutes(DegMinSec.toDegreesMoreThreeSixty(chaMot)));
+		   System.out.printf("2 is %4.9f\n", DegMinSec.toDegrees(surMot));
+		   // System.out.printf("2 is %4.9f\n", DegMinSec.toMinutes(DegMinSec.toDegreesMoreThreeSixty(surMot)));
 		   System.out.printf("3 is %4.9f\n", DegMinSec.toMinutes(remainingDistance));
-		   */
 		// endTime = RD/ (DMC - DMS) * 24
-		return (remainingDistance/ (DegMinSec.toDegrees(chaMot) - DegMinSec.toDegrees(surMot) ))  * 24;
+		*/
+		return (DegMinSec.toMinutes(remainingDistance)/ (DegMinSec.toMinutes(DegMinSec.toDegrees(chaMot)) - DegMinSec.toMinutes(DegMinSec.toDegrees(surMot)) ))  * 24;
 	}
 }
