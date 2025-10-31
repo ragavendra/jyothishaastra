@@ -6,6 +6,7 @@ package org.jyothishaastra;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 class NakshatraTest {
@@ -25,14 +26,45 @@ class NakshatraTest {
 	int surRaashi = 4; // Karkaataka
 	int chaRaashi = 1; // Mesha
 
-	int chandraAbs[] = swissEphermesisMoon;
+	int chaRaashi1 = 2; // on 16 July 2009 it is in Vrushabha
+	int chandraAbs1[] = new int[]{ 00, 50, 00 };
+	chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
+	assertArrayEquals(new int[]{30, 50, 0}, chandraAbs1);
+
+	int chandraAbs[] = Arrays.copyOf(swissEphermesisMoon, swissEphermesisMoon.length);
 	chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
+	// Do not use swissEphermesisMoon anymore
 
-	int sooryaAbs[] = swissEphermesisSun;
+	assertArrayEquals(new int[]{17, 41, 0}, chandraAbs);
+
+	int sooryaAbs[] = Arrays.copyOf(swissEphermesisSun, swissEphermesisSun.length);
 	sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
+	// Do not use swissEphermesisSun anymore
 
-	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, chandraAbs));
-	assertEquals("Revathi - 7.023888889 deg have elapsed", Nakshatra.nakshatra(chaNir));
+	assertArrayEquals(new int[]{112, 39, 28}, sooryaAbs);
+	// assertArrayEquals(new int[]{22, 39, 28}, swissEphermesisSun);
+
+	double ayaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
+	System.out.printf("ayaNir %s\n", ayaNir); 
+	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(ayaNir);
+	System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+	String naks = Nakshatra.nakshatra(chaNir);
+	assertEquals("Revathi - 7.023888889 deg have elapsed", naks);
+
+	System.out.printf("res %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance))); 
+	assertArrayEquals(new int[]{6,18,34}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)); // , 34
+
 	assertEquals(6.309444444444466, Nakshatra.remainingDistance);
+	assertArrayEquals(new int[]{6,18,34}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)); // ,8}
+
+	// daily motion of Chandra
+	int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
+	// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
+
+	assertArrayEquals(new int[]{13,9,0}, chaMot); // 13, 9, 0
+	
+	// chaMot = new int[]{13, 9, 0};
+	// assertEquals(0.5713662833353618, Nakshatra.end(chaMot, Nakshatra.remainingDistance));
+	assertArrayEquals(new int[]{11, 30, 55}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))); // , 8}
 	}
 }

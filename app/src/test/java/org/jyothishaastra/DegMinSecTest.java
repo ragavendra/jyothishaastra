@@ -23,5 +23,9 @@ class DegMinSecTest {
 		resExp = new int[]{ 112, 39, 28 };
 		resAct = DegMinSec.minus(ar1, ar2); 
 		assertArrayEquals(resExp, resAct);
+
+		int[] ress = DegMinSec.minus(new int[]{17, 41, 0}, new int[]{112,29,38});
+		// System.out.printf("res %s", Arrays.toString(ress));
+		assertArrayEquals(new int[]{94,48,38}, ress);
     }
 }

@@ -8,13 +8,18 @@ public class DegMinSec {
 	// get in degrees
 	public static double toDegrees(int degree, int minutes, int seconds){
         int abs = Math.abs(degree);
-
+/* 
         if(degree == 0) {
 			// System.out.println("deg is 0");
             degree = 1;
 		}
+*/
+		double res = Math.signum(degree) * (abs + (minutes / 60.0) + (seconds / 3600.0));
 
-		return Math.signum(degree) * (abs + (minutes / 60.0) + (seconds / 3600.0));
+		if(res > 360.0)
+			res = res - 360.0;
+
+		return 	res;
 	}
 
 	public static double toDegrees(int arr[]){
@@ -29,6 +34,16 @@ public class DegMinSec {
 
 	// get in degrees, minutes and seconds, can be used as ar[0]-ar[1]-ar[2]
 	public static int[] getGeoCoordsFromDegree(double resDegrees) {
+/* 
+		boolean flag = false;
+		if(resDegrees < 0.0){
+			flag = true;
+			resDegrees = -1 * resDegrees;
+		}
+*/
+		if(resDegrees < 0.0)
+			resDegrees = 360.0 + resDegrees;
+
 		int d = (int)resDegrees;  // Truncate the decimals
 		double t1 = (resDegrees - d) * 60;
 		int m = (int)t1;
@@ -45,6 +60,11 @@ public class DegMinSec {
 			m = m - 60;
 			System.out.println("In minutes minu loop");
 		}
+/* 
+		if(flag){
+			d = 360 - d;
+		}
+*/
 
 		int ar[] = { d, m, sec};
 
@@ -71,8 +91,8 @@ public class DegMinSec {
 		double d1 = toDegrees(dms1);
 		double d2 = toDegrees(dms2);
 
-		// System.out.println("d1 is " + d1);	
-		// System.out.println("d2 is " + d2);	
+		System.out.println("d1 is " + d1);	
+		System.out.println("d2 is " + d2);	
 		// swap
 		if(d1 > d2){
 			double d = d2;
@@ -81,7 +101,7 @@ public class DegMinSec {
 		}
 
 		double res = d2 - d1;
-		// System.out.println("Sub is " + res);	
+		System.out.println("Sub is " + res);	
 
 		return getGeoCoordsFromDegree(res);
 	}
