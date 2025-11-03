@@ -634,6 +634,7 @@ APP_HOME	gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
 AnnInterf	app/src/main/java/org/learn/learn.java	/^    @interface AnnInterf {$/;"	a	class:Main
 AnotherComp	app/src/main/java/org/learn/learn.java	/^    public int AnotherComp(S per1, S per2);$/;"	m	interface:FirLasComp
 App	app/src/main/java/org/example/App.java	/^public class App {$/;"	c
+App	app/src/main/java/org/jyothishaastra/App.java	/^public class App {$/;"	c
 AppTest	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<h1>AppTest<\/h1>$/;"	h
 AppTest	app/src/test/java/org/example/AppTest.java	/^class AppTest {$/;"	c
 ArraySum	app/src/main/java/org/learn/learn.java	/^    public static int ArraySum(int[] input, int[] ind) {$/;"	m	class:Main
@@ -4645,6 +4646,7 @@ getCheckBox	app/build/reports/tests/test/js/report.js	/^    function getCheckBox
 getClassAttribute	app/build/reports/tests/test/js/report.js	/^    function getClassAttribute(element) {$/;"	f	function:anonymousFunctionfed02dd60100
 getGeoCoordsFromDegree	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] getGeoCoordsFromDegree(double resDegrees) {$/;"	m	class:DegMinSec
 getGreeting	app/src/main/java/org/example/App.java	/^    public String getGreeting() {$/;"	m	class:App
+getGreeting	app/src/main/java/org/jyothishaastra/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getLabelForCheckBox	app/build/reports/tests/test/js/report.js	/^    function getLabelForCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
 getPropName	app/src/main/java/org/learn/learn.java	/^    public String getPropName() {$/;"	m	class:ClassName
 getSequence	app/src/main/java/org/learn/learn.java	/^    static Integer getSequence() {$/;"	m	class:Main
@@ -4709,7 +4711,7 @@ link	app/src/main/java/org/learn/learn.java	/^        public LinkedList<String> 
 list	app/src/main/java/org/learn/learn.java	/^    public List<Integer> list = new LinkedList<Integer>();$/;"	f	class:ProCons2
 lock	app/src/main/java/org/learn/learn.java	/^    private Object lock = new Object();$/;"	f	class:ProCons2	file:
 main	app/src/main/java/org/example/App.java	/^    public static void main(String[] args) {$/;"	m	class:App
-main	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static void main(String ags[]) throws Exception {$/;"	m	class:DegMinSec
+main	app/src/main/java/org/jyothishaastra/App.java	/^	public static void main(String ags[]) throws Exception {$/;"	m	class:App
 main	app/src/main/java/org/learn/learn.java	/^    public static void main(String[] args) {$/;"	m	class:Main
 mainEnd	app/build/scripts/app.bat	/^:mainEnd$/;"	l
 mainEnd	gradlew.bat	/^:mainEnd$/;"	l
@@ -5676,6 +5678,7 @@ org.eclipse.platform	.metadata/version.ini	/^org.eclipse.platform=4.37.0.v202509
 org.example	app/src/main/java/org/example/App.java	/^package org.example;$/;"	p
 org.example	app/src/test/java/org/example/AppTest.java	/^package org.example;$/;"	p
 org.gradle.configuration-cache	gradle.properties	/^org.gradle.configuration-cache=true$/;"	k
+org.jyothishaastra	app/src/main/java/org/jyothishaastra/App.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Karana.java	/^package org.jyothishaastra;$/;"	p

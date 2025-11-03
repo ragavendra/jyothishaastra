@@ -34,7 +34,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.jyothishaastra.DegMinSec"
+    mainClass = "org.jyothishaastra.App"
 }
 
 tasks.named<Test>("test") {
