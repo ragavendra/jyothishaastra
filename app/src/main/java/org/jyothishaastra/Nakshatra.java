@@ -2,7 +2,8 @@ package org.jyothishaastra;
 
 // Need Niraayana and absolute longitudes of Chandra
 public class Nakshatra {
-	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika", "Rohini", "Mrigashira", "Aradra", "Punarvasu", "Pushya", "Ashlesha", "Magha", "Pubha", "Uttara", "Hashta", "Chitta", "Swathi", "Vishakha", "Anuradha", "Jyeshta", "Moola", "Purvashaada", "Uttarashaada", "Shravana", "Dhanishta", "Shathabisha", "Poorvabadha", "Uttarabadha", "Revathi" };
+	// the prefixes are Paadas of 4 in each Raashis otherwise it has all 4 Padas in same Nakshatra
+	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "Aradra", "Punarvasu31", "Pushya", "Ashlesha", "Magha", "Poorva Phalguni Pubha", "Uttara Phalguni13", "Hashta", "Chitta22", "Swathi", "Vishakha31", "Anuradha", "Jyeshta", "Moola", "Purvashaada", "Uttarashaada13", "Shravana", "Dhanishta22", "Shathabisha", "Poorvabadha31", "Uttarabadha", "Revathi" };
 
 	private static int nakshaIndex;
 

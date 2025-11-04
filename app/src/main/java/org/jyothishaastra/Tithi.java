@@ -23,6 +23,7 @@ public class Tithi {
     private static double tithiDeg;
 
 	// raashi no. like Mesha is 1.
+	// Each Tithi is 12 degrees
 	public static String tithi(int chandraAbs[], int sooryaAbs[]) throws Exception {
 		// Thithi = Chandra - Soorya Sayaana or Nirayaana
 		// ar1 and ar3 are Chandra & Soorya'a Sayaana
@@ -63,6 +64,7 @@ public class Tithi {
 	// end time in hours
 	public static double end(int[] surMot, int[] chaMot, double remainingDistance) throws Exception {
 		/* 
+		   (RD/ DMC - DMS) * 24
 		System.out.printf("chaMot and surMot is %s and %s\n", Arrays.toString(chaMot), Arrays.toString(surMot));
 		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
 		   System.out.printf("1 is %4.9f\n", DegMinSec.toDegrees(chaMot));

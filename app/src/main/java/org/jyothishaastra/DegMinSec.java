@@ -22,7 +22,7 @@ public class DegMinSec {
 
 	public static double toDegreesMoreThreeSixty(int degree, int minutes, int seconds){
         if(degree == 0) {
-			// System.out.println("deg is 0");
+			System.out.println("deg is 0");
             degree = 1;
 		}
 		int abs = Math.abs(degree);

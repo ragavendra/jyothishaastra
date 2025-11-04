@@ -5192,7 +5192,7 @@ nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private stati
 nakshaIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshaIndex;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
 nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshatraIndex;$/;"	f	class:Nakshatra	file:
-nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika", "Rohini", "Mrigashira", "Aradr/;"	f	class:Nakshatra
+nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "A/;"	f	class:Nakshatra
 name	app/src/main/java/org/learn/learn.java	/^        String name();$/;"	m	annotation:Main.AnnInterf
 next	app/src/main/java/org/learn/learn.java	/^            public String next() {$/;"	m	class:learn.ImplIter.ImplIterat
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:1

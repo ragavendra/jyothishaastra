@@ -86,7 +86,7 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		/*uncomment when Chandra has moved to next Raashi 
 		*/
 		// ar1[0] = DegMinSec.absGeo(chaRaashi, ar1);
-		chaRaashi = chaRaashi + 1; // since it is moving to next raashi
+		// chaRaashi = chaRaashi + 1; // since it is moving to next raashi
 		swissEphCha2[0] = DegMinSec.absGeo(chaRaashi, swissEphCha2);
 
 		int surMot[] = DegMinSec.minus(swissEphSur1, swissEphSur2);
