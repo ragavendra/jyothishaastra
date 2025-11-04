@@ -62,9 +62,9 @@ class TithiTest {
 	// assertEquals(10.974444444444487, Tithi.end(surMot,chaMot, Tithi.remainingDistance));
 	// assertEquals(21.595954, Tithi.end(surMot,chaMot, Tithi.remainingDistance));
 	var tithiEnd = Tithi.end(surMot,chaMot, Tithi.remainingDistance);
-	assertEquals(20.029404309252296, tithiEnd);
+	assertEquals(21.59595499476162, tithiEnd);
 	var tithiEndArr = DegMinSec.getGeoCoordsFromDegree(tithiEnd);
-	assertArrayEquals(new int[]{20, 1, 46}, tithiEndArr, "tithi End is not " + Arrays.toString(tithiEndArr));
+	assertArrayEquals(new int[]{21, 35, 45}, tithiEndArr, "tithi End is not " + Arrays.toString(tithiEndArr));
 	// Tithi is  - Padya - 5.271666667 deg have elapsed and remaining distance is 6.728333333.
 	// Tithi ends at [0, 38, 37] from 5:30 IST following day or from 5pm in PST? which is from midnight UT.
 	}

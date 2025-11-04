@@ -120,6 +120,12 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		var naksEnd = Nakshatra.end(chaMot, Nakshatra.remainingDistance);
 		System.out.printf("Nakshatra ends at %s %s %s\n", naksEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(naksEnd)), suff);
 		// System.out.printf("Nakshatra ends at %s for Cha mot %s and RD %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))), Arrays.toString(chaMot), Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)));
+
+		String yoga = Yoga.yoga(chaNir, surNir);
+		System.out.printf("Yoga is %s and remaining distance is %4.9f.\n", yoga, Yoga.remainingDistance);
+
+		var yogaEnd = Yoga.end(chaMot, surMot);
+		System.out.printf("Yoga ends at %s %s %s\n", yogaEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaEnd)), suff);
 	}
 
 }

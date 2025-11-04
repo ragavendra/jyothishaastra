@@ -754,6 +754,8 @@ Tests	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTes
 Tithi	app/src/main/java/org/jyothishaastra/Tithi.java	/^public class Tithi {$/;"	c
 TithiTest	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h1>TithiTest<\/h1>$/;"	h
 TithiTest	app/src/test/java/org/jyothishaastra/TithiTest.java	/^class TithiTest {$/;"	c
+Yoga	app/src/main/java/org/jyothishaastra/Yoga.java	/^public class Yoga {$/;"	c
+YogaTest	app/src/test/java/org/jyothishaastra/YogaTest.java	/^class YogaTest {$/;"	c
 a	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 a:visited	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 absGeo	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int absGeo(int raashi, int[] grahaGeo) throws Exception {$/;"	m	class:DegMinSec
@@ -1232,6 +1234,7 @@ activeRc	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  
 activeRc	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "activeRc" : true,$/;"	b	object:2
 add	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] add(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 addClass	app/build/reports/tests/test/js/report.js	/^    function addClass(element, classValue) {$/;"	f	function:anonymousFunctionfed02dd60100
+addMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] addMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 all	app/src/test/java/org/jyothishaastra/IntegrationTest.java	/^    @Test void all() throws Exception {$/;"	m	class:IntegraionTest
 altStr	app/src/main/java/org/learn/learn.java	/^    static String altStr(Integer i) {$/;"	m	class:Main
 anonymousFunctionfed02dd60100	app/build/reports/tests/test/js/report.js	/^(function (window, document) {$/;"	f
@@ -2189,6 +2192,7 @@ buildTime	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^ 
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Karana.java	/^	public static String byWholeDegrees(int[] chandraWholeDeg, int raashi){$/;"	m	class:Karana
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Nakshatra
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String byWholeDegrees(int[] chandraWholeDeg, int raashi){$/;"	m	class:Raashi
+byWholeDegrees	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Yoga
 calc	app/src/main/java/org/learn/learn.java	/^        public int calc(int x, int y);$/;"	m	interface:learn.Sum
 calc	app/src/main/java/org/learn/learn.java	/^    public static <R> R calc(BinaryOperator<R> meth, R p1, R p2) {$/;"	m	class:Main
 calce	app/src/main/java/org/learn/learn.java	/^    public static <R> R calce(Operation<R> meth, R p1, R p2) {$/;"	m	class:Main
@@ -4601,6 +4605,7 @@ duration	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<d
 end	app/build/scripts/app.bat	/^:end$/;"	l
 end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double end(int[] chaMot, double remainingDistance) throws Exception {$/;"	m	class:Nakshatra
 end	app/src/main/java/org/jyothishaastra/Tithi.java	/^	public static double end(int[] surMot, int[] chaMot, double remainingDistance) throws Exception/;"	m	class:Tithi
+end	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static double end(int[] chaMot, int[] surMot) throws Exception {$/;"	m	class:Yoga
 end	gradlew.bat	/^:end$/;"	l
 estimateSize	app/src/main/java/org/learn/learn.java	/^    public long estimateSize() {$/;"	m	class:Spliterator_
 execute	app/build/scripts/app.bat	/^:execute$/;"	l
@@ -5191,6 +5196,7 @@ minusMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	publi
 nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double nakshDeg;$/;"	f	class:Nakshatra	file:
 nakshaIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshaIndex;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
+nakshatra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	void nakshatra() throws Exception {$/;"	m	class:NakshatraTest
 nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshatraIndex;$/;"	f	class:Nakshatra	file:
 nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "A/;"	f	class:Nakshatra
 name	app/src/main/java/org/learn/learn.java	/^        String name();$/;"	m	annotation:Main.AnnInterf
@@ -5685,6 +5691,7 @@ org.jyothishaastra	app/src/main/java/org/jyothishaastra/Karana.java	/^package or
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Raashi.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Tithi.java	/^package org.jyothishaastra;$/;"	p
+org.jyothishaastra	app/src/main/java/org/jyothishaastra/Yoga.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/DegMinSecTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/IntegrationTest.java	/^package org.jyothishaastra;$/;"	p
@@ -5692,6 +5699,7 @@ org.jyothishaastra	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^packag
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/TithiTest.java	/^package org.jyothishaastra;$/;"	p
+org.jyothishaastra	app/src/test/java/org/jyothishaastra/YogaTest.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra.unit	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^package org.jyothishaastra.unit;$/;"	p
 org.learn	app/src/main/java/org/learn/Person.java	/^package org.learn;$/;"	p
 org.learn	app/src/main/java/org/learn/Some.java	/^package org.learn;$/;"	p
@@ -5702,7 +5710,6 @@ propName	app/src/main/java/org/learn/learn.java	/^    private String propName = 
 r	app/src/main/java/org/learn/learn.java	/^    private Random r = new Random(100);$/;"	f	class:ProCons2	file:
 raashi	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String raashi(int chaNirAbs[]) throws Exception {$/;"	m	class:Raashi
 raashi	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^	void raashi() throws Exception {$/;"	m	class:KaranaTest
-raashi	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:NakshatraTest
 raashi	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^	void raashi() throws Exception {$/;"	m	class:RaashiTest
 raashi	app/src/test/java/org/jyothishaastra/TithiTest.java	/^	@Test void raashi() throws Exception {$/;"	m	class:TithiTest
 randSelNames	app/src/main/java/org/learn/learn.java	/^    public static String[] randSelNames(int count, String[] ip, Supplier<Integer> s) {$/;"	m	class:Main
@@ -6654,6 +6661,7 @@ remainingDistance	app/src/main/java/org/jyothishaastra/Karana.java	/^	static dou
 remainingDistance	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double remainingDistance;$/;"	f	class:Nakshatra
 remainingDistance	app/src/main/java/org/jyothishaastra/Raashi.java	/^	static double remainingDistance;$/;"	f	class:Raashi
 remainingDistance	app/src/main/java/org/jyothishaastra/Tithi.java	/^	static double remainingDistance;$/;"	f	class:Tithi
+remainingDistance	app/src/main/java/org/jyothishaastra/Yoga.java	/^	static double remainingDistance;$/;"	f	class:Yoga
 removeClass	app/build/reports/tests/test/js/report.js	/^    function removeClass(element, classValue) {$/;"	f	function:anonymousFunctionfed02dd60100
 select	app/build/reports/tests/test/js/report.js	/^        select(i) {$/;"	m	class:anonymousFunctionfed02dd60100.TabManager
 sequence	app/src/main/java/org/learn/learn.java	/^    private static Integer sequence = 0;$/;"	f	class:Main	file:
@@ -8323,3 +8331,9 @@ wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-1/;"	s	object:5
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-2/;"	s	object:4
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-rc-1-wrappe/;"	s	object:2
+yoga	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static String yoga(int chaNirAbs[], int surNirAbs[]) throws Exception {$/;"	m	class:Yoga
+yoga	app/src/test/java/org/jyothishaastra/YogaTest.java	/^	void yoga() throws Exception {$/;"	m	class:YogaTest
+yogaDeg	app/src/main/java/org/jyothishaastra/Yoga.java	/^    private static double yogaDeg;$/;"	f	class:Yoga	file:
+yogaIndex	app/src/main/java/org/jyothishaastra/Yoga.java	/^	private static int yogaIndex;$/;"	f	class:Yoga	file:
+yoga_Index	app/src/main/java/org/jyothishaastra/Yoga.java	/^	private static int yoga_Index;$/;"	f	class:Yoga	file:
+yogas	app/src/main/java/org/jyothishaastra/Yoga.java	/^	static String yogas[] = { "Vishkambha", "Priti", "Ayushman", "Soubhagya", "Sobhana", "Atiganda"/;"	f	class:Yoga
