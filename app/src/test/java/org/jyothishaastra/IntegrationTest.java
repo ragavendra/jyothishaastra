@@ -41,7 +41,7 @@ class IntegraionTest {
 
 		assertEquals(208, sooryaAbs[0]);
 		assertEquals(214, chandraAbs[0]);
-		System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", Tithi.tithi(chandraAbs, sooryaAbs), Tithi.remainingDistance);
+		// System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", Tithi.tithi(chandraAbs, sooryaAbs), Tithi.remainingDistance);
 
 				/*uncomment when Chandra has moved to next Raashi 
 		  ar1[0] = DegMinSec.absGeo(chaRaashi, ar1);

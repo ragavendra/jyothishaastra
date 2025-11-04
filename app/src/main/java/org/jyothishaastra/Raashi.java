@@ -21,7 +21,7 @@ public class Raashi {
 	public static String raashi(int chaNirAbs[]) throws Exception {
 
 		chaDeg = DegMinSec.toDegrees(chaNirAbs);
-        System.out.printf("Chandra deg is %4.9f\n", chaDeg);
+        // System.out.printf("Chandra deg is %4.9f\n", chaDeg);
 
 		if(chaDeg > 360)
 			chaDeg = chaDeg - 360;

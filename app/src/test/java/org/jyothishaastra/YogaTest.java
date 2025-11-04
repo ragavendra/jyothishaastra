@@ -53,12 +53,12 @@ class YogaTest {
 	double ayaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
 	// System.out.printf("ayaNir %s\n", ayaNir); 
 	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(ayaNir);
-	System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+	assertArrayEquals(new int[]{353, 41, 26}, chaNir, "chaNir is " + Arrays.toString(chaNir)); // ,8}
 
-	int surNir[] = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, sooryaAbs));
-	System.out.printf("surNir %s\n", Arrays.toString(surNir)); 
+	int soorNir[] = DegMinSec.getGeoCoordsFromDegree(Ayanaamsha.nirayaana(ayanamsha, sooryaAbs));
+	assertArrayEquals(new int[]{88, 39, 54}, soorNir, "soorNir is " + Arrays.toString(soorNir)); // ,8}
 
-	String yoga = Yoga.yoga(chaNir, surNir);
+	String yoga = Yoga.yoga(chaNir, soorNir);
 	assertEquals("Sukarma - 2.355555556 deg have elapsed", yoga);
 
 	assertEquals(10.977777777777789, Yoga.remainingDistance); // , 34

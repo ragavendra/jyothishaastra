@@ -22,7 +22,7 @@ public class Yoga {
 	public static String yoga(int chaNirAbs[], int surNirAbs[]) throws Exception {
 
 		yogaDeg = DegMinSec.toDegrees(DegMinSec.addMoreThreeSixty(chaNirAbs, surNirAbs));
-        System.out.printf("Yoga deg is %4.9f\n", yogaDeg);
+        // System.out.printf("Yoga deg is %4.9f\n", yogaDeg);
 
 		if(yogaDeg > 360)
 			yogaDeg = yogaDeg - 360;
@@ -34,7 +34,7 @@ public class Yoga {
 		// Each Yoga is 27 degrees
 		// yoga_Index = (int) ( yogaDeg / yogaSectorSize );
 		double yoga_Index_d = ( yogaDeg / yogaSectorSize );
-		System.out.println("Yoga elapsed " + yoga_Index_d);
+		// System.out.println("Yoga elapsed " + yoga_Index_d);
 
 		yoga_Index = (int) yoga_Index_d;
 
@@ -60,7 +60,7 @@ if(remainingDistance == 0.0)
 		*/
 		// return (remainingDistance/ DegMinSec.toDegrees(chaMot) + DegMinSec.toDegrees(surMot))  * 24;
 		double sum = DegMinSec.toDegrees(DegMinSec.add(chaMot, surMot));
-		System.out.printf("Sum is %4.9f", sum);
+		// System.out.printf("Sum is %4.9f", sum);
 		return (remainingDistance / sum)  * 24;
 	}
 

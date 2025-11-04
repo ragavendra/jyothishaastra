@@ -91,7 +91,7 @@ public class DegMinSec {
 		double d2 = toDegrees(dms2);
 
 		double res = d1 + d2;
-		System.out.println("Add is " + res);	
+		// System.out.println("Add is " + res);	
 
 		// if more than 360 subtract it from 360
 		if(res > 360)
