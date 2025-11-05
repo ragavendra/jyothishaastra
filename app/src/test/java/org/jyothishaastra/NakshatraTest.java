@@ -52,6 +52,8 @@ class NakshatraTest {
 	// System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
 	String naks = Nakshatra.nakshatra(chaNir);
 	assertEquals("Revathi - 7.023888889 deg have elapsed", naks);
+	assertEquals(26, Nakshatra.nakshatraIndex);
+	assertArrayEquals(new int[]{7,1,26}, Nakshatra.getElapsed(), "Elapsed is not " + Arrays.toString(Nakshatra.getElapsed())); // 13, 9, 0
 
 	// System.out.printf("res %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance))); 
 	assertArrayEquals(new int[]{6,18,34}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)); // , 34

@@ -1237,6 +1237,11 @@ addClass	app/build/reports/tests/test/js/report.js	/^    function addClass(eleme
 addMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] addMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 all	app/src/test/java/org/jyothishaastra/IntegrationTest.java	/^    @Test void all() throws Exception {$/;"	m	class:IntegraionTest
 altStr	app/src/main/java/org/learn/learn.java	/^    static String altStr(Integer i) {$/;"	m	class:Main
+amrutha	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int[] amrutha(Calendar date){$/;"	m	class:Nakshatra
+amrutha	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,1/;"	f	class:Nakshatra
+amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public double amruthaEnd(){$/;"	m	class:Nakshatra
+amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public Calendar amruthaStart(){$/;"	m	class:Nakshatra
+amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar amruthaStart;$/;"	f	class:Nakshatra
 anonymousFunctionfed02dd60100	app/build/reports/tests/test/js/report.js	/^(function (window, document) {$/;"	f
 appHasAGreeting	app/src/test/java/org/example/AppTest.java	/^    @Test void appHasAGreeting() {$/;"	m	class:AppTest
 apply	app/src/main/java/org/learn/learn.java	/^        public Integer apply(Integer d);$/;"	m	interface:learn.Funct
@@ -4602,11 +4607,15 @@ duration	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="dura
 duration	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="duration">$/;"	I
+elapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static double elapsed;$/;"	f	class:Nakshatra
+elapsedArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static int[] elapsedArr;$/;"	f	class:Nakshatra
 end	app/build/scripts/app.bat	/^:end$/;"	l
 end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double end(int[] chaMot, double remainingDistance) throws Exception {$/;"	m	class:Nakshatra
+end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double end;$/;"	f	class:Nakshatra	file:
 end	app/src/main/java/org/jyothishaastra/Tithi.java	/^	public static double end(int[] surMot, int[] chaMot, double remainingDistance) throws Exception/;"	m	class:Tithi
 end	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static double end(int[] chaMot, int[] surMot) throws Exception {$/;"	m	class:Yoga
 end	gradlew.bat	/^:end$/;"	l
+endArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static int[] endArr;$/;"	f	class:Nakshatra	file:
 estimateSize	app/src/main/java/org/learn/learn.java	/^    public long estimateSize() {$/;"	m	class:Spliterator_
 execute	app/build/scripts/app.bat	/^:execute$/;"	l
 execute	gradlew.bat	/^:execute$/;"	l
@@ -4649,10 +4658,13 @@ forAllCodeBlocks	app/build/reports/tests/test/js/report.js	/^    function forAll
 get	app/src/main/java/org/learn/learn.java	/^        default Integer get() {$/;"	m	interface:learn.Pro
 getCheckBox	app/build/reports/tests/test/js/report.js	/^    function getCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
 getClassAttribute	app/build/reports/tests/test/js/report.js	/^    function getClassAttribute(element) {$/;"	f	function:anonymousFunctionfed02dd60100
+getDuration	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double getDuration(){$/;"	m	class:Nakshatra
+getElapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int[] getElapsed(){$/;"	m	class:Nakshatra
 getGeoCoordsFromDegree	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] getGeoCoordsFromDegree(double resDegrees) {$/;"	m	class:DegMinSec
 getGreeting	app/src/main/java/org/example/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getGreeting	app/src/main/java/org/jyothishaastra/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getLabelForCheckBox	app/build/reports/tests/test/js/report.js	/^    function getLabelForCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
+getNakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar getNakshatraEnd(){$/;"	m	class:Nakshatra
 getPropName	app/src/main/java/org/learn/learn.java	/^    public String getPropName() {$/;"	m	class:ClassName
 getSequence	app/src/main/java/org/learn/learn.java	/^    static Integer getSequence() {$/;"	m	class:Main
 getTabContainers	app/build/reports/tests/test/js/report.js	/^    function getTabContainers() {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -5193,11 +5205,14 @@ milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	
 milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "milestoneFor" : "9.2.0",$/;"	s	object:5
 minus	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] minus(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 minusMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] minusMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
+naksDuration	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double naksDuration;$/;"	f	class:Nakshatra
 nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double nakshDeg;$/;"	f	class:Nakshatra	file:
 nakshaIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshaIndex;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
 nakshatra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	void nakshatra() throws Exception {$/;"	m	class:NakshatraTest
-nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshatraIndex;$/;"	f	class:Nakshatra	file:
+nakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar nakshatraEnd;$/;"	f	class:Nakshatra
+nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int nakshatraIndex;$/;"	f	class:Nakshatra
+nakshatraStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar nakshatraStart;$/;"	f	class:Nakshatra
 nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "A/;"	f	class:Nakshatra
 name	app/src/main/java/org/learn/learn.java	/^        String name();$/;"	m	annotation:Main.AnnInterf
 next	app/src/main/java/org/learn/learn.java	/^            public String next() {$/;"	m	class:learn.ImplIter.ImplIterat
