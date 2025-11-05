@@ -3,8 +3,10 @@
  */
 package org.jyothishaastra;
 
+import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.TimeZone;
 
 public class App {
     public String getGreeting() {
@@ -16,8 +18,6 @@ public class App {
 	   java jyotishaastra/DegMinSec.java
 	   */
 	public static void main(String ags[]) throws Exception {
-
-        System.out.println(new App().getGreeting());
 
 		// Mesha is 1
 		//  for 22nd Oct
@@ -33,7 +33,9 @@ public class App {
 
 		// India Ephemersis doesnt have Ayanamsha
 		Calendar date = Calendar.getInstance();
-		date.set(2025, 9, 22); 
+		date.setTimeZone(TimeZone.getTimeZone("UT"));
+		date.set(2025, 9, 22, 0, 0, 0); 
+        System.out.println(new App().getGreeting() + " at " + date.toInstant());
 
 		/*
 
@@ -115,6 +117,8 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 
 		// System.out.printf("Raashi ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Raashi.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 		System.out.printf("Nakshatra is %s and remaining distance is %4.9f.\n", Nakshatra.nakshatra(chaNir), Nakshatra.remainingDistance);
+
+		System.out.printf("Nakshatra start is %s in UT.\n", Nakshatra.start(date).toInstant());
 
 		// "Nakshatra ends at %s from 5:30 IST or minus from 5pm in PST?\n"
 		var naksEnd = Nakshatra.end(chaMot, Nakshatra.remainingDistance);

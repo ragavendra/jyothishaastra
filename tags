@@ -1237,10 +1237,11 @@ addClass	app/build/reports/tests/test/js/report.js	/^    function addClass(eleme
 addMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] addMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 all	app/src/test/java/org/jyothishaastra/IntegrationTest.java	/^    @Test void all() throws Exception {$/;"	m	class:IntegraionTest
 altStr	app/src/main/java/org/learn/learn.java	/^    static String altStr(Integer i) {$/;"	m	class:Main
-amrutha	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int[] amrutha(Calendar date){$/;"	m	class:Nakshatra
 amrutha	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,1/;"	f	class:Nakshatra
-amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public double amruthaEnd(){$/;"	m	class:Nakshatra
-amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public Calendar amruthaStart(){$/;"	m	class:Nakshatra
+amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruthaEnd(){$/;"	m	class:Nakshatra
+amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar amruthaEnd;$/;"	f	class:Nakshatra
+amruthaEnd_	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double amruthaEnd_(){$/;"	m	class:Nakshatra
+amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruthaStart(){$/;"	m	class:Nakshatra
 amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar amruthaStart;$/;"	f	class:Nakshatra
 anonymousFunctionfed02dd60100	app/build/reports/tests/test/js/report.js	/^(function (window, document) {$/;"	f
 appHasAGreeting	app/src/test/java/org/example/AppTest.java	/^    @Test void appHasAGreeting() {$/;"	m	class:AppTest
@@ -4658,13 +4659,11 @@ forAllCodeBlocks	app/build/reports/tests/test/js/report.js	/^    function forAll
 get	app/src/main/java/org/learn/learn.java	/^        default Integer get() {$/;"	m	interface:learn.Pro
 getCheckBox	app/build/reports/tests/test/js/report.js	/^    function getCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
 getClassAttribute	app/build/reports/tests/test/js/report.js	/^    function getClassAttribute(element) {$/;"	f	function:anonymousFunctionfed02dd60100
-getDuration	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double getDuration(){$/;"	m	class:Nakshatra
-getElapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int[] getElapsed(){$/;"	m	class:Nakshatra
 getGeoCoordsFromDegree	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] getGeoCoordsFromDegree(double resDegrees) {$/;"	m	class:DegMinSec
 getGreeting	app/src/main/java/org/example/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getGreeting	app/src/main/java/org/jyothishaastra/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getLabelForCheckBox	app/build/reports/tests/test/js/report.js	/^    function getLabelForCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
-getNakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar getNakshatraEnd(){$/;"	m	class:Nakshatra
+getNakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar getNakshatraEnd(Calendar date){$/;"	m	class:Nakshatra
 getPropName	app/src/main/java/org/learn/learn.java	/^    public String getPropName() {$/;"	m	class:ClassName
 getSequence	app/src/main/java/org/learn/learn.java	/^    static Integer getSequence() {$/;"	m	class:Main
 getTabContainers	app/build/reports/tests/test/js/report.js	/^    function getTabContainers() {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -4675,6 +4674,7 @@ h2	app/build/reports/tests/test/css/base-style.css	/^h2 {$/;"	s
 h3	app/build/reports/tests/test/css/base-style.css	/^h1, h2, h3 {$/;"	s
 hasNext	app/src/main/java/org/learn/learn.java	/^            public boolean hasNext() {$/;"	m	class:learn.ImplIter.ImplIterat
 headers	app/build/reports/tests/test/js/report.js	/^        headers;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
+hrMnInDec	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static double hrMnInDec(Calendar date){$/;"	m	class:Nakshatra	file:
 ignored	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="ignored">$/;"	I
@@ -7157,6 +7157,8 @@ someVar	app/src/main/java/org/learn/learn.java	/^        static String someVar;$
 span.code	app/build/reports/tests/test/css/base-style.css	/^span.code {$/;"	c
 span.code pre	app/build/reports/tests/test/css/base-style.css	/^span.code pre {$/;"	s
 span.wrapped pre	app/build/reports/tests/test/css/base-style.css	/^span.wrapped pre {$/;"	s
+start	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar start(Calendar date){$/;"	m	class:Nakshatra
+staticdoublevarjya	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double staticdoublevarjya[]= {20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5./;"	f	class:Nakshatra
 successRate	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
