@@ -79,22 +79,30 @@ class NakshatraTest {
 	// assertEquals(0.5713662833353618, Nakshatra.end(chaMot, Nakshatra.remainingDistance));
 	assertArrayEquals(new int[]{11, 30, 55}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))); // , 8}
 
-	var naksStart = Nakshatra.start(date);
+	Calendar naksStart = Nakshatra.start(date);
 	System.out.printf("Nakshatra start is %s in IST.\n", naksStart.toInstant());
 	// assertEquals(1247590714l, naksStart.getTimeInMillis()/1000, "Nakshatra start is " + naksStart.getTimeInMillis());
 	assertEquals(1247610514l, naksStart.getTimeInMillis()/1000, "Nakshatra start is " + naksStart.getTimeInMillis());
-	var naksEnd = Nakshatra.getNakshatraEnd(date);
+	Calendar naksEnd = Nakshatra.getNakshatraEnd(date);
 	
 	assertEquals(1247677255l, naksEnd.getTimeInMillis()/1000);
 	System.out.printf("Nakshatra end is %s in IST\n", naksEnd.toInstant());
 
-	Calendar amrSta = Nakshatra.amruthaStart();
+	Calendar amrSta = Nakshatra.amruVarjStart(true);
 	assertEquals(1247673694l, amrSta.getTimeInMillis()/1000);
 	System.out.printf("Amrutha start is %s in IST.\n", amrSta.toInstant());
 
-	Calendar amrEnd = Nakshatra.amruthaEnd();
+	Calendar amrEnd = Nakshatra.amruVarjEnd(true);
 	assertEquals(1247678674l, amrEnd.getTimeInMillis()/1000);
 	System.out.printf("Amrutha end is %s in IST.\n", amrEnd.toInstant());
+	
+	Calendar varjSta = Nakshatra.amruVarjStart(false);
+	assertEquals(1247681374l, varjSta.getTimeInMillis()/1000);
+	System.out.printf("Varjya start is %s in IST.\n", varjSta.toInstant());
+
+	Calendar varjEnd = Nakshatra.amruVarjEnd(false);
+	assertEquals(1247686354l, varjEnd.getTimeInMillis()/1000);
+	System.out.printf("Varjya end is %s in IST.\n", varjEnd.toInstant());
 	}
 }
 

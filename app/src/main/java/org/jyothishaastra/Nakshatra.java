@@ -10,9 +10,9 @@ public class Nakshatra {
 	// the prefixes are Paadas of 4 in each Raashis otherwise it has all 4 Padas in same Nakshatra
 	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "Aradra", "Punarvasu31", "Pushya", "Ashlesha", "Magha", "Poorva Phalguni Pubha", "Uttara Phalguni13", "Hashta", "Chitta22", "Swathi", "Vishakha31", "Anuradha", "Jyeshta", "Moola", "Purvashaada", "Uttarashaada13", "Shravana", "Dhanishta22", "Shathabisha", "Poorvapaada31", "Uttarapaada", "Revathi" };
 
-	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,15.2,15.2,13.6,15.2,17.6,19.2,17.6,13.6,13.6,16.8,16,19.2,21.6};
+	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,15.2,15.2,13.6,15.2,17.6,19.2,17.6,13.6,13.6,16.8,16,19.2,21.6 };
 
-	static double staticdoublevarjya[]= {20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8,22.4, 9.6,8,4,4,7.2,6.4,9.6,12};
+	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8,22.4, 9.6,8,4,4,7.2,6.4,9.6,12 };
 
 	private static int nakshaIndex;
 
@@ -30,7 +30,9 @@ public class Nakshatra {
     public static int[] elapsedArr;
 	static Calendar nakshatraStart;
 	static Calendar amruthaStart;
+	static Calendar varjyaStart;
 	static Calendar amruthaEnd;
+	static Calendar varjyaEnd;
 	static Calendar nakshatraEnd;
 	static double naksDuration;
     private static double end;
@@ -61,31 +63,38 @@ public class Nakshatra {
 	}
 
 	// in hours
-	public static Calendar amruthaEnd(){
+	public static Calendar amruVarjEnd(boolean amrutha){
 		// duration of Naks * 1.6/24;
 		double amrEnd = naksDuration * 1.6/24;
-		amruthaEnd = (Calendar) amruthaStart.clone();
+
+		Calendar amruVarjEnd;
+
+		if(amrutha)
+			amruVarjEnd = (Calendar) amruthaStart.clone();
+		else
+			amruVarjEnd = (Calendar) varjyaStart.clone();
+
 		// System.out.printf("amrEnd is %s\n", amrEnd);	
 		if(amrEnd > 24.0){
-			amruthaEnd.add(Calendar.DATE, 1);
+			amruVarjEnd.add(Calendar.DATE, 1);
 			amrEnd = amrEnd - 24.0;
 		}
 
 		if(amrEnd >= 1){
 			int no = (int) amrEnd;
-			amruthaEnd.add(Calendar.HOUR_OF_DAY, no);
+			amruVarjEnd.add(Calendar.HOUR_OF_DAY, no);
 			amrEnd = amrEnd - no; 
 		}
 
-		amruthaEnd.add(Calendar.MINUTE, (int) (amrEnd * 100));
+		amruVarjEnd.add(Calendar.MINUTE, (int) (amrEnd * 100));
 
-		return amruthaEnd;
-	}
+		// copy to class var
+		if(amrutha)
+			amruthaEnd = (Calendar) amruVarjEnd.clone();
+		else
+			varjyaEnd = (Calendar) amruVarjEnd.clone();
 
-	// in hours
-	public static double amruthaEnd_(){
-		// duration of Naks * 1.6/24;
-		return naksDuration * 1.6/24;
+		return amruVarjEnd;
 	}
 
 	private static double hrMnInDec(Calendar date){
@@ -95,9 +104,15 @@ public class Nakshatra {
 		return res;
 	}
 
-	public static Calendar amruthaStart(){
+	// only diff bw amru and varj start and end is the X value
+	public static Calendar amruVarjStart(boolean amrutha_){
 		// start time of Naks + X/24 * durationOfNakshatra;
-		double X = amrutha[nakshaIndex];
+		double X;
+
+		if(amrutha_)
+			X = amrutha[nakshaIndex];
+		else
+			X = varjya[nakshaIndex];
 
 		// get only hours:mm:ss in say decimal to use the formula
 		int daysDiff = nakshatraEnd.get(Calendar.DATE) - nakshatraStart.get(Calendar.DATE);
@@ -111,26 +126,34 @@ public class Nakshatra {
 		naksDuration = endInDec - staInDec;
 		// System.out.printf("Naks duration is %s\n", naksDuration);	
 
-		double amrutha = staInDec + X/24 * naksDuration;
+		double amruVarj = staInDec + X/24 * naksDuration;
 
-		amruthaStart = (Calendar) nakshatraStart.clone();
+		Calendar amruVarjStart = (Calendar) nakshatraStart.clone();
 
-		if(amrutha > 24.0) {
-			amruthaStart.add(Calendar.DATE, 1);
-			amrutha = amrutha - 24.0;
+		if(amruVarj > 24.0) {
+			amruVarjStart.add(Calendar.DATE, 1);
+			amruVarj = amruVarj - 24.0;
 		}
 
-		if(amrutha >= 1){
-			int no = (int) amrutha;
-			amruthaStart.add(Calendar.HOUR_OF_DAY, no);
-			amrutha = amrutha - no;
+		if(amruVarj >= 1){
+			int no = (int) amruVarj;
+			amruVarjStart.add(Calendar.HOUR_OF_DAY, no);
+			amruVarj = amruVarj - no;
 		}
 
-		amruthaStart.add(Calendar.MINUTE, (int) (amrutha * 100));
+		amruVarjStart.add(Calendar.MINUTE, (int) (amruVarj * 100));
 
-		return amruthaStart;
+		// copy to class var
+		if(amrutha_)
+			amruthaStart = (Calendar) amruVarjStart.clone();
+		else
+			varjyaStart = (Calendar) amruVarjStart.clone();
+
+
+		return amruVarjStart;
 	}
 
+	// get end in Cal type
 	public static Calendar getNakshatraEnd(Calendar date){
 		nakshatraEnd = (Calendar) date.clone();
 		nakshatraEnd.add(Calendar.HOUR_OF_DAY, endArr[0]);
@@ -139,6 +162,7 @@ public class Nakshatra {
 		return nakshatraEnd;
 	}
 
+	// subtract the elapsed for the given date
 	public static Calendar start(Calendar date){
 		// elapsed - 00:00 UT - is this the end time of the previous Nakshatra as well?
 		nakshatraStart = (Calendar) date.clone();
@@ -150,7 +174,7 @@ public class Nakshatra {
 		return nakshatraStart;
 	}
 
-	// end time in hours
+	// end time in hours using the formula
 	public static double end(int[] chaMot, double remainingDistance) throws Exception {
 		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
 		/* 

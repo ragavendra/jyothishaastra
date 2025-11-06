@@ -1237,11 +1237,10 @@ addClass	app/build/reports/tests/test/js/report.js	/^    function addClass(eleme
 addMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] addMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 all	app/src/test/java/org/jyothishaastra/IntegrationTest.java	/^    @Test void all() throws Exception {$/;"	m	class:IntegraionTest
 altStr	app/src/main/java/org/learn/learn.java	/^    static String altStr(Integer i) {$/;"	m	class:Main
+amruVarjEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruVarjEnd(boolean amrutha){$/;"	m	class:Nakshatra
+amruVarjStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruVarjStart(boolean amrutha_){$/;"	m	class:Nakshatra
 amrutha	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,1/;"	f	class:Nakshatra
-amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruthaEnd(){$/;"	m	class:Nakshatra
 amruthaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar amruthaEnd;$/;"	f	class:Nakshatra
-amruthaEnd_	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double amruthaEnd_(){$/;"	m	class:Nakshatra
-amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar amruthaStart(){$/;"	m	class:Nakshatra
 amruthaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar amruthaStart;$/;"	f	class:Nakshatra
 anonymousFunctionfed02dd60100	app/build/reports/tests/test/js/report.js	/^(function (window, document) {$/;"	f
 appHasAGreeting	app/src/test/java/org/example/AppTest.java	/^    @Test void appHasAGreeting() {$/;"	m	class:AppTest
@@ -7158,7 +7157,6 @@ span.code	app/build/reports/tests/test/css/base-style.css	/^span.code {$/;"	c
 span.code pre	app/build/reports/tests/test/css/base-style.css	/^span.code pre {$/;"	s
 span.wrapped pre	app/build/reports/tests/test/css/base-style.css	/^span.wrapped pre {$/;"	s
 start	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar start(Calendar date){$/;"	m	class:Nakshatra
-staticdoublevarjya	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double staticdoublevarjya[]= {20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5./;"	f	class:Nakshatra
 successRate	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
@@ -7231,6 +7229,9 @@ ul.tabLinks li.selected	app/build/reports/tests/test/css/base-style.css	/^ul.tab
 ul.tabLinks li:hover	app/build/reports/tests/test/css/base-style.css	/^ul.tabLinks li:hover {$/;"	s
 useThr	app/src/main/java/org/learn/learn.java	/^    public void useThr() {$/;"	m	class:learn
 var	app/src/main/java/org/learn/learn.java	/^    public static void var(String par) {$/;"	m	class:learn
+varjya	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8,22.4, /;"	f	class:Nakshatra
+varjyaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar varjyaEnd;$/;"	f	class:Nakshatra
+varjyaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar varjyaStart;$/;"	f	class:Nakshatra
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.7",$/;"	s	object:470
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.8",$/;"	s	object:469
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.9",$/;"	s	object:465
