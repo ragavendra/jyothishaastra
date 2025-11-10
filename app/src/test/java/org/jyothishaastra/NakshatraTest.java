@@ -4,6 +4,8 @@
 package org.jyothishaastra;
 
 import org.junit.jupiter.api.Test;
+import org.jyothishaastra.Kaalas.Kaala;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
@@ -120,7 +122,21 @@ class NakshatraTest {
 	date1.set(Calendar.HOUR_OF_DAY, 0);
 
 	System.out.println("Caclculating for date " + date1.getTime());
-	org.jyothishaastra.Sunrise.calc(date1, latitude, longitude, "");
+	Sunrise.calc(date1, latitude, longitude, "");
+	int srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
+	int srMin = Sunrise.sunrise.get(Calendar.MINUTE);
+
+	int ssHour = Sunrise.sunset.get(Calendar.HOUR_OF_DAY);
+	int ssMin = Sunrise.sunset.get(Calendar.MINUTE);
+
+	int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK);
+	int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Raahu);
+	System.out.printf("Raahu kaala starts at %s\n", Arrays.toString(raahu));
+	int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Guli);
+	System.out.printf("Guli kaala starts at %s\n", Arrays.toString(guli));
+	int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Yama);
+	System.out.printf("Yama kaala starts at %s\n", Arrays.toString(yama));
+	System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Kaalas.duration)));
 	}
 }
 
