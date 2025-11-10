@@ -42,7 +42,7 @@ public class Sunrise {
 		// System.out.printf("Equation of the center C       = %8.9f\n", C_degrees);
 
 		// # Ecliptic longitude
-		var L_degrees = (M_degrees + C_degrees + 180.0 + 102.9372)% 360;
+		var L_degrees = (M_degrees + C_degrees + 180.0 + 102.9372)% 360.0;
 		// System.out.printf("Ecliptic longitude     L       = %8.9f\n", L_degrees);
 
 		var Lambda_radians = L_degrees * toRads;
@@ -65,6 +65,8 @@ public class Sunrise {
 
 		double toDegrees = (7.0/22.0) * 180.0;
 		var w0_degrees = w0_radians * toDegrees;  //  0...180
+		// System.out.printf("Hour angle             w0      = %8.9f\n", w0_degrees);
+
 		var j_rise = J_transit - w0_degrees / 360.0;
 		var j_set = J_transit + w0_degrees / 360.0;
 
@@ -77,6 +79,6 @@ public class Sunrise {
 		var ssT = Calendar.getInstance();
 		ssT.setTimeInMillis((long) ss * 1000);
 		System.out.printf("Sunset at: %s\n", ssT.getTime());
-		System.out.printf("Day length: %s hours\n", w0_degrees / (180 / 24));
+		System.out.printf("Day length: %s hours\n", w0_degrees / (180.0 / 24.0));
 	}
 }

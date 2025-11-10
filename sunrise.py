@@ -109,6 +109,7 @@ def calc(
         return None, None, some_cos > 0.0
     w0_degrees = degrees(w0_radians)  # 0...180
 
+    log.debug(f"Hour angle             w0      = {(w0_degrees)}")
     log.debug(f"Hour angle             w0      = {_deg2human(w0_degrees)}")
 
     j_rise = J_transit - w0_degrees / 360
