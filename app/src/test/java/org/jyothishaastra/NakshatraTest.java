@@ -116,7 +116,8 @@ class NakshatraTest {
 	*/
 
 	Calendar date1 = Calendar.getInstance();
-	date1.set(Calendar.DATE, 26);
+	// date1.set(Calendar.DATE, 26);
+	date1.set(2009, 6, 15, 0, 0, 0); // for 15 July 2009
 
 	// try setting hours to 00 to avoid issues
 	date1.set(Calendar.HOUR_OF_DAY, 0);
@@ -129,14 +130,17 @@ class NakshatraTest {
 	int ssHour = Sunrise.sunset.get(Calendar.HOUR_OF_DAY);
 	int ssMin = Sunrise.sunset.get(Calendar.MINUTE);
 
-	int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK);
-	int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Raahu);
+	int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
+	System.out.printf("Day of week is %d\n", weekday);
+	int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Raahu);
 	System.out.printf("Raahu kaala starts at %s\n", Arrays.toString(raahu));
-	int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Guli);
+	int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Guli);
 	System.out.printf("Guli kaala starts at %s\n", Arrays.toString(guli));
-	int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, 6, Kaala.Yama);
+	int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Yama);
 	System.out.printf("Yama kaala starts at %s\n", Arrays.toString(yama));
 	System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Kaalas.duration)));
+
+	Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
 	}
 }
 
