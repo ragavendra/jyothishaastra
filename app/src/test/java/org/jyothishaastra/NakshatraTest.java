@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.TimeZone;
+// import com.luckycatlabs.sunrisesunset.SunriseSunsetCalculator;
 
 class NakshatraTest {
 
@@ -103,6 +104,21 @@ class NakshatraTest {
 	Calendar varjEnd = Nakshatra.amruVarjEnd(false);
 	assertEquals(1247686354l, varjEnd.getTimeInMillis()/1000);
 	System.out.printf("Varjya end is %s in IST.\n", varjEnd.toInstant());
+
+    double latitude = 49.202347531821296;
+    double longitude = -122.91647403420454;
+	/* 
+	Calendar[] sunriseSunset = ca.rmen.sunrisesunset.SunriseSunset.getSunriseSunset(Calendar.getInstance(), latitude, longitude);
+	System.out.println("Sunrise at: " + sunriseSunset[0].getTime());
+	System.out.println("Sunset at: " + sunriseSunset[1].getTime());
+	*/
+
+	Calendar date1 = Calendar.getInstance();
+	date1.set(Calendar.DATE, 26);
+	date1.set(Calendar.HOUR_OF_DAY, 0);
+
+	System.out.println("Caclculating for date " + date1.getTime());
+	org.jyothishaastra.Sunrise.calc(date1, latitude, longitude, "");
 	}
 }
 

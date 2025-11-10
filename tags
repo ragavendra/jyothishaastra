@@ -8,6 +8,7 @@
 !_TAG_FIELD_DESCRIPTION	name	/tag name/
 !_TAG_FIELD_DESCRIPTION	pattern	/pattern/
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
+!_TAG_FIELD_DESCRIPTION!Python	nameref	/the original name for the tag/
 !_TAG_FIELD_DESCRIPTION!XML	uri	/uri associated with name prefix/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
@@ -72,6 +73,13 @@
 !_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
 !_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
+!_TAG_KIND_DESCRIPTION!Python	I,namespace	/name referring a module defined in other file/
+!_TAG_KIND_DESCRIPTION!Python	Y,unknown	/name referring a class\/variable\/function\/module defined in other module/
+!_TAG_KIND_DESCRIPTION!Python	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!Python	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!Python	i,module	/modules/
+!_TAG_KIND_DESCRIPTION!Python	m,member	/class members/
+!_TAG_KIND_DESCRIPTION!Python	v,variable	/variables/
 !_TAG_KIND_DESCRIPTION!Sh	a,alias	/aliases/
 !_TAG_KIND_DESCRIPTION!Sh	f,function	/functions/
 !_TAG_KIND_DESCRIPTION!Sh	h,heredoc	/label for here document/
@@ -94,6 +102,7 @@
 !_TAG_PARSER_VERSION!JavaScript	1.1	/current.age/
 !_TAG_PARSER_VERSION!Kotlin	0.0	/current.age/
 !_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
+!_TAG_PARSER_VERSION!Python	1.1	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PARSER_VERSION!XML	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
@@ -101,13 +110,20 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	6.2.0	/v6.2.0/
+!_TAG_PROGRAM_VERSION	6.2.1	/v6.2.1/
 !_TAG_ROLE_DESCRIPTION!Ant!antfile	imported	/imported/
 !_TAG_ROLE_DESCRIPTION!HTML!class	attribute	/assigned as attributes/
 !_TAG_ROLE_DESCRIPTION!HTML!script	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!HTML!stylesheet	extFile	/referenced as external files/
 !_TAG_ROLE_DESCRIPTION!Java!package	imported	/imported package/
 !_TAG_ROLE_DESCRIPTION!JavaScript!function	foreigndecl	/declared in foreign languages/
+!_TAG_ROLE_DESCRIPTION!Python!function	entryPoint	/specified as an entry point/
+!_TAG_ROLE_DESCRIPTION!Python!module	entryPoint	/specified as a module of an entry point/
+!_TAG_ROLE_DESCRIPTION!Python!module	imported	/imported modules/
+!_TAG_ROLE_DESCRIPTION!Python!module	indirectlyImported	/module imported in alternative name/
+!_TAG_ROLE_DESCRIPTION!Python!module	namespace	/namespace from where classes\/variables\/functions are imported/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	imported	/imported from the other module/
+!_TAG_ROLE_DESCRIPTION!Python!unknown	indirectlyImported	/classes\/variables\/functions\/modules imported in alternative name/
 !_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
 !_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
 #content	app/build/reports/tests/test/css/base-style.css	/^#content {$/;"	i
@@ -643,7 +659,7 @@ AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.Ayanaamsh
 AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<h1>AyanaamshaTest<\/h1>$/;"	h
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
-CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\fa/;"	v
+CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\Su/;"	v
 CLASSPATH	gradlew.bat	/^set CLASSPATH=$/;"	v
 CallableFuture	app/src/main/java/org/learn/learn.java	/^    public void CallableFuture() {$/;"	m	class:learn
 ClassName	app/src/main/java/org/learn/learn.java	/^class ClassName {$/;"	c
@@ -671,6 +687,7 @@ EXIT_CODE	gradlew.bat	/^set EXIT_CODE=%ERRORLEVEL%$/;"	v
 ExtSome	app/src/main/java/org/learn/learn.java	/^    class ExtSome extends SomeCla {$/;"	c	class:Main
 FirLasComp	app/src/main/java/org/learn/learn.java	/^interface FirLasComp<S> extends Comparator<S> {$/;"	i
 Funct	app/src/main/java/org/learn/learn.java	/^    interface Funct extends Function<Integer, Integer> {$/;"	i	class:learn
+Guli	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static enum Kaala { Raahu, Guli, Yama };$/;"	e	enum:Kaalas.Kaala	file:
 ImplIter	app/src/main/java/org/learn/learn.java	/^    public class ImplIter implements Iterable<String> {$/;"	c	class:learn
 ImplIterat	app/src/main/java/org/learn/learn.java	/^        class ImplIterat implements Iterator<String> {$/;"	c	class:learn.ImplIter
 IntegraionTest	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<h1>IntegraionTest<\/h1>$/;"	h
@@ -681,6 +698,8 @@ JAVA_EXE	gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
 JAVA_EXE	gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
 JAVA_HOME	app/build/scripts/app.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
 JAVA_HOME	gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+Kaala	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static enum Kaala { Raahu, Guli, Yama };$/;"	g	class:Kaalas
+Kaalas	app/src/main/java/org/jyothishaastra/Kaalas.java	/^public class Kaalas {$/;"	c
 Karana	app/src/main/java/org/jyothishaastra/Karana.java	/^public class Karana {$/;"	c
 KaranaTest	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^<h1>KaranaTest<\/h1>$/;"	h
 KaranaTest	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^class KaranaTest {$/;"	c
@@ -701,6 +720,7 @@ Pre	app/src/main/java/org/learn/learn.java	/^    interface Pre extends DoublePre
 Pro	app/src/main/java/org/learn/learn.java	/^    interface Pro extends Supplier<Integer> {$/;"	i	class:learn
 ProCons	app/src/main/java/org/learn/learn.java	/^class ProCons {$/;"	c
 ProCons2	app/src/main/java/org/learn/learn.java	/^class ProCons2 {$/;"	c
+Raahu	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static enum Kaala { Raahu, Guli, Yama };$/;"	e	enum:Kaalas.Kaala	file:
 Raashi	app/src/main/java/org/jyothishaastra/Raashi.java	/^public class Raashi {$/;"	c
 RaashiTest	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h1>RaashiTest<\/h1>$/;"	h
 RaashiTest	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^class RaashiTest {$/;"	c
@@ -720,13 +740,12 @@ SomeMetho	app/src/main/java/org/learn/learn.java	/^        public void SomeMetho
 SomeMethod	app/src/main/java/org/learn/learn.java	/^        public static void SomeMethod() {$/;"	m	interface:Main.SomeInter
 SomeRec	app/src/main/java/org/learn/learn.java	/^    public record SomeRec(String name, String lastName, String email, int id) {$/;"	m	class:Main
 Spliterator_	app/src/main/java/org/learn/learn.java	/^class Spliterator_ implements Spliterator<String> {$/;"	c
-Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<h2>Standard output<\/h2>$/;"	i
-Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.IntegraionTest.html	/^<h2>Standard output<\/h2>$/;"	i
-Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h2>Standard output<\/h2>$/;"	i
+Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<h2>Standard output<\/h2>$/;"	i
 Standard output	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h2>Standard output<\/h2>$/;"	i
 StreamSample	app/src/main/java/org/learn/learn.java	/^    public static void StreamSample() {$/;"	m	class:learn
 StreamsMapFilterReduce	app/src/main/java/org/learn/learn.java	/^    public void StreamsMapFilterReduce() {$/;"	m	class:learn
 Sum	app/src/main/java/org/learn/learn.java	/^    public interface Sum {$/;"	i	class:learn
+Sunrise	app/src/main/java/org/jyothishaastra/Sunrise.java	/^public class Sunrise {$/;"	c
 TabManager	app/build/reports/tests/test/js/report.js	/^    class TabManager {$/;"	c	function:anonymousFunctionfed02dd60100
 Test Summary	app/build/reports/tests/test/index.html	/^<h1>Test Summary<\/h1>$/;"	h
 Test results - AppTest	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<title>Test results - AppTest<\/title>$/;"	j
@@ -742,6 +761,7 @@ Test results - Package org.jyothishaastra.unit	app/build/reports/tests/test/pack
 Test results - RaashiTest	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<title>Test results - RaashiTest<\/title>$/;"	j
 Test results - Test Summary	app/build/reports/tests/test/index.html	/^<title>Test results - Test Summary<\/title>$/;"	j
 Test results - TithiTest	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<title>Test results - TithiTest<\/title>$/;"	j
+Test results - YogaTest	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<title>Test results - YogaTest<\/title>$/;"	j
 Tests	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<h2>Tests<\/h2>$/;"	i
@@ -750,12 +770,18 @@ Tests	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h2>Tests<\/h2>$/;"	i
+Tests	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tests	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<h2>Tests<\/h2>$/;"	i
 Tithi	app/src/main/java/org/jyothishaastra/Tithi.java	/^public class Tithi {$/;"	c
 TithiTest	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<h1>TithiTest<\/h1>$/;"	h
 TithiTest	app/src/test/java/org/jyothishaastra/TithiTest.java	/^class TithiTest {$/;"	c
+Yama	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static enum Kaala { Raahu, Guli, Yama };$/;"	e	enum:Kaalas.Kaala	file:
 Yoga	app/src/main/java/org/jyothishaastra/Yoga.java	/^public class Yoga {$/;"	c
+YogaTest	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<h1>YogaTest<\/h1>$/;"	h
 YogaTest	app/src/test/java/org/jyothishaastra/YogaTest.java	/^class YogaTest {$/;"	c
+_deg2human	sunrise.py	/^def _deg2human(deg: float | int) -> str:$/;"	f	typeref:typename:str
+_j2human	sunrise.py	/^def _j2human(j: float | int, debugtz: tzinfo | None) -> str:$/;"	f	typeref:typename:str
+_ts2human	sunrise.py	/^def _ts2human(ts: int | float, debugtz: tzinfo | None) -> str:$/;"	f	typeref:typename:str
 a	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 a:visited	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 absGeo	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int absGeo(int raashi, int[] grahaGeo) throws Exception {$/;"	m	class:DegMinSec
@@ -2198,8 +2224,10 @@ byWholeDegrees	app/src/main/java/org/jyothishaastra/Karana.java	/^	public static
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Nakshatra
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String byWholeDegrees(int[] chandraWholeDeg, int raashi){$/;"	m	class:Raashi
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Yoga
+calc	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static void calc(Calendar date, double f, double l_w, String debugtz){$/;"	m	class:Sunrise
 calc	app/src/main/java/org/learn/learn.java	/^        public int calc(int x, int y);$/;"	m	interface:learn.Sum
 calc	app/src/main/java/org/learn/learn.java	/^    public static <R> R calc(BinaryOperator<R> meth, R p1, R p2) {$/;"	m	class:Main
+calc	sunrise.py	/^def calc($/;"	f	typeref:typename:tuple[float,float,None]|tuple[None,None,bool]
 calce	app/src/main/java/org/learn/learn.java	/^    public static <R> R calce(Operation<R> meth, R p1, R p2) {$/;"	m	class:Main
 chaDeg	app/src/main/java/org/jyothishaastra/Raashi.java	/^    private static double chaDeg;$/;"	f	class:Raashi	file:
 changeElementClass	app/build/reports/tests/test/js/report.js	/^    function changeElementClass(element, classValue) {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -3629,6 +3657,7 @@ content	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	
 content	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="content">$/;"	I
+content	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/index.html	/^<div id="content">$/;"	I
 content	app/build/reports/tests/test/packages/org.example.html	/^<div id="content">$/;"	I
@@ -4602,11 +4631,13 @@ duration	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="duration">$/;"	I
+duration	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	private static int []duration;$/;"	f	class:Kaalas	file:
 elapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static double elapsed;$/;"	f	class:Nakshatra
 elapsedArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static int[] elapsedArr;$/;"	f	class:Nakshatra
 end	app/build/scripts/app.bat	/^:end$/;"	l
@@ -4629,6 +4660,7 @@ failures	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="failures">$/;"	I
+failures	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="failures">$/;"	I
 failures	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="failures">$/;"	I
@@ -4649,6 +4681,7 @@ footer	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="footer">$/;"	I
+footer	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/index.html	/^<div id="footer">$/;"	I
 footer	app/build/reports/tests/test/packages/org.example.html	/^<div id="footer">$/;"	I
@@ -4667,6 +4700,7 @@ getPropName	app/src/main/java/org/learn/learn.java	/^    public String getPropNa
 getSequence	app/src/main/java/org/learn/learn.java	/^    static Integer getSequence() {$/;"	m	class:Main
 getTabContainers	app/build/reports/tests/test/js/report.js	/^    function getTabContainers() {$/;"	f	function:anonymousFunctionfed02dd60100
 gradle.version	.gradle/buildOutputCleanup/cache.properties	/^gradle.version=8.14.3$/;"	k
+guli	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static int guli[] = { 6, 5, 4, 3, 2, 1, 0 };$/;"	f	class:Kaalas
 h1	app/build/reports/tests/test/css/base-style.css	/^h1, h2, h3 {$/;"	s
 h2	app/build/reports/tests/test/css/base-style.css	/^h1, h2, h3 {$/;"	s
 h2	app/build/reports/tests/test/css/base-style.css	/^h2 {$/;"	s
@@ -4682,6 +4716,7 @@ ignored	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="ignored">$/;"	I
+ignored	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="ignored">$/;"	I
@@ -4691,6 +4726,9 @@ index	app/src/main/java/org/learn/learn.java	/^            int index = 0;$/;"	f	
 initControls	app/build/reports/tests/test/js/report.js	/^    function initControls() {$/;"	f	function:anonymousFunctionfed02dd60100
 initTabs	app/build/reports/tests/test/js/report.js	/^    function initTabs() {$/;"	f	function:anonymousFunctionfed02dd60100
 iterator	app/src/main/java/org/learn/learn.java	/^        public Iterator<String> iterator() {$/;"	m	class:learn.ImplIter
+j2ts	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static double j2ts(double j){$/;"	m	class:Sunrise
+j2ts	sunrise.py	/^def j2ts(j: float | int) -> float:$/;"	f	typeref:typename:float
+kaala	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	public static int[] kaala(int sunrise[], int sunset[], int day, Kaala kaala) throws Exception {$/;"	m	class:Kaalas
 karana	app/src/main/java/org/jyothishaastra/Karana.java	/^	public static String karana(int chandraAbs[], int sooryaAbs[]) throws Exception {$/;"	m	class:Karana
 karanaDeg	app/src/main/java/org/jyothishaastra/Karana.java	/^    private static double karanaDeg;$/;"	f	class:Karana	file:
 karanaIndex	app/src/main/java/org/jyothishaastra/Karana.java	/^	private static int karanaIndex;$/;"	f	class:Karana	file:
@@ -4703,6 +4741,7 @@ label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothish
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
+label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/index.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
 label-for-line-wrapping-toggle	app/build/reports/tests/test/packages/org.example.html	/^<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines$/;"	I
@@ -4718,6 +4757,7 @@ line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.Kar
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
+line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/index.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
 line-wrapping-toggle	app/build/reports/tests/test/packages/org.example.html	/^<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"\/>$/;"	I
@@ -4726,9 +4766,11 @@ line-wrapping-toggle	app/build/reports/tests/test/packages/org.jyothishaastra.un
 link	app/src/main/java/org/learn/learn.java	/^        public LinkedList<String> link = new LinkedList();$/;"	f	class:learn.ImplIter
 list	app/src/main/java/org/learn/learn.java	/^    public List<Integer> list = new LinkedList<Integer>();$/;"	f	class:ProCons2
 lock	app/src/main/java/org/learn/learn.java	/^    private Object lock = new Object();$/;"	f	class:ProCons2	file:
+log	sunrise.py	/^log = logging.getLogger()$/;"	v
 main	app/src/main/java/org/example/App.java	/^    public static void main(String[] args) {$/;"	m	class:App
 main	app/src/main/java/org/jyothishaastra/App.java	/^	public static void main(String ags[]) throws Exception {$/;"	m	class:App
 main	app/src/main/java/org/learn/learn.java	/^    public static void main(String[] args) {$/;"	m	class:Main
+main	sunrise.py	/^def main():$/;"	f
 mainEnd	app/build/scripts/app.bat	/^:mainEnd$/;"	l
 mainEnd	gradlew.bat	/^:mainEnd$/;"	l
 milestoneFor	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "milestoneFor" : "",$/;"	s	object:0
@@ -5701,9 +5743,11 @@ org.gradle.configuration-cache	gradle.properties	/^org.gradle.configuration-cach
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/App.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^package org.jyothishaastra;$/;"	p
+org.jyothishaastra	app/src/main/java/org/jyothishaastra/Kaalas.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Karana.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Raashi.java	/^package org.jyothishaastra;$/;"	p
+org.jyothishaastra	app/src/main/java/org/jyothishaastra/Sunrise.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Tithi.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/main/java/org/jyothishaastra/Yoga.java	/^package org.jyothishaastra;$/;"	p
 org.jyothishaastra	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^package org.jyothishaastra;$/;"	p
@@ -5722,6 +5766,7 @@ produce	app/src/main/java/org/learn/learn.java	/^    public synchronized void pr
 produce	app/src/main/java/org/learn/learn.java	/^    public synchronized void produce() throws InterruptedException {$/;"	m	class:ProCons2
 propName	app/src/main/java/org/learn/learn.java	/^    private String propName = "";$/;"	f	class:ClassName	file:
 r	app/src/main/java/org/learn/learn.java	/^    private Random r = new Random(100);$/;"	f	class:ProCons2	file:
+raahu	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static int raahu[] = { 7, 1, 6, 4, 5, 3, 2 };$/;"	f	class:Kaalas
 raashi	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String raashi(int chaNirAbs[]) throws Exception {$/;"	m	class:Raashi
 raashi	app/src/test/java/org/jyothishaastra/KaranaTest.java	/^	void raashi() throws Exception {$/;"	m	class:KaranaTest
 raashi	app/src/test/java/org/jyothishaastra/RaashiTest.java	/^	void raashi() throws Exception {$/;"	m	class:RaashiTest
@@ -7165,6 +7210,7 @@ successRate	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.h
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
+successRate	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/index.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox success" id="successRate">$/;"	I
@@ -7180,6 +7226,7 @@ summary	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div id="summary">$/;"	I
+summary	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/index.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.example.html	/^<div id="summary">$/;"	I
@@ -7197,6 +7244,7 @@ tests	app/build/reports/tests/test/classes/org.jyothishaastra.KaranaTest.html	/^
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.NakshatraTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.RaashiTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.TithiTest.html	/^<div class="infoBox" id="tests">$/;"	I
+tests	app/build/reports/tests/test/classes/org.jyothishaastra.YogaTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/index.html	/^<div class="infoBox" id="tests">$/;"	I
 tests	app/build/reports/tests/test/packages/org.example.html	/^<div class="infoBox" id="tests">$/;"	I
@@ -7217,6 +7265,8 @@ toMinutes	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static d
 toggleLineWrapping	app/build/reports/tests/test/js/report.js	/^    function toggleLineWrapping() {$/;"	f	function:anonymousFunctionfed02dd60100
 tryAdvance	app/src/main/java/org/learn/learn.java	/^    public boolean tryAdvance(Consumer<? super String> cnsmr) {$/;"	m	class:Spliterator_
 trySplit	app/src/main/java/org/learn/learn.java	/^    public Spliterator<String> trySplit() {$/;"	m	class:Spliterator_
+ts2Julian	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static double ts2Julian(double ts){$/;"	m	class:Sunrise
+ts2j	sunrise.py	/^def ts2j(ts: float | int) -> float:$/;"	f	typeref:typename:float
 ul	app/build/reports/tests/test/css/base-style.css	/^ul {$/;"	s
 ul.linkList	app/build/reports/tests/test/css/style.css	/^ul.linkList {$/;"	c
 ul.linkList li	app/build/reports/tests/test/css/style.css	/^ul.linkList li {$/;"	s
@@ -8349,6 +8399,7 @@ wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-1/;"	s	object:5
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-milestone-2/;"	s	object:4
 wrapperChecksumUrl	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "wrapperChecksumUrl" : "https:\/\/services.gradle.org\/distributions\/gradle-9.2.0-rc-1-wrappe/;"	s	object:2
+yama	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static int yama[] = { 4, 3, 2, 1, 0, 6, 5 }; $/;"	f	class:Kaalas
 yoga	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static String yoga(int chaNirAbs[], int surNirAbs[]) throws Exception {$/;"	m	class:Yoga
 yoga	app/src/test/java/org/jyothishaastra/YogaTest.java	/^	void yoga() throws Exception {$/;"	m	class:YogaTest
 yogaDeg	app/src/main/java/org/jyothishaastra/Yoga.java	/^    private static double yogaDeg;$/;"	f	class:Yoga	file:
