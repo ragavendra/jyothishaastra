@@ -115,6 +115,8 @@ class NakshatraTest {
 
 	Calendar date1 = Calendar.getInstance();
 	date1.set(Calendar.DATE, 26);
+
+	// try setting hours to 00 to avoid issues
 	date1.set(Calendar.HOUR_OF_DAY, 0);
 
 	System.out.println("Caclculating for date " + date1.getTime());
