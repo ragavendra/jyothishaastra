@@ -4638,6 +4638,7 @@ duration	app/build/reports/tests/test/packages/org.example.html	/^<div class="in
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div class="infoBox" id="duration">$/;"	I
 duration	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	private static int []duration;$/;"	f	class:Kaalas	file:
+duration	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static double duration;$/;"	f	class:Sunrise
 elapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static double elapsed;$/;"	f	class:Nakshatra
 elapsedArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static int[] elapsedArr;$/;"	f	class:Nakshatra
 end	app/build/scripts/app.bat	/^:end$/;"	l
@@ -7232,6 +7233,8 @@ summary	app/build/reports/tests/test/index.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.example.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.jyothishaastra.html	/^<div id="summary">$/;"	I
 summary	app/build/reports/tests/test/packages/org.jyothishaastra.unit.html	/^<div id="summary">$/;"	I
+sunrise	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static Calendar sunrise;$/;"	f	class:Sunrise
+sunset	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static Calendar sunset;$/;"	f	class:Sunrise
 swissEphIndChandra	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndChandra() {$/;"	m	class:AyanaamshaTest	file:
 swissEphIndSoorya	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	private static Stream<Arguments> swissEphIndSoorya() {$/;"	m	class:AyanaamshaTest	file:
 tabs	app/build/reports/tests/test/js/report.js	/^        tabs;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager

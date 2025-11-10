@@ -6,6 +6,10 @@ import java.util.TimeZone;
 // half of a Tithi or a day
 public class Sunrise {
 
+	static Calendar sunrise;
+	static Calendar sunset;
+	static double duration;
+
 	static double j2ts(double j){
 		return (j - 2440587.5) * 86400;
 	}
@@ -71,14 +75,15 @@ public class Sunrise {
 		var j_set = J_transit + w0_degrees / 360.0;
 
 		var sr = j2ts(j_rise);
-		var srT = Calendar.getInstance();
-		srT.setTimeInMillis((long) sr * 1000);
-		System.out.printf("Sunrise at: %s\n", srT.getTime());
+		sunrise = Calendar.getInstance();
+		sunrise.setTimeInMillis((long) sr * 1000);
+		System.out.printf("Sunrise at: %s\n", sunrise.getTime());
 
 		var ss = j2ts(j_set);
-		var ssT = Calendar.getInstance();
-		ssT.setTimeInMillis((long) ss * 1000);
-		System.out.printf("Sunset at: %s\n", ssT.getTime());
-		System.out.printf("Day length: %s hours\n", w0_degrees / (180.0 / 24.0));
+		sunset = Calendar.getInstance();
+		sunset.setTimeInMillis((long) ss * 1000);
+		System.out.printf("Sunset at: %s\n", sunset.getTime());
+		duration = w0_degrees / (180.0 / 24.0);
+		System.out.printf("Day length: %8.9f hours\n", duration);
 	}
 }
