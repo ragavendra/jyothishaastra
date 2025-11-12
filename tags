@@ -659,7 +659,7 @@ AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.Ayanaamsh
 AyanaamshaTest	app/build/reports/tests/test/classes/org.jyothishaastra.unit.AyanaamshaTest.html	/^<h1>AyanaamshaTest<\/h1>$/;"	h
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
-CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\Su/;"	v
+CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\fa/;"	v
 CLASSPATH	gradlew.bat	/^set CLASSPATH=$/;"	v
 CallableFuture	app/src/main/java/org/learn/learn.java	/^    public void CallableFuture() {$/;"	m	class:learn
 ClassName	app/src/main/java/org/learn/learn.java	/^class ClassName {$/;"	c
@@ -5263,6 +5263,7 @@ nakshatraStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Cal
 nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "A/;"	f	class:Nakshatra
 name	app/src/main/java/org/learn/learn.java	/^        String name();$/;"	m	annotation:Main.AnnInterf
 next	app/src/main/java/org/learn/learn.java	/^            public String next() {$/;"	m	class:learn.ImplIter.ImplIterat
+nightLength	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	private static int []nightLength;$/;"	f	class:Kaalas	file:
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:1
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:10
 nightly	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "nightly" : false,$/;"	b	object:100
@@ -6730,6 +6731,7 @@ remainingDistance	app/src/main/java/org/jyothishaastra/Yoga.java	/^	static doubl
 removeClass	app/build/reports/tests/test/js/report.js	/^    function removeClass(element, classValue) {$/;"	f	function:anonymousFunctionfed02dd60100
 select	app/build/reports/tests/test/js/report.js	/^        select(i) {$/;"	m	class:anonymousFunctionfed02dd60100.TabManager
 sequence	app/src/main/java/org/learn/learn.java	/^    private static Integer sequence = 0;$/;"	f	class:Main	file:
+setNightLength	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	public static void setNightLength(int sunrise[], int sunriseNextDay[]) throws Exception {$/;"	m	class:Kaalas
 snapshot	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "snapshot" : false,$/;"	b	object:10
 snapshot	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "snapshot" : false,$/;"	b	object:100
 snapshot	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "snapshot" : false,$/;"	b	object:101

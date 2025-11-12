@@ -140,6 +140,20 @@ class NakshatraTest {
 	System.out.printf("Yama kaala starts at %s\n", Arrays.toString(yama));
 	System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Kaalas.duration)));
 
+	if(weekday == 2){
+		// get sunrise for next day
+		date1.set(2009, 6, 16, 0, 0, 0); // for 15 July 2009
+	
+		// try setting hours to 00 to avoid issues
+		date1.set(Calendar.HOUR_OF_DAY, 0);
+
+		Sunrise.calc(date1, latitude, longitude, "");
+		srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
+		srMin = Sunrise.sunrise.get(Calendar.MINUTE);
+
+		Kaalas.setNightLength(new int[]{srHour, srMin, 0}, new int[]{srHour, srMin, 0});
+	}
+
 	Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
 	}
 }
