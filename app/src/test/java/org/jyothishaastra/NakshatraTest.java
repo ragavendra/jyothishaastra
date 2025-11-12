@@ -28,8 +28,6 @@ class NakshatraTest {
 	date = Calendar.getInstance(TimeZone.getTimeZone("Asia/Calcutta"));
 	date.setTimeInMillis(timezoneAlteredTime);
 */
-	var istTz = TimeZone.getTimeZone("IST");
-
 	double ayanamsha = Ayanaamsha.ayanamsha(date);
 
 	// 23.9853731 in pdf
@@ -118,15 +116,9 @@ class NakshatraTest {
 	System.out.println("Sunset at: " + sunriseSunset[1].getTime());
 	*/
 
-	Calendar date1 = Calendar.getInstance();
-	// date1.set(Calendar.DATE, 26);
-	date1.set(2009, 6, 15, 0, 0, 0); // for 15 July 2009
-
-	// try setting hours to 00 to avoid issues
-	date1.set(Calendar.HOUR_OF_DAY, 0);
-
-	System.out.println("Caclculating for date " + date1.getTime());
-	Sunrise.calc(date1, latitude, longitude, "");
+	System.out.println("Caclculating for date " + date.getTime());
+	System.out.printf("Sunrise or Kaalas for location Vancouver in PST\n");
+	Sunrise.calc(date, latitude, longitude, "");
 	int srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
 	int srMin = Sunrise.sunrise.get(Calendar.MINUTE);
 
@@ -145,12 +137,12 @@ class NakshatraTest {
 
 	if(weekday == 2){
 		// get sunrise for next day
-		date1.set(2009, 6, 16, 0, 0, 0); // for 15 July 2009
+		date.set(2009, 6, 16, 0, 0, 0); // for 15 July 2009
 	
 		// try setting hours to 00 to avoid issues
-		date1.set(Calendar.HOUR_OF_DAY, 0);
+		date.set(Calendar.HOUR_OF_DAY, 0);
 
-		Sunrise.calc(date1, latitude, longitude, "");
+		Sunrise.calc(date, latitude, longitude, "");
 		srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
 		srMin = Sunrise.sunrise.get(Calendar.MINUTE);
 
