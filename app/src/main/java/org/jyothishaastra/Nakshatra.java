@@ -3,6 +3,7 @@ package org.jyothishaastra;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.Arrays;
 import java.util.Calendar;
 
 // Need Niraayana and absolute longitudes of Chandra
@@ -12,17 +13,7 @@ public class Nakshatra {
 
 	static double amrutha[] = { 16.8,19.2,21.6,20.8,15.2,14,21.6,17.6,22.4,21.6,17.6,16.8,18,17.6,15.2,15.2,13.6,15.2,17.6,19.2,17.6,13.6,13.6,16.8,16,19.2,21.6 };
 
-	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8,22.4, 9.6,8,4,4,7.2,6.4,9.6,12 };
-
-	private static int nakshaIndex;
-
-	// public static double (int[] chandraNiraayana){
-	// raashi starting from 0 for Mesha
-	public static String byWholeDegrees(int[] chaNirAbs){
-		double nakshSectorSize = (360.0 / 27.0);
-		nakshaIndex = (int) (chaNirAbs[0]/nakshSectorSize);
-		return nakshatras[nakshaIndex];
-	}
+	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8 , 9.6,8,4,4,7.2,6.4,9.6,12 };
 
 	public static int nakshatraIndex;
     private static double nakshDeg;
@@ -110,9 +101,9 @@ public class Nakshatra {
 		double X;
 
 		if(amrutha_)
-			X = amrutha[nakshaIndex];
+			X = amrutha[nakshatraIndex];
 		else
-			X = varjya[nakshaIndex];
+			X = varjya[nakshatraIndex];
 
 		// get only hours:mm:ss in say decimal to use the formula
 		int daysDiff = nakshatraEnd.get(Calendar.DATE) - nakshatraStart.get(Calendar.DATE);
@@ -124,12 +115,20 @@ public class Nakshatra {
 		double endInDec = hrMnInDec(nakshatraEnd) + addHours; 
 		// double diff = endInDec - staInDec;
 		naksDuration = endInDec - staInDec;
-		// System.out.printf("Naks duration is %s\n", naksDuration);	
+		System.out.printf("Naks duration is %8.9f\n", naksDuration);	
+		System.out.printf("Start time of Nakshatra is %8.9f\n", staInDec);	
+		System.out.printf("X is %8.9f for naksIndex %d\n", X, nakshatraIndex);	
 
 		double amruVarj = staInDec + X/24 * naksDuration;
+		System.out.printf("amruVarj is %8.9f\n", amruVarj);	
 
 		Calendar amruVarjStart = (Calendar) nakshatraStart.clone();
+		amruVarjStart.set(Calendar.HOUR_OF_DAY, 0);
+		amruVarjStart.set(Calendar.MINUTE, 0);
+		amruVarjStart.set(Calendar.SECOND, 0);
+		System.out.printf("amruVarjStart is %s\n", amruVarjStart.toInstant());	
 
+		/* 
 		if(amruVarj > 24.0) {
 			amruVarjStart.add(Calendar.DATE, 1);
 			amruVarj = amruVarj - 24.0;
@@ -142,6 +141,9 @@ public class Nakshatra {
 		}
 
 		amruVarjStart.add(Calendar.MINUTE, (int) (amruVarj * 100));
+		*/
+		amruVarjStart.add(Calendar.HOUR, (int) amruVarj);
+		amruVarjStart.add(Calendar.MINUTE, (int)((amruVarj - (int) amruVarj) * 60));
 
 		// copy to class var
 		if(amrutha_)
@@ -164,9 +166,11 @@ public class Nakshatra {
 
 	// subtract the elapsed for the given date
 	public static Calendar start(Calendar date){
+		System.out.printf("Now %s\n", date.toInstant());
 		// elapsed - 00:00 UT - is this the end time of the previous Nakshatra as well?
 		nakshatraStart = (Calendar) date.clone();
 		elapsedArr = DegMinSec.getGeoCoordsFromDegree(elapsed);
+		System.out.printf("Elapsed arr %s\n", Arrays.toString(elapsedArr));
 		nakshatraStart.add(Calendar.HOUR_OF_DAY, -1 * elapsedArr[0]);
 		nakshatraStart.add(Calendar.MINUTE, -1 * elapsedArr[1]);
 		nakshatraStart.add(Calendar.SECOND, -1 * elapsedArr[2]);

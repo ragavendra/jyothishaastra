@@ -1273,7 +1273,7 @@ appHasAGreeting	app/src/test/java/org/example/AppTest.java	/^    @Test void appH
 apply	app/src/main/java/org/learn/learn.java	/^        public Integer apply(Integer d);$/;"	m	interface:learn.Funct
 applyAsDouble	app/src/main/java/org/learn/learn.java	/^        double applyAsDouble(long value);$/;"	m	interface:learn.Ltd
 arrayOfMultiples	app/src/main/java/org/learn/learn.java	/^    public static int[] arrayOfMultiples(int num, int length) {$/;"	m	class:learn
-ayanamsha	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^	public static double ayanamsha(Calendar cal){$/;"	m	class:Ayanaamsha
+ayanamsha	app/src/main/java/org/jyothishaastra/Ayanaamsha.java	/^	public static double ayanamsha(Date date){$/;"	m	class:Ayanaamsha
 ayanamshaData	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^	void ayanamshaData(int day, int []sayyana, int[] nirayaana, int raashi) throws Exception {$/;"	m	class:AyanaamshaTest
 baseId	app/build/reports/tests/test/js/report.js	/^        baseId;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
 body	app/build/reports/tests/test/css/base-style.css	/^body {$/;"	s
@@ -2221,7 +2221,6 @@ buildTime	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^ 
 buildTime	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "buildTime" : "20251007070641+0000",$/;"	s	object:1
 buildTime	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "buildTime" : "20251008010641+0000",$/;"	s	object:0
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Karana.java	/^	public static String byWholeDegrees(int[] chandraWholeDeg, int raashi){$/;"	m	class:Karana
-byWholeDegrees	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Nakshatra
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Raashi.java	/^	public static String byWholeDegrees(int[] chandraWholeDeg, int raashi){$/;"	m	class:Raashi
 byWholeDegrees	app/src/main/java/org/jyothishaastra/Yoga.java	/^	public static String byWholeDegrees(int[] chaNirAbs){$/;"	m	class:Yoga
 calc	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static void calc(Calendar date, double f, double l_w, String debugtz){$/;"	m	class:Sunrise
@@ -5254,7 +5253,6 @@ minus	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[]
 minusMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int[] minusMoreThreeSixty(int dms1[], int dms2[]) {$/;"	m	class:DegMinSec
 naksDuration	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double naksDuration;$/;"	f	class:Nakshatra
 nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double nakshDeg;$/;"	f	class:Nakshatra	file:
-nakshaIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static int nakshaIndex;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
 nakshatra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	void nakshatra() throws Exception {$/;"	m	class:NakshatraTest
 nakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar nakshatraEnd;$/;"	f	class:Nakshatra
@@ -7289,7 +7287,7 @@ ul.tabLinks li.selected	app/build/reports/tests/test/css/base-style.css	/^ul.tab
 ul.tabLinks li:hover	app/build/reports/tests/test/css/base-style.css	/^ul.tabLinks li:hover {$/;"	s
 useThr	app/src/main/java/org/learn/learn.java	/^    public void useThr() {$/;"	m	class:learn
 var	app/src/main/java/org/learn/learn.java	/^    public static void var(String par) {$/;"	m	class:learn
-varjya	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8,22.4, /;"	f	class:Nakshatra
+varjya	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double varjya[]= { 20,9.6,12,16,5.6,8.4,12,8,12.8,12,8,7.2,8.4,8,5.6,5.6,4,5.6, 8 , 9.6,/;"	f	class:Nakshatra
 varjyaEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar varjyaEnd;$/;"	f	class:Nakshatra
 varjyaStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar varjyaStart;$/;"	f	class:Nakshatra
 version	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "version" : "0.7",$/;"	s	object:470
