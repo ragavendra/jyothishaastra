@@ -661,6 +661,7 @@ AyanaamshaTest	app/src/test/java/org/jyothishaastra/AyanaamshaTest.java	/^class 
 AyanaamshaTest	app/src/test/java/org/jyothishaastra/unit/AyanaamshaTest.java	/^class AyanaamshaTest {$/;"	c
 CLASSPATH	app/build/scripts/app.bat	/^set CLASSPATH=%APP_HOME%\\lib\\app.jar;%APP_HOME%\\lib\\guava-33.4.5-jre.jar;%APP_HOME%\\lib\\fa/;"	v
 CLASSPATH	gradlew.bat	/^set CLASSPATH=$/;"	v
+CalToHrs	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static double CalToHrs(Calendar date){$/;"	m	class:Nakshatra	file:
 CallableFuture	app/src/main/java/org/learn/learn.java	/^    public void CallableFuture() {$/;"	m	class:learn
 ClassName	app/src/main/java/org/learn/learn.java	/^class ClassName {$/;"	c
 Classes	app/build/reports/tests/test/index.html	/^<h2>Classes<\/h2>$/;"	i
@@ -784,7 +785,9 @@ _j2human	sunrise.py	/^def _j2human(j: float | int, debugtz: tzinfo | None) -> st
 _ts2human	sunrise.py	/^def _ts2human(ts: int | float, debugtz: tzinfo | None) -> str:$/;"	f	typeref:typename:str
 a	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
 a:visited	app/build/reports/tests/test/css/base-style.css	/^body, a, a:visited {$/;"	s
+absEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar absEnd(Calendar date){$/;"	m	class:Nakshatra
 absGeo	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	public static int absGeo(int raashi, int[] grahaGeo) throws Exception {$/;"	m	class:DegMinSec
+absStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar absStart(Calendar date){$/;"	m	class:Nakshatra
 accept	app/src/main/java/org/learn/learn.java	/^        public void accept(Double in);$/;"	m	interface:learn.Cons
 accept	app/src/main/java/org/learn/learn.java	/^    public static <S> void accept(BiConsumer<S, S> oper, S val1, S val2) {$/;"	m	class:Main
 activeRc	.metadata/.plugins/org.eclipse.buildship.core/gradle/versions.json	/^  "activeRc" : false,$/;"	b	object:0
@@ -4644,7 +4647,6 @@ durmDuration	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static double d
 durmuhurtha	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	public static void durmuhurtha(int sunrise[], int day) throws Exception {$/;"	m	class:Kaalas
 durmuhurtha	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	static double durmuhurtha[][] = {{10.4}, {6.4, 8.8}, {2.4, 4.8}, {5.6}, {4, 8.8}, {2.4, 6.4}, {/;"	f	class:Kaalas
 elapsed	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static double elapsed;$/;"	f	class:Nakshatra
-elapsedArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    public static int[] elapsedArr;$/;"	f	class:Nakshatra
 end	app/build/scripts/app.bat	/^:end$/;"	l
 end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double end(int[] chaMot, double remainingDistance) throws Exception {$/;"	m	class:Nakshatra
 end	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double end;$/;"	f	class:Nakshatra	file:
@@ -4700,7 +4702,6 @@ getGeoCoordsFromDegree	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	pu
 getGreeting	app/src/main/java/org/example/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getGreeting	app/src/main/java/org/jyothishaastra/App.java	/^    public String getGreeting() {$/;"	m	class:App
 getLabelForCheckBox	app/build/reports/tests/test/js/report.js	/^    function getLabelForCheckBox() {$/;"	f	function:anonymousFunctionfed02dd60100
-getNakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar getNakshatraEnd(Calendar date){$/;"	m	class:Nakshatra
 getPropName	app/src/main/java/org/learn/learn.java	/^    public String getPropName() {$/;"	m	class:ClassName
 getSequence	app/src/main/java/org/learn/learn.java	/^    static Integer getSequence() {$/;"	m	class:Main
 getTabContainers	app/build/reports/tests/test/js/report.js	/^    function getTabContainers() {$/;"	f	function:anonymousFunctionfed02dd60100
@@ -4712,7 +4713,6 @@ h2	app/build/reports/tests/test/css/base-style.css	/^h2 {$/;"	s
 h3	app/build/reports/tests/test/css/base-style.css	/^h1, h2, h3 {$/;"	s
 hasNext	app/src/main/java/org/learn/learn.java	/^            public boolean hasNext() {$/;"	m	class:learn.ImplIter.ImplIterat
 headers	app/build/reports/tests/test/js/report.js	/^        headers;$/;"	M	class:anonymousFunctionfed02dd60100.TabManager
-hrMnInDec	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	private static double hrMnInDec(Calendar date){$/;"	m	class:Nakshatra	file:
 ignored	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox" id="ignored">$/;"	I
 ignored	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox" id="ignored">$/;"	I
@@ -5254,8 +5254,8 @@ minusMoreThreeSixty	app/src/main/java/org/jyothishaastra/DegMinSec.java	/^	publi
 naksDuration	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static double naksDuration;$/;"	f	class:Nakshatra
 nakshDeg	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double nakshDeg;$/;"	f	class:Nakshatra	file:
 nakshatra	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static String nakshatra(int chaNirAbs[]) throws Exception {$/;"	m	class:Nakshatra
-nakshatra	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	void nakshatra() throws Exception {$/;"	m	class:NakshatraTest
 nakshatraEnd	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar nakshatraEnd;$/;"	f	class:Nakshatra
+nakshatraExcercise	app/src/test/java/org/jyothishaastra/NakshatraTest.java	/^	void nakshatraExcercise() throws Exception {$/;"	m	class:NakshatraTest
 nakshatraIndex	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static int nakshatraIndex;$/;"	f	class:Nakshatra
 nakshatraStart	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static Calendar nakshatraStart;$/;"	f	class:Nakshatra
 nakshatras	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	static String nakshatras[] = { "Ashwini", "Bharani", "Krithika13", "Rohini", "Mrigashira22", "A/;"	f	class:Nakshatra
@@ -7207,7 +7207,9 @@ someVar	app/src/main/java/org/learn/learn.java	/^        static String someVar;$
 span.code	app/build/reports/tests/test/css/base-style.css	/^span.code {$/;"	c
 span.code pre	app/build/reports/tests/test/css/base-style.css	/^span.code pre {$/;"	s
 span.wrapped pre	app/build/reports/tests/test/css/base-style.css	/^span.wrapped pre {$/;"	s
-start	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static Calendar start(Calendar date){$/;"	m	class:Nakshatra
+staArr	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static int[] staArr;$/;"	f	class:Nakshatra	file:
+start	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^	public static double start(int[] chaMot, double transitDistance) throws Exception {$/;"	m	class:Nakshatra
+start	app/src/main/java/org/jyothishaastra/Nakshatra.java	/^    private static double start;$/;"	f	class:Nakshatra	file:
 successRate	app/build/reports/tests/test/classes/org.example.AppTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.AyanaamshaTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
 successRate	app/build/reports/tests/test/classes/org.jyothishaastra.DegMinSecTest.html	/^<div class="infoBox success" id="successRate">$/;"	I
