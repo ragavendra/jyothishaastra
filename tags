@@ -4733,7 +4733,7 @@ initTabs	app/build/reports/tests/test/js/report.js	/^    function initTabs() {$/
 iterator	app/src/main/java/org/learn/learn.java	/^        public Iterator<String> iterator() {$/;"	m	class:learn.ImplIter
 j2ts	app/src/main/java/org/jyothishaastra/Sunrise.java	/^	static double j2ts(double j){$/;"	m	class:Sunrise
 j2ts	sunrise.py	/^def j2ts(j: float | int) -> float:$/;"	f	typeref:typename:float
-kaala	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	public static int[] kaala(int sunrise[], int sunset[], int day, Kaala kaala) throws Exception {$/;"	m	class:Kaalas
+kaala	app/src/main/java/org/jyothishaastra/Kaalas.java	/^	public static int[] kaala(int sunrise[], int sunset[], int day, double dayLen, Kaala kaala) thr/;"	m	class:Kaalas
 karana	app/src/main/java/org/jyothishaastra/Karana.java	/^	public static String karana(int chandraAbs[], int sooryaAbs[]) throws Exception {$/;"	m	class:Karana
 karanaDeg	app/src/main/java/org/jyothishaastra/Karana.java	/^    private static double karanaDeg;$/;"	f	class:Karana	file:
 karanaIndex	app/src/main/java/org/jyothishaastra/Karana.java	/^	private static int karanaIndex;$/;"	f	class:Karana	file:

@@ -23,19 +23,30 @@ public class Kaalas {
 
 	// day starts from 0 for Sunday
 	// returns hh mm ss of kaala start
-	public static int[] kaala(int sunrise[], int sunset[], int day, Kaala kaala) throws Exception {
-		dayLength = DegMinSec.minusMoreThreeSixty(sunset, sunrise);
+	// pass sunrise and sunset times based on the destination or the location's time zone
+	public static int[] kaala(int sunrise[], int sunset[], int day, double dayLen, Kaala kaala) throws Exception {
 
+		if(day > 6)
+			day = day - 7;
+
+		// dayLength = DegMinSec.minusMoreThreeSixty(sunset, sunrise);
+		dayLength = DegMinSec.getGeoCoordsFromDegree(dayLen);
+
+		// System.out.printf("Sunr  is %s\n", Arrays.toString(sunrise));
+		// System.out.printf("Suns  is %s\n", Arrays.toString(sunset));
+		// System.out.printf("Day length is %s\n", Arrays.toString(dayLength));
 		var sunr = DegMinSec.toDegreesMoreThreeSixty(sunrise);
+		// var sunr = sunrise[0] + sunrise[1]/60.0 + sunrise[2]/60.0;
+		// System.out.printf("Sunr is %8.9f\n", sunr);
 		int X = 0;
 
 		if (kaala == Kaala.Raahu)
-				X = raahu[day];
+			X = raahu[day];
 		else if (kaala == Kaala.Guli)
-				X = guli[day];
+			X = guli[day];
 		else 
 			X = yama[day];
-		duration = DegMinSec.toDegreesMoreThreeSixty(dayLength)/8;
+		duration = dayLen/8.0;
 		var res = sunr + duration * X;
 		return DegMinSec.getGeoCoordsFromDegree(res);
 	}
@@ -52,6 +63,10 @@ public class Kaalas {
 	}
 
 	public static void durmuhurtha(int sunrise[], int day) throws Exception {
+
+		if(day > 6)
+			day = day - 7;
+
 		double dayLen = DegMinSec.toDegrees(dayLength);
 		var las = DegMinSec.toDegrees(dayLength) * durmuhurtha[day][0]/12.0;
 		var durmuhurtha_ = DegMinSec.addMoreThreeSixty(sunrise, DegMinSec.getGeoCoordsFromDegree(las));

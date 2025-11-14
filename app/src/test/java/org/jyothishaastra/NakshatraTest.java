@@ -18,7 +18,7 @@ class NakshatraTest {
 	@Test 
 	void nakshatraExcercise() throws Exception {
 
-	Calendar date = Calendar.getInstance(TimeZone.getTimeZone("UT")); // or ET or GMT all have GMT id
+	final Calendar date = Calendar.getInstance(TimeZone.getTimeZone("GMT")); // or ET or GMT all have GMT id
 	date.set(2009, 5, 21, 0, 0, 0);
 	System.out.printf("Calcs for %s\n", date.toInstant());
 	// setTimeZone only sets the TZ and does not change the time
@@ -92,31 +92,44 @@ class NakshatraTest {
     double latitude = 25.578527955142327;
 	double longitude = 91.89088839950004;
 
-	date = Calendar.getInstance(TimeZone.getTimeZone("IST")); // or ET or GMT all have GMT id
-	date.set(2009, 5, 21, 0, 0, 0);
+	// date = Calendar.getInstance(TimeZone.getTimeZone("IST")); // or ET or GMT all have GMT id
+	// date.setTimeZone(TimeZone.getTimeZone("IST"));
+	// date.set(2009, 5, 21, 0, 0, 0);
 
-	System.out.println("Caclculating for date " + date.getTime());
+	System.out.println("Caclculating for date in UT" + date.toInstant());
 	System.out.printf("Sunrise or Kaalas for location Shillong in UT\n");
 	Sunrise.calc(date, latitude, longitude, "");
-	int srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
-	int srMin = Sunrise.sunrise.get(Calendar.MINUTE);
+	// java.time.ZonedDateTime.from(date.getTime().getTime());
+	java.time.ZonedDateTime zdt;
+	var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone("IST").toZoneId());
+	var sunstimeAtDest = Sunrise.sunset.toInstant().atZone(TimeZone.getTimeZone("IST").toZoneId());
 
-	int ssHour = Sunrise.sunset.get(Calendar.HOUR_OF_DAY);
-	int ssMin = Sunrise.sunset.get(Calendar.MINUTE);
+	int srHour = sunrtimeAtDest.getHour();
+	int srMin = sunrtimeAtDest.getMinute();
 
-	int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
+	int ssHour = sunstimeAtDest.getHour();
+	int ssMin = sunstimeAtDest.getMinute();
+
+	// int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
+	// weekday = 0;
+	int weekday = sunrtimeAtDest.getDayOfWeek().getValue();
+
 	System.out.printf("Day of week is %d\n", weekday);
-	int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Raahu);
-	System.out.printf("Raahu kaala starts at %s\n", Arrays.toString(raahu));
-	int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Guli);
-	System.out.printf("Guli kaala starts at %s\n", Arrays.toString(guli));
-	int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Kaala.Yama);
-	System.out.printf("Yama kaala starts at %s\n", Arrays.toString(yama));
+	int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Raahu);
+	// System.out.printf("Sunrise at: %s GMT\n", Sunrise.sunrise.toInstant());
+	// System.out.printf("Sunrise at: %s \n", Sunrise.sunrise.getTime());
+	// System.out.printf("Sunset at: %s GMT\n", Sunrise.sunset.toInstant());
+	System.out.printf("Raahu kaala starts at %s in IST\n", Arrays.toString(raahu));
+	int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Guli);
+	System.out.printf("Guli kaala starts at %s in IST\n", Arrays.toString(guli));
+	int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Yama);
+	System.out.printf("Yama kaala starts at %s in IST\n", Arrays.toString(yama));
 	System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Kaalas.duration)));
+	// System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Sunrise.duration)));
 
 	if(weekday == 2){
 		// get sunrise for next day
-		date.set(2025, 10, 12, 0, 0, 0); // for 15 July 2009
+		date.set(2009, 5, 22, 0, 0, 0); // for 22 June 2009
 	
 		// try setting hours to 00 to avoid issues
 		date.set(Calendar.HOUR_OF_DAY, 0);

@@ -39,7 +39,7 @@ public class Nakshatra {
 		if(nakshDeg > 360)
 			nakshDeg = nakshDeg - 360;
 
-        System.out.printf("Nakshatra deg is %4.9f\n", nakshDeg);
+        // System.out.printf("Nakshatra deg is %4.9f\n", nakshDeg);
 
 		double nakshSectorSize = (360.0 / 27.0);
 
@@ -136,14 +136,16 @@ public class Nakshatra {
 		double endInHrs = CalToHrs(nakshatraEnd) + addHours; 
 		// double diff = endInDec - staInDec;
 		naksDuration = endInHrs - staInHrs;
+		/* 
 		System.out.printf("Naks duration is %8.9f\n", naksDuration);	
 		System.out.printf("Start time of Nakshatra is %8.9f\n", staInHrs);	
 		System.out.printf("X is %8.9f for naksIndex %d\n", X, nakshatraIndex);	
 		System.out.printf("Naks start is %s\n", nakshatraStart.toInstant());	
 		System.out.printf("Naks end is %s\n", nakshatraEnd.toInstant());	
+		*/
 
 		double amruVarj = staInHrs + X/24 * naksDuration;
-		System.out.printf("amruVarj is %8.9f\n", amruVarj);	
+		// System.out.printf("amruVarj is %8.9f\n", amruVarj);	
 
 		Calendar amruVarjStart = (Calendar) nakshatraStart.clone();
 		amruVarjStart.set(Calendar.HOUR_OF_DAY, 0);
@@ -209,7 +211,7 @@ public class Nakshatra {
 		// elapsed - 00:00 UT - is this the end time of the previous Nakshatra as well?
 		nakshatraStart = (Calendar) date.clone();
 		// elapsedArr = DegMinSec.getGeoCoordsFromDegree(elapsed);
-		System.out.printf("Elapsed arr %s\n", Arrays.toString(staArr));
+		// System.out.printf("Elapsed arr %s\n", Arrays.toString(staArr));
 		nakshatraStart.add(Calendar.HOUR_OF_DAY, -1 * staArr[0]);
 		nakshatraStart.add(Calendar.MINUTE, -1 * staArr[1]);
 		nakshatraStart.add(Calendar.SECOND, -1 * staArr[2]);
@@ -228,7 +230,7 @@ public class Nakshatra {
 		// endTime = (RD/ DMC) * 24
 		 start = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 staArr = DegMinSec.getGeoCoordsFromDegree(start);
-		 System.out.printf("Naks start arr %s\n", Arrays.toString(staArr));
+		 // System.out.printf("Naks start arr %s\n", Arrays.toString(staArr));
 		 return end;
 	}
 	// end time in hours using the formula
@@ -242,7 +244,7 @@ public class Nakshatra {
 		// endTime = (RD/ DMC) * 24
 		 end = (remainingDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 endArr = DegMinSec.getGeoCoordsFromDegree(end);
-		 System.out.printf("End arr %s\n", Arrays.toString(endArr));
+		 // System.out.printf("End arr %s\n", Arrays.toString(endArr));
 		 return end;
 	}
 }
