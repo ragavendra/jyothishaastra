@@ -18,7 +18,7 @@ public class Nakshatra {
 	public static int nakshatraIndex;
     private static double nakshDeg;
     public static double elapsed;
-    public static int[] elapsedArr;
+    // public static int[] elapsedArr;
 	static Calendar nakshatraStart;
 	static Calendar amruthaStart;
 	static Calendar varjyaStart;
@@ -29,6 +29,7 @@ public class Nakshatra {
     private static double end;
     private static int[] endArr;
 	static double remainingDistance;
+	// static double naksStartAgo;
 
 	// raashi no. like Mesha is 1.
 	public static String nakshatra(int chaNirAbs[]) throws Exception {
@@ -39,6 +40,8 @@ public class Nakshatra {
 		if(nakshDeg > 360)
 			nakshDeg = nakshDeg - 360;
 
+        System.out.printf("Nakshatra deg is %4.9f\n", nakshDeg);
+
 		double nakshSectorSize = (360.0 / 27.0);
 
 		// Each Karana is 12/2 == 6 degrees
@@ -46,6 +49,19 @@ public class Nakshatra {
 
 		double endLimit = (nakshatraIndex + 1) * nakshSectorSize;
 		remainingDistance = endLimit - nakshDeg;
+
+		/* 
+		double naksSecStart;
+		if(nakshatraIndex != 0)
+			naksSecStart = nakshatraIndex * nakshSectorSize;
+		else
+			naksSecStart = 0;
+
+		naksStartAgo = nakshDeg - naksSecStart;
+
+		System.out.println("NaksStartAgo " + naksStartAgo);
+		*/
+
 		// System.out.println("Remaining " + remainingDistance);
 		elapsed = nakshDeg % nakshSectorSize;
         // tithiIndex = (int) Math.round(tithi);
@@ -156,14 +172,14 @@ public class Nakshatra {
 	}
 
 	// get end in Cal type
-	public static Calendar getNakshatraEnd(Calendar date){
+	public static Calendar absEnd(Calendar date){
 		nakshatraEnd = (Calendar) date.clone();
 		nakshatraEnd.add(Calendar.HOUR_OF_DAY, endArr[0]);
 		nakshatraEnd.add(Calendar.MINUTE, endArr[1]);
 		nakshatraEnd.add(Calendar.SECOND, endArr[2]);
 		return nakshatraEnd;
 	}
-
+/* 
 	// subtract the elapsed for the given date
 	public static Calendar start(Calendar date){
 		System.out.printf("Now %s\n", date.toInstant());
@@ -178,6 +194,36 @@ public class Nakshatra {
 		return nakshatraStart;
 	}
 
+*/
+
+	// subtract the elapsed for the given date
+	public static Calendar absStart(Calendar date){
+		// System.out.printf("Now %s\n", date.toInstant());
+		// elapsed - 00:00 UT - is this the end time of the previous Nakshatra as well?
+		nakshatraStart = (Calendar) date.clone();
+		// elapsedArr = DegMinSec.getGeoCoordsFromDegree(elapsed);
+		System.out.printf("Elapsed arr %s\n", Arrays.toString(endArr));
+		nakshatraStart.add(Calendar.HOUR_OF_DAY, -1 * endArr[0]);
+		nakshatraStart.add(Calendar.MINUTE, -1 * endArr[1]);
+		nakshatraStart.add(Calendar.SECOND, -1 * endArr[2]);
+
+		return nakshatraStart;
+	}
+
+	// start time in hours using the formula
+	public static double start(int[] chaMot, double transitDistance) throws Exception {
+		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
+		/* 
+		   System.out.printf("1 is %4.9f\n", DegMinSec.degrees(chaMot) * 60);
+		   System.out.printf("2 is %4.9f\n", DegMinSec.degrees(surMot) * 60);
+		   System.out.printf("3 is %4.9f\n", DegMinSec.toMinutes(remainingDistance));
+		   */
+		// endTime = (RD/ DMC) * 24
+		 end = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
+		 endArr = DegMinSec.getGeoCoordsFromDegree(end);
+		 System.out.printf("Naks start arr %s\n", Arrays.toString(endArr));
+		 return end;
+	}
 	// end time in hours using the formula
 	public static double end(int[] chaMot, double remainingDistance) throws Exception {
 		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
@@ -189,6 +235,7 @@ public class Nakshatra {
 		// endTime = (RD/ DMC) * 24
 		 end = (remainingDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 endArr = DegMinSec.getGeoCoordsFromDegree(end);
+		 System.out.printf("End arr %s\n", Arrays.toString(endArr));
 		 return end;
 	}
 }

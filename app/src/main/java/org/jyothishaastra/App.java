@@ -118,7 +118,7 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		// System.out.printf("Raashi ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Raashi.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 		System.out.printf("Nakshatra is %s and remaining distance is %4.9f.\n", Nakshatra.nakshatra(chaNir), Nakshatra.remainingDistance);
 
-		System.out.printf("Nakshatra start is %s in UT.\n", Nakshatra.start(date).toInstant());
+		System.out.printf("Nakshatra start is %s in UT.\n", Nakshatra.absStart(date).toInstant());
 
 		// "Nakshatra ends at %s from 5:30 IST or minus from 5pm in PST?\n"
 		var naksEnd = Nakshatra.end(chaMot, Nakshatra.remainingDistance);
