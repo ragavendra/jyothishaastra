@@ -96,7 +96,7 @@ class NakshatraTest {
 	date.set(2009, 5, 21, 0, 0, 0);
 
 	System.out.println("Caclculating for date " + date.getTime());
-	System.out.printf("Sunrise or Kaalas for location Vancouver in PST\n");
+	System.out.printf("Sunrise or Kaalas for location Shillong in UT\n");
 	Sunrise.calc(date, latitude, longitude, "");
 	int srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
 	int srMin = Sunrise.sunrise.get(Calendar.MINUTE);
