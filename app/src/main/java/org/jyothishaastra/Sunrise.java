@@ -77,12 +77,12 @@ public class Sunrise {
 		var sr = j2ts(j_rise);
 		sunrise = Calendar.getInstance();
 		sunrise.setTimeInMillis((long) sr * 1000);
-		System.out.printf("Sunrise at: %s\n", sunrise.getTime());
+		System.out.printf("Sunrise at: %s\n", sunrise.toInstant());
 
 		var ss = j2ts(j_set);
 		sunset = Calendar.getInstance();
 		sunset.setTimeInMillis((long) ss * 1000);
-		System.out.printf("Sunset at: %s\n", sunset.getTime());
+		System.out.printf("Sunset at: %s\n", sunset.toInstant());
 		duration = w0_degrees / (180.0 / 24.0);
 		System.out.printf("Day length: %8.9f hours\n", duration);
 	}
