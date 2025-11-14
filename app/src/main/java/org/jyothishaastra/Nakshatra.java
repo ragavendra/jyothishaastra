@@ -1,8 +1,5 @@
 package org.jyothishaastra;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Calendar;
 
@@ -27,7 +24,9 @@ public class Nakshatra {
 	static Calendar nakshatraEnd;
 	static double naksDuration;
     private static double end;
+    private static double start;
     private static int[] endArr;
+    private static int[] staArr;
 	static double remainingDistance;
 	// static double naksStartAgo;
 
@@ -104,13 +103,13 @@ public class Nakshatra {
 		return amruVarjEnd;
 	}
 
-	private static double hrMnInDec(Calendar date){
+	private static double CalToHrs(Calendar date){
 		double hr = date.get(Calendar.HOUR_OF_DAY);
 		double mn = date.get(Calendar.MINUTE);
 		double res = hr + mn/60.0;
 		return res;
 	}
-
+		
 	// only diff bw amru and varj start and end is the X value
 	public static Calendar amruVarjStart(boolean amrutha_){
 		// start time of Naks + X/24 * durationOfNakshatra;
@@ -127,22 +126,30 @@ public class Nakshatra {
 		if(daysDiff > 0)
 			addHours = 24 * daysDiff;
 
-		double staInDec = hrMnInDec(nakshatraStart); 
-		double endInDec = hrMnInDec(nakshatraEnd) + addHours; 
-		// double diff = endInDec - staInDec;
-		naksDuration = endInDec - staInDec;
-		System.out.printf("Naks duration is %8.9f\n", naksDuration);	
-		System.out.printf("Start time of Nakshatra is %8.9f\n", staInDec);	
-		System.out.printf("X is %8.9f for naksIndex %d\n", X, nakshatraIndex);	
+/* 
+		long diffInMillis = nakshatraEnd.getTimeInMillis() - nakshatraStart.getTimeInMillis();
+        double hoursDiff = diffInMillis / (1000 * 60 * 60.0 );
+		System.out.printf("Hours duration is %8.9f\n", hoursDiff);	
+*/
 
-		double amruVarj = staInDec + X/24 * naksDuration;
+		double staInHrs = CalToHrs(nakshatraStart); 
+		double endInHrs = CalToHrs(nakshatraEnd) + addHours; 
+		// double diff = endInDec - staInDec;
+		naksDuration = endInHrs - staInHrs;
+		System.out.printf("Naks duration is %8.9f\n", naksDuration);	
+		System.out.printf("Start time of Nakshatra is %8.9f\n", staInHrs);	
+		System.out.printf("X is %8.9f for naksIndex %d\n", X, nakshatraIndex);	
+		System.out.printf("Naks start is %s\n", nakshatraStart.toInstant());	
+		System.out.printf("Naks end is %s\n", nakshatraEnd.toInstant());	
+
+		double amruVarj = staInHrs + X/24 * naksDuration;
 		System.out.printf("amruVarj is %8.9f\n", amruVarj);	
 
 		Calendar amruVarjStart = (Calendar) nakshatraStart.clone();
 		amruVarjStart.set(Calendar.HOUR_OF_DAY, 0);
 		amruVarjStart.set(Calendar.MINUTE, 0);
 		amruVarjStart.set(Calendar.SECOND, 0);
-		System.out.printf("amruVarjStart is %s\n", amruVarjStart.toInstant());	
+		// System.out.printf("amruVarjStart is %s\n", amruVarjStart.toInstant());	
 
 		/* 
 		if(amruVarj > 24.0) {
@@ -202,10 +209,10 @@ public class Nakshatra {
 		// elapsed - 00:00 UT - is this the end time of the previous Nakshatra as well?
 		nakshatraStart = (Calendar) date.clone();
 		// elapsedArr = DegMinSec.getGeoCoordsFromDegree(elapsed);
-		System.out.printf("Elapsed arr %s\n", Arrays.toString(endArr));
-		nakshatraStart.add(Calendar.HOUR_OF_DAY, -1 * endArr[0]);
-		nakshatraStart.add(Calendar.MINUTE, -1 * endArr[1]);
-		nakshatraStart.add(Calendar.SECOND, -1 * endArr[2]);
+		System.out.printf("Elapsed arr %s\n", Arrays.toString(staArr));
+		nakshatraStart.add(Calendar.HOUR_OF_DAY, -1 * staArr[0]);
+		nakshatraStart.add(Calendar.MINUTE, -1 * staArr[1]);
+		nakshatraStart.add(Calendar.SECOND, -1 * staArr[2]);
 
 		return nakshatraStart;
 	}
@@ -219,9 +226,9 @@ public class Nakshatra {
 		   System.out.printf("3 is %4.9f\n", DegMinSec.toMinutes(remainingDistance));
 		   */
 		// endTime = (RD/ DMC) * 24
-		 end = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
-		 endArr = DegMinSec.getGeoCoordsFromDegree(end);
-		 System.out.printf("Naks start arr %s\n", Arrays.toString(endArr));
+		 start = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
+		 staArr = DegMinSec.getGeoCoordsFromDegree(start);
+		 System.out.printf("Naks start arr %s\n", Arrays.toString(staArr));
 		 return end;
 	}
 	// end time in hours using the formula

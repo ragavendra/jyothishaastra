@@ -20,6 +20,7 @@ class NakshatraTest {
 
 	Calendar date = Calendar.getInstance(TimeZone.getTimeZone("UT")); // or ET or GMT all have GMT id
 	date.set(2009, 5, 21, 0, 0, 0);
+	System.out.printf("Calcs for %s\n", date.toInstant());
 	// setTimeZone only sets the TZ and does not change the time
 /* 
 	// set to IST
@@ -90,6 +91,9 @@ class NakshatraTest {
 
     double latitude = 25.578527955142327;
 	double longitude = 91.89088839950004;
+
+	date = Calendar.getInstance(TimeZone.getTimeZone("IST")); // or ET or GMT all have GMT id
+	date.set(2009, 5, 21, 0, 0, 0);
 
 	System.out.println("Caclculating for date " + date.getTime());
 	System.out.printf("Sunrise or Kaalas for location Vancouver in PST\n");
