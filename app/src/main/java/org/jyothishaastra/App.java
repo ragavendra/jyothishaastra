@@ -35,7 +35,7 @@ public class App {
 		Calendar date = Calendar.getInstance();
 		date.setTimeZone(TimeZone.getTimeZone("UT"));
 		date.set(2025, 9, 22, 0, 0, 0); 
-        System.out.println(new App().getGreeting() + " at " + date.toInstant());
+        System.out.println(new App().getGreeting() + " at " + date.toInstant() + " in GMT");
 
 		/*
 
@@ -83,7 +83,8 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
 		System.out.printf("Abs geo of Surya is %d & Chandra is %d\n", sooryaAbs[0], chandraAbs[0]);
 
-		System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", Tithi.tithi(chandraAbs, sooryaAbs), Tithi.remainingDistance);
+		var tithi = Tithi.tithi(chandraAbs, sooryaAbs);
+		System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", tithi, Tithi.remainingDistance);
 
 		/*uncomment when Chandra has moved to next Raashi 
 		*/
@@ -98,7 +99,8 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		System.out.printf("Daily motion of Chandra is %s\n", Arrays.toString(chaMot));
 
 		// Time taken to cover remainingDistance
-		String suff = "from 5:30 IST following day or from 5pm in PST? which is from midnight UT.";
+		// String suff = "from 5:30 IST following day or from 5pm in PST? which is from midnight UT.";
+		String suff = "GMT or minutes from 5pm in PST?";
 		System.out.printf("Tithi ends at %s %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))), suff);
 
 		System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
@@ -113,17 +115,19 @@ Chandra’s longitude is 17-41’ in Aries. Subtracting Ayanamsa we get
 		// static from pdf, this is not from Indian Eph, not from Swiss Eph calc, but something newer, lol
 		// chaNir = new int[]{ 353, 41, 52 };
 
-		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", Raashi.raashi(chaNir), Raashi.remainingDistance, Arrays.toString(chaNir));
+		String raashi = Raashi.raashi(chaNir); 
+		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
 
 		// System.out.printf("Raashi ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Raashi.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 		System.out.printf("Nakshatra is %s and remaining distance is %4.9f.\n", Nakshatra.nakshatra(chaNir), Nakshatra.remainingDistance);
 
-		System.out.printf("Nakshatra start is %s in UT.\n", Nakshatra.absStart(date).toInstant());
-
-		// "Nakshatra ends at %s from 5:30 IST or minus from 5pm in PST?\n"
-		var naksEnd = Nakshatra.end(chaMot, Nakshatra.remainingDistance);
-		System.out.printf("Nakshatra ends at %s %s %s\n", naksEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(naksEnd)), suff);
-		// System.out.printf("Nakshatra ends at %s for Cha mot %s and RD %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))), Arrays.toString(chaMot), Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)));
+		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
+		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
+		// time is needed only from here
+		Calendar naksStart_ = Nakshatra.absStart(date);
+		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
+		Calendar naksEnd = Nakshatra.absEnd(date);
+		System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
 
 		String yoga = Yoga.yoga(chaNir, surNir);
 		System.out.printf("Yoga is %s and remaining distance is %4.9f.\n", yoga, Yoga.remainingDistance);

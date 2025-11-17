@@ -60,7 +60,7 @@ class NakshatraTest {
     double latitude = 25.578527955142327;
 	double longitude = 91.89088839950004;
 
-	System.out.println("Caclculating for date in UT" + date.toInstant());
+	System.out.println("Caclculating for date " + date.toInstant() + " UT");
 	System.out.printf("Sunrise or Kaalas for location Shillong in UT\n");
 	Sunrise.calc(date, latitude, longitude, "");
 	var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone("IST").toZoneId());
@@ -205,12 +205,14 @@ class NakshatraTest {
 	}
 
 */
+	// data from pdf and results match there only
 	@Test 
 	void nakshatra() throws Exception {
 
 	Calendar date = Calendar.getInstance(TimeZone.getTimeZone("UT")); // or ET or GMT all have GMT id
 	date.set(2009, 6, 15, 0, 0, 0); // for 15 July 2009
 	// setTimeZone only sets the TZ and does not change the time
+	System.out.printf("Calcs for %s\n", date.toInstant());
 
 	double ayanamsha = Ayanaamsha.ayanamsha(date);
 
@@ -241,10 +243,35 @@ class NakshatraTest {
 	assertArrayEquals(new int[]{112, 39, 28}, sooryaAbs);
 	// assertArrayEquals(new int[]{22, 39, 28}, swissEphermesisSun);
 
+	int surRaashi1 = 4; 
+	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
+	sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
+	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1, "Act is " + Arrays.toString(sooryaAbs1));
+
 	double ayaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
 	// System.out.printf("ayaNir %s\n", ayaNir); 
 	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(ayaNir);
-	// System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+	System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+
+	// daily motion of Chandra
+	int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
+	int surMot[] = DegMinSec.minus(sooryaAbs, sooryaAbs1);
+	// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
+
+	assertArrayEquals(new int[]{13,9,0}, chaMot); // 13, 9, 0
+
+	String raashi = Raashi.raashi(chaNir); 
+	System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
+
+	var tithi = Tithi.tithi(chandraAbs, sooryaAbs);
+	System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", tithi, Tithi.remainingDistance);
+
+	String suff = "GMT or minutes from 5pm in PST?";
+	System.out.printf("Tithi ends at %s %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))), suff);
+
+	System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
+	// System.out.printf("Karana ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
+
 	String naks = Nakshatra.nakshatra(chaNir);
 	assertEquals("Revathi - 7.023888889 deg have elapsed", naks);
 	System.out.printf("Nakshatra is %s\n", naks); 
@@ -257,25 +284,21 @@ class NakshatraTest {
 	assertEquals(6.309444444444466, Nakshatra.remainingDistance);
 	assertArrayEquals(new int[]{6,18,34}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.remainingDistance)); // ,8}
 
-	// daily motion of Chandra
-	int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
-	// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
+	Nakshatra.end(chaMot, Nakshatra.remainingDistance);
 
-	assertArrayEquals(new int[]{13,9,0}, chaMot); // 13, 9, 0
-	
 	// chaMot = new int[]{13, 9, 0};
 	// assertEquals(0.5713662833353618, Nakshatra.end(chaMot, Nakshatra.remainingDistance));
 	assertArrayEquals(new int[]{11, 30, 55}, DegMinSec.getGeoCoordsFromDegree(Nakshatra.end(chaMot, Nakshatra.remainingDistance))); // , 8}
 
-	Nakshatra.end(chaMot, Nakshatra.remainingDistance);
+
 	double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
 	// time is needed only from here
 	Calendar naksStart_ = Nakshatra.absStart(date);
 	System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
 	Calendar naksEnd = Nakshatra.absEnd(date);
 	System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
-	
-/* 
+
+	/* 
 	// time is needed only from here
 	Calendar naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
 	System.out.printf("Nakshatra start is %s in GMT.\n", naksStart.toInstant());
@@ -283,8 +306,8 @@ class NakshatraTest {
 	assertEquals(1247590714l, naksStart.getTimeInMillis()/1000, "Nakshatra start is " + naksStart.getTimeInMillis());
 	Calendar naksEnd = Nakshatra.getNakshatraEnd(date);
 	System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
-*/
-	
+	*/
+
 	assertEquals(1247657455l, naksEnd.getTimeInMillis()/1000);
 
 	Calendar amrSta = Nakshatra.amruVarjStart(true);
@@ -294,7 +317,7 @@ class NakshatraTest {
 	Calendar amrEnd = Nakshatra.amruVarjEnd(true);
 	System.out.printf("Amrutha end is %s in GMT.\n", amrEnd.toInstant());
 	// assertEquals(1247705734l, amrEnd.getTimeInMillis()/1000);
-	
+
 	Calendar varjSta = Nakshatra.amruVarjStart(false);
 	System.out.printf("Varjya start is %s in GMT.\n", varjSta.toInstant());
 	// assertEquals(1247708374l, varjSta.getTimeInMillis()/1000);
@@ -303,10 +326,10 @@ class NakshatraTest {
 	System.out.printf("Varjya end is %s in IST.\n", varjEnd.toInstant());
 	// assertEquals(1247713354l, varjEnd.getTimeInMillis()/1000);
 
-    double latitude = 49.202347531821296;
-    double longitude = -122.91647403420454;
+	double latitude = 49.202347531821296;
+	double longitude = -122.91647403420454;
 
-	System.out.println("Caclculating for date in UT" + date.toInstant());
+	System.out.println("Caclculating for date " + date.toInstant() + " UT");
 	System.out.printf("Sunrise or Kaalas for location Vancouver in PT\n");
 	Sunrise.calc(date, latitude, longitude, "");
 	var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone("Americas/Vancouver").toZoneId());
@@ -317,7 +340,6 @@ class NakshatraTest {
 
 	int ssHour = sunstimeAtDest.getHour();
 	int ssMin = sunstimeAtDest.getMinute();
-
 
 	// int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
 	// weekday = 0;
@@ -339,7 +361,7 @@ class NakshatraTest {
 	if(weekday == 2){
 		// get sunrise for next day
 		date.set(2009, 6, 16, 0, 0, 0); // for 15 July 2009
-	
+
 		// try setting hours to 00 to avoid issues
 		date.set(Calendar.HOUR_OF_DAY, 0);
 
@@ -351,6 +373,6 @@ class NakshatraTest {
 	}
 
 	Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
-	}
+}
 }
 

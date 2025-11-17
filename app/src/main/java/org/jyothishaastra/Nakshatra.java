@@ -231,7 +231,7 @@ public class Nakshatra {
 		 start = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 staArr = DegMinSec.getGeoCoordsFromDegree(start);
 		 // System.out.printf("Naks start arr %s\n", Arrays.toString(staArr));
-		 return end;
+		 return start;
 	}
 	// end time in hours using the formula
 	public static double end(int[] chaMot, double remainingDistance) throws Exception {
