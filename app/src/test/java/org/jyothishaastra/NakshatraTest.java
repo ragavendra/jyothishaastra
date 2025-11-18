@@ -248,10 +248,14 @@ class NakshatraTest {
 	sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
 	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1, "Act is " + Arrays.toString(sooryaAbs1));
 
-	double ayaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
+	double chaAyaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
 	// System.out.printf("ayaNir %s\n", ayaNir); 
-	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(ayaNir);
+	int[] chaNir = DegMinSec.getGeoCoordsFromDegree(chaAyaNir);
 	System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+
+	double surAyaNir = Ayanaamsha.nirayaana(ayanamsha, sooryaAbs);
+	int[] surNir = DegMinSec.getGeoCoordsFromDegree(surAyaNir);
+	System.out.printf("surNir %s\n", Arrays.toString(surNir)); 
 
 	// daily motion of Chandra
 	int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
@@ -259,9 +263,6 @@ class NakshatraTest {
 	// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
 
 	assertArrayEquals(new int[]{13,9,0}, chaMot); // 13, 9, 0
-
-	String raashi = Raashi.raashi(chaNir); 
-	System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
 
 	var tithi = Tithi.tithi(chandraAbs, sooryaAbs);
 	System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", tithi, Tithi.remainingDistance);
@@ -271,6 +272,9 @@ class NakshatraTest {
 
 	System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
 	// System.out.printf("Karana ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
+
+	String raashi = Raashi.raashi(chaNir); 
+	System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
 
 	String naks = Nakshatra.nakshatra(chaNir);
 	assertEquals("Revathi - 7.023888889 deg have elapsed", naks);
@@ -309,6 +313,12 @@ class NakshatraTest {
 	*/
 
 	assertEquals(1247657455l, naksEnd.getTimeInMillis()/1000);
+
+	String yoga = Yoga.yoga(chaNir, surNir);
+	System.out.printf("Yoga is %s and remaining distance is %4.9f.\n", yoga, Yoga.remainingDistance);
+
+	var yogaEnd = Yoga.end(chaMot, surMot);
+	System.out.printf("Yoga ends at %s %s %s\n", yogaEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaEnd)), suff);
 
 	Calendar amrSta = Nakshatra.amruVarjStart(true);
 	System.out.printf("Amrutha start is %s in GMT.\n", amrSta.toInstant());
@@ -372,7 +382,7 @@ class NakshatraTest {
 		Kaalas.setNightLength(new int[]{srHour, srMin, 0}, new int[]{srHour, srMin, 0});
 	}
 
-	Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
+Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
 }
 }
 
