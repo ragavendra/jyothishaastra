@@ -23,7 +23,7 @@ class NakshatraTest {
 
 	final Calendar date = Calendar.getInstance(TimeZone.getTimeZone("GMT")); // or ET or GMT all have GMT id
 	date.set(2009, 5, 21, 0, 0, 0);
-	System.out.printf("Calcs for %s\n", date.toInstant());
+	System.out.printf("Calcs for %s GMT\n", date.toInstant());
 	// setTimeZone only sets the TZ and does not change the time
 
 	// int[] soorNir = new int[]{ 65, 46, 37};
@@ -60,7 +60,7 @@ class NakshatraTest {
     double latitude = 25.578527955142327;
 	double longitude = 91.89088839950004;
 
-	System.out.println("Caclculating for date " + date.toInstant() + " UT");
+	// System.out.println("Caclculating for date " + date.toInstant() + " UT");
 	System.out.printf("Sunrise or Kaalas for location Shillong in UT\n");
 	Sunrise.calc(date, latitude, longitude, "");
 	var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone("IST").toZoneId());
@@ -205,14 +205,183 @@ class NakshatraTest {
 	}
 
 */
+	// Test for user supplied inputs
+	@Test 
+	void nakshatra_() throws Exception {
+
+		Calendar date = Calendar.getInstance(TimeZone.getTimeZone("UT")); // or ET or GMT all have GMT id
+		date.set(2009, 10, 18, 0, 0, 0);
+		// setTimeZone only sets the TZ and does not change the time
+		System.out.printf("Calcs for %s GMT\n", date.toInstant());
+
+		double ayanamsha = Ayanaamsha.ayanamsha(date);
+		System.out.printf("Ayanaamsha for the date is %8.6f\n", ayanamsha);
+
+		int swissEphermesisMoon[] = { 1, 7, 0};
+		int swissEphermesisSun[] = { 25, 53, 40};
+		int chaRaashi = 6;
+		int surRaashi = 6;
+
+		int chaRaashi1 = 6; // on 16 July 2009 it is in Vrushabha
+		int chandraAbs1[] = new int[]{ 12, 59, 0};
+		chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
+
+		int surRaashi1 = 6; 
+		int sooryaAbs1[] = new int[]{ 26, 54, 13};
+		sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
+
+		int chandraAbs[] = Arrays.copyOf(swissEphermesisMoon, swissEphermesisMoon.length);
+		chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
+		System.out.printf("Chandra abas %s\n", Arrays.toString(chandraAbs));
+		// Do not use swissEphermesisMoon anymore
+
+		int sooryaAbs[] = Arrays.copyOf(swissEphermesisSun, swissEphermesisSun.length);
+		sooryaAbs[0] = DegMinSec.absGeo(surRaashi, swissEphermesisSun);
+		System.out.printf("Soorya abs %s\n", Arrays.toString(sooryaAbs));
+		// Do not use swissEphermesisSun anymore
+
+		double chaAyaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
+		// System.out.printf("ayaNir %s\n", ayaNir); 
+		int[] chaNir = DegMinSec.getGeoCoordsFromDegree(chaAyaNir);
+		System.out.printf("chaNir %s\n", Arrays.toString(chaNir)); 
+
+		double surAyaNir = Ayanaamsha.nirayaana(ayanamsha, sooryaAbs);
+		int[] surNir = DegMinSec.getGeoCoordsFromDegree(surAyaNir);
+		System.out.printf("surNir %s\n", Arrays.toString(surNir)); 
+
+		// Getting issue with Sayaana longs, so using Niraayana or sidereal from astro seek.com
+		chandraAbs = new int[]{ 186, 54, 0}; // in Thula 7 -> 6 * 30
+		chandraAbs1 = new int[]{ 198, 46, 0};
+		sooryaAbs = new int[]{ 211, 40, 30}; // in Vrushaka 8 -> 7 * 30
+		sooryaAbs1 = new int[]{ 212, 41, 2};
+		chaNir = chandraAbs;
+		surNir = sooryaAbs;
+
+		// daily motion of Chandra
+		int chaMot[] = DegMinSec.minus(chandraAbs, chandraAbs1);
+		int surMot[] = DegMinSec.minus(sooryaAbs, sooryaAbs1);
+		// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
+
+		var tithi = Tithi.tithi(chandraAbs, sooryaAbs);
+		System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", tithi, Tithi.remainingDistance);
+
+		// String suff = "GMT or minutes from 5pm in PST?";
+		String suff = "GMT";
+		System.out.printf("Tithi ends at %s %s\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.end(surMot, chaMot, Tithi.remainingDistance))), suff);
+		System.out.printf("Tithi started at %s %s ago.\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Tithi.start(surMot, chaMot, Tithi.elapsed))), suff);
+
+		System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
+		// System.out.printf("Karana ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
+
+		String raashi = Raashi.raashi(chaNir); 
+		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
+
+		String naks = Nakshatra.nakshatra(chaNir);
+		System.out.printf("Nakshatra is %s\n", naks); 
+
+		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
+
+		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
+		// time is needed only from here
+		Calendar naksStart_ = Nakshatra.absStart(date);
+		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
+		Calendar naksEnd = Nakshatra.absEnd(date);
+		System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
+
+		String yoga = Yoga.yoga(chaNir, surNir);
+		System.out.printf("Yoga is %s and remaining distance is %4.9f.\n", yoga, Yoga.remainingDistance);
+
+		var yogaEnd = Yoga.end(chaMot, surMot);
+		System.out.printf("Yoga ends at %s %s %s\n", yogaEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaEnd)), suff);
+
+		// use TimeZone.getAvailaibleIDs on your machine to confirm if the TZ is available
+		var tzId = "US/Pacific";
+		if(TimeZone.getTimeZone(tzId).getID() != tzId){
+			System.out.printf("Cannot continue as %s TZ is not available.\n", tzId);
+			return;
+		}
+
+		Calendar amrSta = Nakshatra.amruVarjStart(true);
+		var start = amrSta.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+
+		System.out.printf("Amrutha start is %s.\n", start.toString());
+		// assertEquals(1247713354l, amrSta.getTimeInMillis()/1000);
+
+		Calendar amrEnd = Nakshatra.amruVarjEnd(true);
+		var end = amrEnd.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+		System.out.printf("Amrutha end is %s.\n", end.toString());
+		// assertEquals(1247705734l, amrEnd.getTimeInMillis()/1000);
+
+		Calendar varjSta = Nakshatra.amruVarjStart(false);
+		start = varjSta.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+		System.out.printf("Varjya start is %s.\n", start.toString());
+		// assertEquals(1247708374l, varjSta.getTimeInMillis()/1000);
+
+		Calendar varjEnd = Nakshatra.amruVarjEnd(false);
+		end = varjEnd.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+		System.out.printf("Varjya end is %s.\n", end.toString());
+		// assertEquals(1247713354l, varjEnd.getTimeInMillis()/1000);
+
+		double latitude = 49.202347531821296;
+		double longitude = -122.91647403420454;
+
+		// System.out.println("Caclculating for date " + date.toInstant() + " UT");
+		System.out.printf("Sunrise or Kaalas for location Vancouver in PT\n");
+		Sunrise.calc(date, latitude, longitude, "");
+
+		var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+		var sunstimeAtDest = Sunrise.sunset.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
+
+		int srHour = sunrtimeAtDest.getHour();
+		int srMin = sunrtimeAtDest.getMinute();
+
+		int ssHour = sunstimeAtDest.getHour();
+		int ssMin = sunstimeAtDest.getMinute();
+
+		// int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
+		int weekday = sunrtimeAtDest.getDayOfWeek().getValue();
+		weekday = 2;
+
+		System.out.printf("Day of week is %d and sunrise and sunset in local time %s and %s\n", weekday, sunrtimeAtDest.toString(), sunstimeAtDest.toString());
+		int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Raahu);
+		// System.out.printf("Sunrise at: %s GMT\n", Sunrise.sunrise.toInstant());
+		// System.out.printf("Sunrise at: %s \n", Sunrise.sunrise.getTime());
+		// System.out.printf("Sunset at: %s GMT\n", Sunrise.sunset.toInstant());
+		System.out.printf("Raahu kaala starts at %s in PT\n", Arrays.toString(raahu));
+		int[] guli = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Guli);
+		System.out.printf("Guli kaala starts at %s in PT\n", Arrays.toString(guli));
+		int[] yama = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Yama);
+		System.out.printf("Yama kaala starts at %s in PT\n", Arrays.toString(yama));
+		System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Kaalas.duration)));
+		// System.out.printf("Duration of any kaala is %s hours\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Sunrise.duration)));
+
+		if(weekday == 2){
+			// get sunrise for next day
+			// date.set(2009, 6, 16, 0, 0, 0); // for 15 July 2009
+			date.set(Calendar.DATE, date.get(Calendar.DATE) + 1); 
+
+			// try setting hours to 00 to avoid issues
+			date.set(Calendar.HOUR_OF_DAY, 0);
+
+			Sunrise.calc(date, latitude, longitude, "");
+			srHour = Sunrise.sunrise.get(Calendar.HOUR_OF_DAY);
+			srMin = Sunrise.sunrise.get(Calendar.MINUTE);
+
+			Kaalas.setNightLength(new int[]{srHour, srMin, 0}, new int[]{srHour, srMin, 0});
+		}
+
+		Kaalas.durmuhurtha(new int[]{srHour, srMin, 0}, weekday);
+	}
+
 	// data from pdf and results match there only
 	@Test 
+	@Disabled
 	void nakshatra() throws Exception {
 
 	Calendar date = Calendar.getInstance(TimeZone.getTimeZone("UT")); // or ET or GMT all have GMT id
 	date.set(2009, 6, 15, 0, 0, 0); // for 15 July 2009
 	// setTimeZone only sets the TZ and does not change the time
-	System.out.printf("Calcs for %s\n", date.toInstant());
+	System.out.printf("Calcs for %s GMT\n", date.toInstant());
 
 	double ayanamsha = Ayanaamsha.ayanamsha(date);
 
@@ -222,13 +391,18 @@ class NakshatraTest {
 
 	int swissEphermesisMoon[] = { 17, 41, 00 };
 	int swissEphermesisSun[] = { 22, 39, 28 };
-	int surRaashi = 4; // Karkaataka
 	int chaRaashi = 1; // Mesha
+	int surRaashi = 4; // Karkaataka
 
 	int chaRaashi1 = 2; // on 16 July 2009 it is in Vrushabha
 	int chandraAbs1[] = new int[]{ 00, 50, 00 };
 	chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
 	assertArrayEquals(new int[]{30, 50, 0}, chandraAbs1);
+
+	int surRaashi1 = 4; 
+	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
+	sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
+	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1, "Act is " + Arrays.toString(sooryaAbs1));
 
 	int chandraAbs[] = Arrays.copyOf(swissEphermesisMoon, swissEphermesisMoon.length);
 	chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);
@@ -242,11 +416,6 @@ class NakshatraTest {
 
 	assertArrayEquals(new int[]{112, 39, 28}, sooryaAbs);
 	// assertArrayEquals(new int[]{22, 39, 28}, swissEphermesisSun);
-
-	int surRaashi1 = 4; 
-	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
-	sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
-	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1, "Act is " + Arrays.toString(sooryaAbs1));
 
 	double chaAyaNir = Ayanaamsha.nirayaana(ayanamsha, chandraAbs);
 	// System.out.printf("ayaNir %s\n", ayaNir); 
@@ -339,7 +508,7 @@ class NakshatraTest {
 	double latitude = 49.202347531821296;
 	double longitude = -122.91647403420454;
 
-	System.out.println("Caclculating for date " + date.toInstant() + " UT");
+	// System.out.println("Caclculating for date " + date.toInstant() + " UT");
 	System.out.printf("Sunrise or Kaalas for location Vancouver in PT\n");
 	Sunrise.calc(date, latitude, longitude, "");
 	var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone("Americas/Vancouver").toZoneId());

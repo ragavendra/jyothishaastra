@@ -20,6 +20,7 @@ public class Tithi {
 	*/
 
 	static double remainingDistance;
+	static double elapsed;
     private static double tithiDeg;
 
 	// raashi no. like Mesha is 1.
@@ -55,10 +56,15 @@ public class Tithi {
 		double endLimit = (tithiIndex + 1)* 12;
 		remainingDistance = endLimit - tithiDeg;
 		// System.out.println("Remaining " + remainingDistance);
-		double elapsed = tithiDeg%12;
+		elapsed = tithiDeg%12;
         // tithiIndex = (int) Math.round(tithi);
 
 		return "%s - %s - %4.9f deg have elapsed".formatted(paksha, tithis[tithiIndex], elapsed);
+	}
+
+	// end time in hours
+	public static double start(int[] surMot, int[] chaMot, double elapsed) throws Exception {
+		return (DegMinSec.toMinutes(elapsed)/ (DegMinSec.toMinutes(DegMinSec.toDegrees(chaMot)) - DegMinSec.toMinutes(DegMinSec.toDegrees(surMot)) ))  * 24;
 	}
 
 	// end time in hours
