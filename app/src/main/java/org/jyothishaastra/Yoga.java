@@ -22,7 +22,7 @@ public class Yoga {
 	public static String yoga(int chaNirAbs[], int surNirAbs[]) throws Exception {
 
 		yogaDeg = DegMinSec.toDegrees(DegMinSec.addMoreThreeSixty(chaNirAbs, surNirAbs));
-        // System.out.printf("Yoga deg is %4.9f\n", yogaDeg);
+        System.out.printf("Yoga deg is %4.9f\n", yogaDeg);
 
 		if(yogaDeg > 360)
 			yogaDeg = yogaDeg - 360;

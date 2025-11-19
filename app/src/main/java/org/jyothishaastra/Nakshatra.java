@@ -39,7 +39,7 @@ public class Nakshatra {
 		if(nakshDeg > 360)
 			nakshDeg = nakshDeg - 360;
 
-        // System.out.printf("Nakshatra deg is %4.9f\n", nakshDeg);
+        System.out.printf("Nakshatra deg is %4.9f\n", nakshDeg);
 
 		double nakshSectorSize = (360.0 / 27.0);
 

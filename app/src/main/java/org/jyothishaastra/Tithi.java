@@ -36,7 +36,7 @@ public class Tithi {
 		}
 
 		tithiDeg = DegMinSec.toDegrees(DegMinSec.minusMoreThreeSixty(sooryaAbs, chandraAbs));
-        // System.out.printf("Tithi deg is %4.9f\n", tithiDeg);
+        System.out.printf("Tithi deg is %4.9f\n", tithiDeg);
 
 		// Each Tithi is 12 degrees
 		tithiIndex = (int) ( tithiDeg / 12 );
