@@ -3,6 +3,8 @@ package org.jyothishaastra;
 import java.util.Arrays;
 import java.util.Calendar;
 
+// Tithi is presumably the Tithi at Sunrise for the location and not after midnight. In Hindu calendar the day starts at Sunrise and ends the next Sunrise day. For 18th Nov 2025 in Gambia GMT, Triodashi was till [1, 42, 47] GMT but in drikpanchaang it showed as Chathurdashi so this presumption?
+
 public class Tithi {
 
 	// 30 Tithis or days with Poornima on 15th and Amavaasya on the 30th
