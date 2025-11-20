@@ -118,8 +118,8 @@ class NakshatraTest {
 
 	int swissEphermesisSun[] = { 19, 51, 5 };
 	int swissEphermesisMoon[] = { 17, 5, 00 };
-	int surRaashi = 8; 
-	int chaRaashi = 5; // Mesha
+	int surRaashi = 7; 
+	int chaRaashi = 4;
 
 	int chaRaashi1 = 6; // on 16 July 2009 it is in Vrushabha
 	int chandraAbs1[] = new int[]{ 00, 4, 00 };
@@ -219,14 +219,14 @@ class NakshatraTest {
 
 		int swissEphermesisMoon[] = { 1, 7, 0};
 		int swissEphermesisSun[] = { 25, 53, 40};
-		int chaRaashi = 6;
-		int surRaashi = 6;
+		int chaRaashi = 4;
+		int surRaashi = 4;
 
-		int chaRaashi1 = 6; // on 16 July 2009 it is in Vrushabha
+		int chaRaashi1 = 5; // on 16 July 2009 it is in Vrushabha
 		int chandraAbs1[] = new int[]{ 12, 59, 0};
 		chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
 
-		int surRaashi1 = 6; 
+		int surRaashi1 = 5; 
 		int sooryaAbs1[] = new int[]{ 26, 54, 13};
 		sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
 
@@ -252,8 +252,18 @@ class NakshatraTest {
 		// Getting issue with Sayaana longs, so using Niraayana or sidereal from astro seek.com
 		chandraAbs = new int[]{ 186, 54, 0}; // in Thula 7 -> 6 * 30
 		chandraAbs1 = new int[]{ 198, 46, 0};
+		int[] chandraAbs2 = new int[]{ 210, 37, 0};
+		/* 
+		chandraAbs = chandraAbs1;
+		chandraAbs1 = chandraAbs2;
+		*/
 		sooryaAbs = new int[]{ 211, 40, 30}; // in Vrushaka 8 -> 7 * 30
 		sooryaAbs1 = new int[]{ 212, 41, 2};
+		int[] sooryaAbs2 = new int[]{ 213, 41, 36};
+		/* 
+		sooryaAbs = sooryaAbs1;
+		sooryaAbs1 = sooryaAbs2;
+		*/
 		chaNir = chandraAbs;
 		surNir = sooryaAbs;
 
@@ -282,6 +292,8 @@ class NakshatraTest {
 		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
 
 		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
+		System.out.printf("Nakshatra start %s in GMT.\n", Arrays.toString(Nakshatra.staArr));
+		System.out.printf("Nakshatra end %s in GMT.\n", Arrays.toString(Nakshatra.endArr));
 		// time is needed only from here
 		Calendar naksStart_ = Nakshatra.absStart(date);
 		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
@@ -297,7 +309,8 @@ class NakshatraTest {
 		System.out.printf("Yoga started at %s %s %s ago.\n", yogaSta, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaSta)), suff);
 
 		// use TimeZone.getAvailaibleIDs on your machine to confirm if the TZ is available
-		var tzId = "US/Pacific";
+		// var tzId = "US/Pacific";
+		var tzId = "GMT";
 		if(TimeZone.getTimeZone(tzId).getID() != tzId){
 			System.out.printf("Cannot continue as %s TZ is not available.\n", tzId);
 			return;
@@ -324,11 +337,15 @@ class NakshatraTest {
 		System.out.printf("Varjya end is %s.\n", end.toString());
 		// assertEquals(1247713354l, varjEnd.getTimeInMillis()/1000);
 
+		/* 
 		double latitude = 49.202347531821296;
 		double longitude = -122.91647403420454;
+		*/
+		double latitude = 13.454650012611529;
+		double longitude = -16.576297684605827;
 
 		// System.out.println("Caclculating for date " + date.toInstant() + " UT");
-		System.out.printf("Sunrise or Kaalas for location Vancouver in PT\n");
+		System.out.printf("Sunrise or Kaalas for location Gambia in GMT\n");
 		Sunrise.calc(date, latitude, longitude, "");
 
 		var sunrtimeAtDest = Sunrise.sunrise.toInstant().atZone(TimeZone.getTimeZone(tzId).toZoneId());
@@ -342,7 +359,7 @@ class NakshatraTest {
 
 		// int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
 		int weekday = sunrtimeAtDest.getDayOfWeek().getValue();
-		weekday = 2;
+		weekday = 1;
 
 		System.out.printf("Day of week is %d and sunrise and sunset in local time %s and %s\n", weekday, sunrtimeAtDest.toString(), sunstimeAtDest.toString());
 		int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Raahu);
@@ -393,15 +410,15 @@ class NakshatraTest {
 
 	int swissEphermesisMoon[] = { 17, 41, 00 };
 	int swissEphermesisSun[] = { 22, 39, 28 };
-	int chaRaashi = 1; // Mesha
-	int surRaashi = 4; // Karkaataka
+	int chaRaashi = 0; // Mesha
+	int surRaashi = 3; // Karkaataka
 
-	int chaRaashi1 = 2; // on 16 July 2009 it is in Vrushabha
+	int chaRaashi1 = 1; // on 16 July 2009 it is in Vrushabha
 	int chandraAbs1[] = new int[]{ 00, 50, 00 };
 	chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
 	assertArrayEquals(new int[]{30, 50, 0}, chandraAbs1);
 
-	int surRaashi1 = 4; 
+	int surRaashi1 = 3; 
 	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
 	sooryaAbs1[0] = DegMinSec.absGeo(surRaashi1, sooryaAbs1);
 	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1, "Act is " + Arrays.toString(sooryaAbs1));

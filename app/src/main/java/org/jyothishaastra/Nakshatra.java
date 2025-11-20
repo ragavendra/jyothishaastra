@@ -25,8 +25,8 @@ public class Nakshatra {
 	static double naksDuration;
     private static double end;
     private static double start;
-    private static int[] endArr;
-    private static int[] staArr;
+    static int[] endArr;
+    static int[] staArr;
 	static double remainingDistance;
 	// static double naksStartAgo;
 

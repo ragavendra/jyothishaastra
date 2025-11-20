@@ -23,8 +23,8 @@ class RaashiTest {
 
 		int swissEphermesisMoon[] = { 17, 41, 00 };
 		int swissEphermesisSun[] = { 22, 39, 28 };
-		int surRaashi = 4; // Karkaataka
-		int chaRaashi = 1; // Mesha
+		int surRaashi = 3; // Karkaataka
+		int chaRaashi = 0; // Mesha
 
 		int chandraAbs[] = swissEphermesisMoon;
 		chandraAbs[0] = DegMinSec.absGeo(chaRaashi, swissEphermesisMoon);

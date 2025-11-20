@@ -21,10 +21,10 @@ class AyanaamshaTest {
 		// Chandra
 		return Stream.of(
 			//( day, sayyana from Swiss, niraaya from Ind, raashi from Swiss )
-			Arguments.of(1, new int[]{ 27, 42, 0 }, new int[]{ 183, 42, 28 }, 7), //, actual 13 }
-			Arguments.of(2, new int[]{ 10, 22, 0 }, new int[]{ 196, 22, 27 }, 8), //, 21, 33 }
+			Arguments.of(1, new int[]{ 27, 42, 0 }, new int[]{ 183, 42, 28 }, 6), //, actual 13 }
+			Arguments.of(2, new int[]{ 10, 22, 0 }, new int[]{ 196, 22, 27 }, 7), //, 21, 33 }
 
-			Arguments.of(20, new int[]{ 27, 36, 0 }, new int[]{ 63, 36, 25 }, 3) //, 36, 41 }
+			Arguments.of(20, new int[]{ 27, 36, 0 }, new int[]{ 63, 36, 25 }, 2) //, 36, 41 }
 		);
 	}
 
@@ -33,11 +33,11 @@ class AyanaamshaTest {
 		// Soorya
 	   return Stream.of(
 			//( day, sayyana from Swiss, niraaya from Ind, raashi from Swiss )
-			Arguments.of(1, new int[]{ 9, 18, 42 }, new int[]{ 75, 19, 10 }, 4), //, actual 1 }
-			Arguments.of(2, new int[]{ 10, 15, 54 }, new int[]{ 76, 16, 21 }, 4), //, 13 }
-			Arguments.of(3, new int[]{ 11, 13, 06 }, new int[]{ 77, 13, 33 }, 4), //, 24 }
+			Arguments.of(1, new int[]{ 9, 18, 42 }, new int[]{ 75, 19, 10 }, 3), //, actual 1 }
+			Arguments.of(2, new int[]{ 10, 15, 54 }, new int[]{ 76, 16, 21 }, 3), //, 13 }
+			Arguments.of(3, new int[]{ 11, 13, 06 }, new int[]{ 77, 13, 33 }, 3), //, 24 }
 
-			Arguments.of(20, new int[]{ 27, 25, 46 }, new int[]{ 93, 26, 11 }, 4) //, 2 }
+			Arguments.of(20, new int[]{ 27, 25, 46 }, new int[]{ 93, 26, 11 }, 3) //, 2 }
 		);
 	}
 

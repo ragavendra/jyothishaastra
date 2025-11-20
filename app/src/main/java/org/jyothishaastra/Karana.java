@@ -6,7 +6,7 @@ import java.util.Calendar;
 public class Karana {
 
 	// 60 of them
-	static String karanas[] = { "Kimstugna","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Sakuna","Chatushpada","Naga" };
+	static String karanas[] = { "Kimstugna","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Bava","Baalava","Kauvala","Taitila","Gara","Vanija","Vishti(Bhadra)","Shakuni","Chatushpada","Naga" };
 
 	private static int karanaIndex;
     private static double karanaDeg;

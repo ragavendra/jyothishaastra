@@ -23,15 +23,15 @@ class TithiTest {
 
 	int swissEphermesisMoon[] = { 17, 41, 00 };
 	int swissEphermesisSun[] = { 22, 39, 28 };
-	int surRaashi = 4; // Karkaataka
-	int chaRaashi = 1; // Mesha
+	int surRaashi = 3; // Karkaataka
+	int chaRaashi = 0; // Mesha
 
-	int chaRaashi1 = 2; // on 16 July 2009 it is in Vrushabha
+	int chaRaashi1 = 1; // on 16 July 2009 it is in Vrushabha
 	int chandraAbs1[] = new int[]{ 00, 50, 00 };
 	chandraAbs1[0] = DegMinSec.absGeo(chaRaashi1, chandraAbs1);
 	assertArrayEquals(new int[]{30, 50, 0}, chandraAbs1);
 
-	int sooryaRaashi1 = 4; // on 16 July 2009 it is in Karkaataka itself
+	int sooryaRaashi1 = 3; // on 16 July 2009 it is in Karkaataka itself
 	int sooryaAbs1[] = new int[]{ 23, 36, 42 };
 	sooryaAbs1[0] = DegMinSec.absGeo(sooryaRaashi1, sooryaAbs1);
 	assertArrayEquals(new int[]{113, 36, 42}, sooryaAbs1);

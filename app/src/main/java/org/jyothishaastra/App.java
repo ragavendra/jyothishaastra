@@ -19,14 +19,14 @@ public class App {
 	   */
 	public static void main(String ags[]) throws Exception {
 
-		// Mesha is 1
+		// Mesha is 0
 		//  for 22nd Oct
-		int chaRaashi = 8;
+		int chaRaashi = 7;
 		int swissEphermesisMoon[] = { 4, 7, 00 };
 		int swissEphCha1[] = Arrays.copyOf(swissEphermesisMoon, swissEphermesisMoon.length); // of next day's which is in Mesha raashi 9
 		int swissEphCha2[] = { 16, 1, 0 }; // of next day's which is in Mesha raashi 9
 
-		int surRaashi = 7;
+		int surRaashi = 6;
 		int swissEphermesisSun[] = { 28, 50, 42 };
 		int swissEphSur1[] = Arrays.copyOf(swissEphermesisSun, swissEphermesisSun.length);
 		int swissEphSur2[] = { 29, 50, 25 };
@@ -40,8 +40,8 @@ public class App {
 		/*
 
 		// for 15 July 2009
-		int surRaashi = 4; // Karkaataka
-		int chaRaashi = 1; // Mesha
+		int surRaashi = 3; // Karkaataka
+		int chaRaashi = 0; // Mesha
 		int swissEphermesisMoon[] = { 17, 41, 00 };
 		int ar1[] = { 17, 41, 00 }; // of next day's which is in Mesha raashi 9
 		int ar2[] = { 0, 50, 0 }; // of next day's which is Vrushabha

@@ -144,6 +144,6 @@ public class DegMinSec {
 	}
 
 	public static int absGeo(int raashi, int[] grahaGeo) throws Exception {
-		return (grahaGeo[0] + 30 * ( raashi - 1));
+		return (grahaGeo[0] + 30 * ( raashi ));
 	}
 }

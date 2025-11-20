@@ -22,9 +22,9 @@ class IntegraionTest {
 		// expected: <24.21711081408956> but was: <24.21834538198289>
 		// assertEquals(24.21711081408956, ayanamsha);
 
-		// Mesha is 1
-		int surRaashi = 7;
-		int chaRaashi = 8;
+		// Mesha is 0
+		int surRaashi = 6;
+		int chaRaashi = 7;
 		int swissEphermesisMoon[] = { 4, 7, 00 };
 		int ar1[] = { 4, 7, 0 }; // of next day's which is in Mesha raashi 9
 		int ar2[] = { 16, 1, 0 }; // of next day's which is in Mesha raashi 9
