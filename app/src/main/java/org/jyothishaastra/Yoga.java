@@ -17,6 +17,7 @@ public class Yoga {
 	private static int yoga_Index;
     private static double yogaDeg;
 	static double remainingDistance;
+	static double elapsed;
 
 	// raashi no. like Mesha is 1.
 	public static String yoga(int chaNirAbs[], int surNirAbs[]) throws Exception {
@@ -41,11 +42,20 @@ public class Yoga {
 		double endLimit = (yoga_Index + 1) * yogaSectorSize;
 		remainingDistance = endLimit - yogaDeg;
 		// System.out.println("Remaining " + remainingDistance);
-		double elapsed = yogaDeg % yogaSectorSize;
+		elapsed = yogaDeg % yogaSectorSize;
         // tithiIndex = (int) Math.round(tithi);
 
 		// no minus 1 as we dealing with array
 		return "%s - %4.9f deg have elapsed".formatted(yogas[yoga_Index], elapsed);
+	}
+
+	// end time in hours
+	public static double start(int[] chaMot, int[] surMot, double elapsed) throws Exception {
+		// endTime = RD/ (DMC + DMS) * 24
+		// return (remainingDistance/ DegMinSec.toDegrees(chaMot) + DegMinSec.toDegrees(surMot))  * 24;
+		double sum = DegMinSec.toDegrees(DegMinSec.add(chaMot, surMot));
+		// System.out.printf("Sum is %4.9f", sum);
+		return (elapsed / sum)  * 24;
 	}
 
 	// end time in hours

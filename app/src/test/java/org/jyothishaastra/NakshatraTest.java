@@ -293,6 +293,8 @@ class NakshatraTest {
 
 		var yogaEnd = Yoga.end(chaMot, surMot);
 		System.out.printf("Yoga ends at %s %s %s\n", yogaEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaEnd)), suff);
+		var yogaSta = Yoga.start(chaMot, surMot, Yoga.elapsed);
+		System.out.printf("Yoga started at %s %s %s ago.\n", yogaSta, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaSta)), suff);
 
 		// use TimeZone.getAvailaibleIDs on your machine to confirm if the TZ is available
 		var tzId = "US/Pacific";
