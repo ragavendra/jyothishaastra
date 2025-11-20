@@ -222,11 +222,6 @@ public class Nakshatra {
 	// start time in hours using the formula
 	public static double start(int[] chaMot, double transitDistance) throws Exception {
 		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
-		/* 
-		   System.out.printf("1 is %4.9f\n", DegMinSec.degrees(chaMot) * 60);
-		   System.out.printf("2 is %4.9f\n", DegMinSec.degrees(surMot) * 60);
-		   System.out.printf("3 is %4.9f\n", DegMinSec.toMinutes(remainingDistance));
-		   */
 		// endTime = (RD/ DMC) * 24
 		 start = (transitDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 staArr = DegMinSec.getGeoCoordsFromDegree(start);
@@ -236,11 +231,6 @@ public class Nakshatra {
 	// end time in hours using the formula
 	public static double end(int[] chaMot, double remainingDistance) throws Exception {
 		//        return DegMinSec.degrees(new int[]{tithiSector * 12, 0, 0}) - tithiDeg;
-		/* 
-		   System.out.printf("1 is %4.9f\n", DegMinSec.degrees(chaMot) * 60);
-		   System.out.printf("2 is %4.9f\n", DegMinSec.degrees(surMot) * 60);
-		   System.out.printf("3 is %4.9f\n", DegMinSec.toMinutes(remainingDistance));
-		   */
 		// endTime = (RD/ DMC) * 24
 		 end = (remainingDistance/ DegMinSec.toDegrees(chaMot))  * 24;
 		 endArr = DegMinSec.getGeoCoordsFromDegree(end);
