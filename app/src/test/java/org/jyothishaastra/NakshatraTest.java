@@ -206,6 +206,8 @@ class NakshatraTest {
 
 */
 	// Test for user supplied inputs
+	// For 18th Nov 2025, Tithi, Karana and Yoga ends at 1:42:00 am itself so the next date's calcs are taken
+	// or this will show the prev's day's Tithi, Karana and Yoga info.
 	@Test 
 	void nakshatra_() throws Exception {
 
@@ -252,15 +254,15 @@ class NakshatraTest {
 		// Getting issue with Sayaana longs, so using Niraayana or sidereal from astro seek.com
 		chandraAbs = new int[]{ 186, 54, 0}; // in Thula 7 -> 6 * 30
 		chandraAbs1 = new int[]{ 198, 46, 0};
-		int[] chandraAbs2 = new int[]{ 210, 37, 0};
 		/* 
+		int[] chandraAbs2 = new int[]{ 210, 37, 0};
 		chandraAbs = chandraAbs1;
 		chandraAbs1 = chandraAbs2;
 		*/
 		sooryaAbs = new int[]{ 211, 40, 30}; // in Vrushaka 8 -> 7 * 30
 		sooryaAbs1 = new int[]{ 212, 41, 2};
-		int[] sooryaAbs2 = new int[]{ 213, 41, 36};
 		/* 
+		int[] sooryaAbs2 = new int[]{ 213, 41, 36};
 		sooryaAbs = sooryaAbs1;
 		sooryaAbs1 = sooryaAbs2;
 		*/
@@ -272,6 +274,24 @@ class NakshatraTest {
 		int surMot[] = DegMinSec.minus(sooryaAbs, sooryaAbs1);
 		// System.out.printf("chaMot %s", Arrays.toString(chaMot)); // 265, 1, 32
 
+		String raashi = Raashi.raashi(chaNir); 
+		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
+
+		String naks = Nakshatra.nakshatra(chaNir);
+		System.out.printf("Nakshatra is %s\n", naks); 
+
+		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
+
+		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
+		System.out.printf("Nakshatra started %s GMT ago.\n", Arrays.toString(Nakshatra.staArr));
+		System.out.printf("Nakshatra ends at %s GMT.\n", Arrays.toString(Nakshatra.endArr));
+		// time is needed only from here
+		Calendar naksStart_ = Nakshatra.absStart(date);
+		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
+		Calendar naksEnd = Nakshatra.absEnd(date);
+		System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
+
+		System.out.println("-----------------------------------------------");
 		var tithi = Tithi.tithi(chandraAbs, sooryaAbs);
 		System.out.printf("Tithi is %s and remaining distance is %4.9f.\n", tithi, Tithi.remainingDistance);
 
@@ -283,23 +303,6 @@ class NakshatraTest {
 		System.out.printf("Karana is %s and remaining distance is %4.9f.\n", Karana.karana(chandraAbs, sooryaAbs), Karana.remainingDistance);
 		// System.out.printf("Karana ends at %s from 5:30 IST or minus from 5pm in PST?\n", Arrays.toString(DegMinSec.getGeoCoordsFromDegree(Karana.tithiEnd(surMot, chaMot, Tithi.remainingDistance))));
 
-		String raashi = Raashi.raashi(chaNir); 
-		System.out.printf("Raashi is %s and remaining distance is %4.9f for Chandra Niraayana %s.\n", raashi, Raashi.remainingDistance, Arrays.toString(chaNir));
-
-		String naks = Nakshatra.nakshatra(chaNir);
-		System.out.printf("Nakshatra is %s\n", naks); 
-
-		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
-
-		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
-		System.out.printf("Nakshatra start %s in GMT.\n", Arrays.toString(Nakshatra.staArr));
-		System.out.printf("Nakshatra end %s in GMT.\n", Arrays.toString(Nakshatra.endArr));
-		// time is needed only from here
-		Calendar naksStart_ = Nakshatra.absStart(date);
-		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
-		Calendar naksEnd = Nakshatra.absEnd(date);
-		System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
-
 		String yoga = Yoga.yoga(chaNir, surNir);
 		System.out.printf("Yoga is %s and remaining distance is %4.9f.\n", yoga, Yoga.remainingDistance);
 
@@ -307,6 +310,7 @@ class NakshatraTest {
 		System.out.printf("Yoga ends at %s %s %s\n", yogaEnd, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaEnd)), suff);
 		var yogaSta = Yoga.start(chaMot, surMot, Yoga.elapsed);
 		System.out.printf("Yoga started at %s %s %s ago.\n", yogaSta, Arrays.toString(DegMinSec.getGeoCoordsFromDegree(yogaSta)), suff);
+		System.out.println("-----------------------------------------------");
 
 		// use TimeZone.getAvailaibleIDs on your machine to confirm if the TZ is available
 		// var tzId = "US/Pacific";
@@ -358,8 +362,8 @@ class NakshatraTest {
 		int ssMin = sunstimeAtDest.getMinute();
 
 		// int weekday = Sunrise.sunrise.get(Calendar.DAY_OF_WEEK) - 1; // as using Sunday to be 0
-		int weekday = sunrtimeAtDest.getDayOfWeek().getValue();
-		weekday = 1;
+		int weekday = sunrtimeAtDest.getDayOfWeek().getValue() - 1;
+		// weekday = 1;
 
 		System.out.printf("Day of week is %d and sunrise and sunset in local time %s and %s\n", weekday, sunrtimeAtDest.toString(), sunstimeAtDest.toString());
 		int[] raahu = Kaalas.kaala(new int[]{srHour, srMin, 0}, new int[]{ ssHour, ssMin, 0 }, weekday, Sunrise.duration, Kaala.Raahu);
