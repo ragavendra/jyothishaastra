@@ -50,7 +50,7 @@ class NakshatraMonthTest {
 
 		int ephChaAbs[] = Arrays.copyOf(ephCha, ephCha.length);
 		ephChaAbs[0] = DegMinSec.absGeo(raaCha, ephCha);
-		System.out.printf("Chandra abs %s\n", Arrays.toString(ephChaAbs));
+		// System.out.printf("Chandra abs %s\n", Arrays.toString(ephChaAbs));
 
 		// int ephSoorAbs[] = Arrays.copyOf(ephSoor, ephSoor.length);
 		// ephSoorAbs[0] = DegMinSec.absGeo(raaSoo, ephSoor);
@@ -59,7 +59,7 @@ class NakshatraMonthTest {
 		// daily motion of Chandra
 		int chaMot[] = DegMinSec.minusMoreThreeSixty(ephChaAbs, ephCha1);
 		// int surMot[] = DegMinSec.minus(ephSoorAbs, ephSoor1);
-		System.out.printf("chaMot %s\n", Arrays.toString(chaMot)); // 345, 26, 0
+		// System.out.printf("chaMot %s\n", Arrays.toString(chaMot)); // 345, 26, 0
 		// chaMot = new int[]{14, 34, 0};
 
 		String raashi = Raashi.raashi(ephChaAbs); 
@@ -68,18 +68,18 @@ class NakshatraMonthTest {
 
 		String naks = Nakshatra.nakshatra(ephChaAbs);
 		System.out.printf("Nakshatra is %s\n", naks); 
-		System.out.printf("Nakshatra RD is %8.6f\n", Nakshatra.remainingDistance); 
+		// System.out.printf("Nakshatra RD is %8.6f\n", Nakshatra.remainingDistance); 
 
 		Nakshatra.end(chaMot, Nakshatra.remainingDistance);
 
 		double naksStart = Nakshatra.start(chaMot, Nakshatra.elapsed);
-		System.out.printf("Nakshatra started %s GMT ago.\n", Arrays.toString(Nakshatra.staArr));
+		// System.out.printf("Nakshatra started %s GMT ago.\n", Arrays.toString(Nakshatra.staArr));
 		System.out.printf("Nakshatra ends at %s GMT.\n", Arrays.toString(Nakshatra.endArr));
 		// time is needed only from here
 		Calendar naksStart_ = Nakshatra.absStart(date);
-		System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
+		// System.out.printf("Nakshatra start is %s in GMT.\n", naksStart_.toInstant());
 		Calendar naksEnd = Nakshatra.absEnd(date);
-		System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
+		// System.out.printf("Nakshatra end is %s in GMT\n", naksEnd.toInstant());
 
 		// use TimeZone.getAvailaibleIDs on your machine to confirm if the TZ is available
 		// var tzId = "US/Pacific";
